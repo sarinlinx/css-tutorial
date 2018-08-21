@@ -1,0 +1,139 @@
+/*___________________________________________________
+General Styles
+___________________________________________________*/
+
+body {
+  background-color: #231f20;
+  color: #d8ab4e;
+  position: relative;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-top: 80px;
+  margin-bottom: 20px;
+  color: #ffcd2f;
+  border-bottom: 2px solid #776a6a;
+  padding: 10px;
+  /* text-align: center; */
+}
+
+h2 {
+  padding-bottom: 15px;
+  margin-top: 50px;
+  color: #ffcd2f;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #776a6a;
+  /* Dark Gold */
+}
+
+h3 {
+  margin-top: 30px;
+  color: #00ff88;
+  /* GREEN */
+  /* color: #ff5f5f; RED*/
+}
+
+h4 {
+  text-decoration: underline;
+}
+
+
+/*___________________________________________________
+Customizations
+___________________________________________________*/
+
+.standout {
+  font-weight: bolder;
+  font-size: 1.2rem;
+}
+
+.bg-shade {
+  background-color: #1d1d1d;
+  padding: 1.5rem 0;
+}
+
+.margin-top {
+  margin-top: 30px;
+}
+
+.code-css {
+  color: #ffe500;
+}
+
+.breadcrumb-container {
+  background-color: #000;
+}
+
+.breadcrumb-link {
+  color: #ffbf00;
+}
+
+/*___________________________________________________
+Note boxes
+___________________________________________________*/
+
+.alert-important, .alert-note, .alert-tip, .alert-warning {
+  position: relative;
+  padding: 15px;
+  /* border: 1px solid #DCDCDC; */
+  border: 1px solid #ff0000;
+  height: auto;
+  min-height: 90px;
+  display: table;
+  margin: 15px 0 15px 0;
+  /* background-color: #a0e1cd; */
+}
+
+/* vertical divider between icon and text */
+
+.alert-content {
+  margin-left: 80px;
+  line-height: 22px;
+  font-size: 95%;
+  padding-left: 20px;
+  /* border-left: 1px solid #DCDCDC; */
+  border-left: 1px solid #ff0000;
+  display: table-cell;
+  vertical-align: middle;
+  /* color: #000; */
+  color: #fff;
+}
+
+.alert-content ul, .alert-content ol {
+  margin-bottom: 0;
+}
+
+.alert-content li {
+  padding: 0;
+}
+
+.alert-icon {
+  display: table-cell;
+  width: 8%;
+  min-width: 75px;
+  vertical-align: middle;
+}
+
+/*___________________________________________________
+Colors
+___________________________________________________*/
+
+.red {
+  color: red;
+}
+
+.green {
+  color: green;
+}
+
+/*___________________________________________________
+Examples
+___________________________________________________*/
+
+.example {
+  background-color: #000;
+  color: #ffbf00;
+  padding: 5px;
+  box-shadow: 0 0 4px 2px #1f1f1f;
+}
