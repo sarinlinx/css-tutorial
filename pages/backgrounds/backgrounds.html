@@ -1,0 +1,862 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="../../_css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../../_css/style.css">
+
+    <title>Backgrounds</title>
+</head>
+
+<body>
+    <a href="../../index.html">Home page</a>
+
+
+
+
+    <section class="container">
+        <h1>Setting a background color</h1>
+        <div class="row">
+            <div class="col-6">
+                <p>Setting a background color</p>
+            </div>
+
+            <div class="col-6">
+                <pre class="example"><span class="code-css">body {
+  background-color: lightblue;
+}</pre>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="container">
+        <h1>Setting a background image</h1>
+        <div class="row">
+            <div class="col-6">
+                <p>Add a background image.</p>
+            </div>
+
+            <div class="col-6">
+                <pre class="example"><span class="code-css">body {
+  background-image: url("paper.gif");
+}</pre>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                <p>To specify multiple images, separate the URLs with a comma.</p>
+            </div>
+
+            <div class="col-6">
+                <pre class="example"><span class="code-css">body {
+  background-image: url("image1.png"),
+  url("image2.png");
+}</pre>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+    <section class="container">
+        <h1>Background transparency</h1>
+        <div class="row">
+            <div class="col-6">
+                <p>If there is already a background added, you can add a second layer over it. You can then adjust this second layer's transparency value.</p>
+                <p><strong>Make sure this is NO SPACE between rgba and the parenthese.</strong></p>
+            </div>
+
+            <div class="col-6">
+                <pre class="example"><span class="code-html">&lt;div class="image-bg"&gt;
+  &lt;p class="rgba-transparency"&gt;Testing to see how the transparency works.&lt;/p&gt;
+&lt;/div&gt;</span>
+
+<span class="code-css">.image-bg {
+  background: url("images/note.jpg")
+}
+
+.rgba-transparency {
+  background: rgba(199, 21, 133, .25);
+}</span></pre>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                <p>The result will be a transparent layer over top the current background.</p>
+            </div>
+
+            <div class="col-6">
+                <pre class="example"><div class="image-bg">
+<p class="rgba-transparency">Testing to see how the transparency works.</p>
+</div></pre>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+    <section class="container">
+        <h1>Linear gradient background</h1>
+        <div class="row">
+            <div class="col-6">
+                <p>This shows how to add a background of 2 colors that blend into each other.</p>
+            </div>
+
+            <div class="col-6">
+                <pre class="example"><span class="code-html">&lt;p class="linear-gradient"&gt;Testing to see how the linear gradient works.&lt;/p&gt;</span>
+
+<span class="code-css">.linear-gradient {
+  background: linear-gradient(red, green)
+}</span></pre>
+            </div>
+        </div>
+
+
+
+        <div class="row">
+            <div class="col-6">
+                <p>The result will be a transparent layer over top the current background.</p>
+            </div>
+
+            <div class="col-6">
+                <pre class="example"><p class="linear-gradient">Testing to see how the linear gradient works.</p></pre>
+            </div>
+        </div>
+
+
+
+
+        <div class="row">
+            <div class="col-6">
+                <p>You can also add a 3rd color.</p>
+            </div>
+
+            <div class="col-6">
+                <pre class="example"><span class="code-html"><span class="code-html">&lt;p class="linear-gradient-3colors"&gt;Testing to see how the linear gradient works.&lt;/p&gt;
+    </span>
+
+<span class="code-css">.linear-gradient-3colors {
+  background: linear-gradient-3colors(red, yellow, green),
+}</span></pre>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                <p>The result will be a transparent layer over top the current background.</p>
+            </div>
+
+            <div class="col-6">
+                <pre class="example"><p class="linear-gradient-3colors">Testing to see how the linear gradient works.</p></pre>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+    <section class="container">
+        <h1>Transparent linear gradient over a background image</h1>
+        <div class="row">
+            <div class="col-6">
+                <p>This shows how to add a transparent linear gradient of 3 colors over a background image.</p>
+                <p><strong>The linear-gradient values must come first.</strong></p>
+            </div>
+            <div class="col-6">
+                <pre class="example"><span class="code-html">&lt;div class="image-bg"&gt;
+  &lt;p class="transparent-linear-gradient"&gt;Transparent linear gradient over an background image.&lt;/p&gt;
+&lt;div&gt;
+</span>
+
+<span class="code-css">.transparent-linear-gradient {
+  height: 40px;
+  background: linear-gradient(rgba(255, 0, 0, 0.35),  /*red*/
+  rgba(255, 255, 0, 0.35), /*yellow*/
+  rgba(0, 0, 255, 0.35)),  /*blue*/
+  url("images/backgrounds/examples/white-bg.jpg");
+}</span></pre></div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-6">
+                <p>The result will be a transparent gradient over a background image.</p>
+            </div>
+
+            <div class="col-6">
+                <pre class="example"><div class="image-bg">
+      <p class="transparent-linear-gradient">Transparent linear gradient over an background image.</p>
+    </div></pre></div>
+        </div>
+    </section>
+
+
+
+
+    <section class="container">
+        <h1>Background repeat</h1>
+        <div class="row">
+            <div class="col-6">
+                <p>By default, the background-image property repeats an image both horizontally and vertically.</p>
+            </div>
+
+            <div class="col-6">
+                <pre class="example"><div class="image-bg-repeat"><p>asdf</p>
+<p>asdf</p>
+</div></pre>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <section class="container">
+        <h1>Repeat the image on the x axis</h1>
+        <div class="row">
+            <div class="col-6">
+                <p>This repeats the image horizontally.</p>
+            </div>
+
+            <div class="col-6">
+                <pre class="example"><span class="code-css">body {
+      background: url("../images/backgrounds/examples/purple-dot.jpg");
+      background-repeat: repeat-x;
+    }</pre>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                <p>The image is repeated horizontally only. If the image has a short height, anything below is inherits its background color.</p>
+            </div>
+
+            <div class="col-6">
+                <pre class="example"><div class="image-bg-repeat-x"><p>asdf</p>
+<p>asdf</p>
+<p>asdf</p></div></pre>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+    <section class="container">
+        <h1>Repeat the image on the y axis</h1>
+        <div class="row">
+            <div class="col-6">
+                <p>This repeats the image vertically.</p>
+            </div>
+
+            <div class="col-6">
+                <pre class="example"><span class="code-css">body {
+  background: url("../images/backgrounds/examples/purple-dot.jpg");
+  background-repeat: repeat-y;
+}</pre>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                <p>The image is repeated horizontally only. If the image has a short width, anything to the right inherits its background color.</p>
+            </div>
+
+            <div class="col-6">
+                <pre class="example"><div class="image-bg-repeat-y"><p>asdf</p>
+<p>asdf</p>
+<p>asdf</p></div></pre>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+    <section class="container">
+        <h1>Do not repeat the image</h1>
+        <div class="row">
+            <div class="col-6">
+                <p>This forces the image to not repeat at all.</p>
+            </div>
+
+            <div class="col-6">
+                <pre class="example"><span class="code-css">body {
+  background: url("../images/backgrounds/examples/purple-dot.jpg");
+  background-repeat: no-repeat;
+}</pre>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                <p>The result is that the image shows once in the top left corner.</p>
+            </div>
+
+            <div class="col-6">
+                <pre class="example"><div class="image-bg-no-repeat"><p>asdf</p>
+<p>asdf</p>
+<p>asdf</p></div></pre>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section class="container">
+        <h1>Background attachement</h1>
+        <div class="row">
+            <div class="col">
+                <p>By default, the background image will not move with the page.</p>
+                <p>The background attachment property allows you to control what happens to the background image as the page is navigated.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="container">
+        <h2>Fixed — Fix the image to the page as you scroll</h2>
+        <div class="row">
+            <div class="col-6">
+                <p>This causes the image to be fixed to the top left of the page. As the user scrolls, the image always remains on the top left and never goes out of sight.</p>
+            </div>
+
+            <div class="col-6">
+                <pre class="example"><span class="code-css">body {
+  background: url("../images/backgrounds/examples/purple-dot.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}</pre>
+            </div>
+            <div class="alert alert-note">
+                <div class="alert-icon">
+                    <img src="../../_img/note-icon.png" width="60" height="60">
+                </div>
+                <div class="alert-content">
+                    <p>This only works on the body element. If you used 'fixed' for any other element, the image will disappear. This is because 'fixed' is relative to the viewport, not the element you're adding the code to.</p>
+                    <p>View the following example:</p>
+                    <ul>
+                        <li><a href="../examples/example-fixed-image.html" target="_blank">Fixed image eample</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <section class="container">
+        <h2>Allow the image to scroll with the page</h2>
+        <div class="row">
+            <div class="col-6">
+                <p>This causes the image to scroll with the page. As the user scrolls, the image scrolls also. This is the default behavior.</p>
+            </div>
+            <div class="col-6">
+                <pre class="example"><span class="code-css">body {
+  background: url("../images/backgrounds/examples/purple-dot.jpg");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+}</pre>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                <p>This causes the image to scroll with the page. As the user scrolls, the image scrolls also. This is the default behavior.</p>
+            </div>
+            <div class="col-6">
+                <pre class="codebox-fixed-height"><div class="image-bg-scroll"><span class="white">Testing Testing Testing
+Testing Testing Testing
+Testing Testing Testing
+Testing Testing Testing
+Testing Testing Testing
+Testing Testing Testing
+Testing Testing Testing
+Testing Testing Testing</span></div>
+</pre>
+            </div>
+        </div>
+        <h2 class="heading-emphasis"><span class="red">Local — How is this different from Scroll?.</span></h2>
+    </section>
+
+
+
+
+
+
+
+
+
+
+    <section class="container">
+        <h1>Background Position</h1>
+        <div class="row">
+            <div class="col">
+                <p>Position the background image to a specific area of the page.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="container">
+        <h2>Using positional words</h2>
+        <div class="row">
+            <div class="col-6">
+                <p>You can use words like 'top right' to position the background.</p>
+            </div>
+
+            <div class="col-6">
+                <pre class="example"><span class="code-css">body {
+  background: url("../images/backgrounds/examples/purple-dot.jpg");
+  background-repeat: no-repeat;
+  background-position: top right;
+}</pre>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                <p>The result will be the image on the top right.</p>
+            </div>
+
+            <div class="col-6">
+                <pre class="example"><div class="image-bg-position-words"><span class="white">Testing Testing Testing
+Testing Testing Testing
+Testing Testing Testing
+Testing Testing Testing
+Testing Testing Testing
+Testing Testing Testing
+Testing Testing Testing
+Testing Testing Testing</span></div></pre>
+            </div>
+        </div>
+        <p>Other options are:</p>
+        <ul>
+            <li>left top</li>
+            <li>left center</li>
+            <li>left bottom</li>
+            <li>right top</li>
+            <li>right center</li>
+            <li>right bottom</li>
+            <li>center top</li>
+            <li>center center</li>
+            <li>center bottom</li>
+        </ul>
+        <p>If you only specify one keyword, the other value will be "center"</p>
+
+    </section>
+
+
+    <section class="container">
+        <h2>Using % values</h2>
+        <div class="row">
+            <div class="col-6">
+                <p>You can use % values to position the background.</p>
+                <p>The first value is the horizontal position and the second value is the vertical. The top left corner is 0% 0%. The right bottom corner is 100% 100%.</p>
+                <p>If you only specify one value, the other value will be 50%. Default value is: 0% 0%.</p>
+            </div>
+
+            <div class="col-6">
+                <pre class="example"><span class="code-css">body {
+  background: url("../images/backgrounds/examples/purple-dot.jpg");
+  background-repeat: no-repeat;
+  background-position: 20% 10%;
+}</pre>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                <p>This example moves the image 20% to the right and 10% down on the page.</p>
+            </div>
+
+            <div class="col-6">
+                <pre class="example"><div class="image-bg-position-percent"><span class="white">Testing Testing Testing
+Testing Testing Testing
+Testing Testing Testing
+Testing Testing Testing
+Testing Testing Testing
+Testing Testing Testing
+Testing Testing Testing
+Testing Testing Testing</span></div></pre></div>
+        </div>
+    </section>
+
+    <section class="container">
+        <h2>Using CSS units</h2>
+        <div class="row">
+            <div class="col-6">
+                <p>You can position using any CSS unit like pixels.</p>
+            </div>
+
+            <div class="col-6">
+                <pre class="example"><span class="code-css">body {
+  background: url("../images/backgrounds/examples/purple-dot.jpg");
+  background-repeat: no-repeat;
+  background-position: 20px 50px;
+}</pre>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                <p>This example moves the image 20 pixels to the right and 50 pixels down on the page.</p>
+            </div>
+
+            <div class="col-6">
+                <pre class="example"><div class="image-bg-position-pixels"><span class="white">Testing Testing Testing
+Testing Testing Testing
+Testing Testing Testing
+Testing Testing Testing
+Testing Testing Testing
+Testing Testing Testing
+Testing Testing Testing
+Testing Testing Testing</span></div></pre></div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+    <section class="container">
+        <h1>Background size</h1>
+        <div class="row">
+            <div class="col">
+                <p>Background size specifies the size of background images.</p>
+
+                <p>There are four different syntaxes you can use with this property:</p>
+                <ul class="no-style">
+                    <li><strong>Keyword syntax</strong> ("auto", "cover" and "contain")</li>
+                    <li><strong>One-value syntax</strong> (sets the width of the image (height becomes "auto")</li>
+                    <li><strong>Two-value syntax</strong> (first value: width of the image, second value: height)</li>
+                    <li><strong>Multiple background syntax</strong> (separated with comma).</li>
+                </ul>
+            </div>
+        </div>
+
+        <h2>Keyword syntax</h2>
+        <div class="row">
+            <div class="col-6">
+                <p><span class="highlight-word">auto</span> is the default value. The background image is displayed in its original size.</p>
+            </div>
+
+            <div class="col-6">
+                <pre class="example"><span class="code-css">body {
+  background: url("../images/backgrounds/examples/purple-dot.jpg");
+  background-repeat:no-repeat;
+  background-size:auto;
+}</pre></div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                <p>Example:</p>
+            </div>
+            <div class="col-6">
+                <pre class="example"><div class="image-bg-background-size-auto"><span class="white">Testing Testing Testing
+Testing Testing Testing
+Testing Testing Testing
+Testing Testing Testing
+Testing Testing Testing
+Testing Testing Testing</span></div></pre>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                <p><span class="highlight-word">cover</span> resizes the background image to cover the entire container, even if it has to stretch the image or crop a little bit off one of the edges.</p>
+            </div>
+
+            <div class="col-6">
+                <pre class="example"><span class="code-css">body {
+         background: url("../images/backgrounds/examples/purple-dot.jpg");
+         background-repeat:no-repeat;
+         background-size:cover;
+       }</pre></div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                <p>Example:</p>
+            </div>
+            <div class="col-6">
+                <pre class="example"><div class="image-bg-background-size-cover">Testing Testing Testing
+Testing Testing Testing
+Testing Testing Testing
+Testing Testing Testing
+Testing Testing Testing
+Testing Testing Testing</div></pre>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                <p><span class="highlight-word">contain</span> resizes the background image to make sure the image is fully visible.</p>
+                <p>The image will resize to fit the container.</p>
+            </div>
+
+            <div class="col-6">
+                <pre class="example"><span class="code-css">body {
+  background: url("../images/backgrounds/examples/purple-dot.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}</pre></div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                <p>Example:</p>
+            </div>
+            <div class="col-6">
+                <pre class="example"><div class="image-bg-background-size-contain">Testing Testing Testing
+Testing Testing Testing
+Testing Testing Testing
+Testing Testing Testing
+Testing Testing Testing
+Testing Testing Testing
+Testing Testing Testing
+Testing Testing Testing
+Testing Testing Testing
+Testing Testing Testing</div></pre>
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
+        <h2>One value syntax</h2>
+        <div class="row">
+            <div class="col-6">
+                <p>If you set only one value for width, the second value for height becomes 'auto'.</p>
+            </div>
+            <div class="col-6">
+                <pre class="example"><span class="code-css">body {
+  background: url("../images/backgrounds/examples/purple-dot.jpg");
+  background-repeat:no-repeat;
+  background-size: 80px;
+}</pre>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-6">
+                <p>Example: The image is set to 80px.</p>
+                <p>You can also use percentage, but this is not recommended. This isn't a good idea because the aspect ratio does not change, so there could be blank space at the bottom of the page after the image.</p>
+            </div>
+            <div class="col-6">
+                <pre class="example"><div class="image-bg-background-size-onevalue">Testing Testing Testing
+Testing Testing Testing
+Testing Testing Testing
+Testing Testing Testing
+Testing Testing Testing
+Testing Testing Testing</div></pre>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+    <section class="container">
+        <h2>Two value syntax</h2>
+        <div class="row">
+            <div class="col-6">
+                <p>This sets both a width and height to the property.</p>
+            </div>
+            <div class="col-6">
+                <pre class="example"><span class="code-css">body {
+  background: url("../images/backgrounds/examples/purple-dot.jpg");
+  background-repeat:no-repeat;
+  background-size: 80px 120px;
+}</pre>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-6">
+                <p>Example: The image is set to 80px wide and 120px high.</p>
+                <p>You can also use percentage.</p>
+            </div>
+
+            <div class="col-6">
+                <pre class="example"><div class="image-bg-background-size-twovalue">Testing Testing Testing
+Testing Testing Testing
+Testing Testing Testing
+Testing Testing Testing
+Testing Testing Testing
+Testing Testing Testing</div></pre>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+    <section class="container">
+        <h1>Different background images for different displays</h1>
+        <div class="row">
+            <div class="col">
+                <p>If you have a high resolution display (retina) you may want to display a different image than a smaller screen with less resolution.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <p>Use a media query.</p>
+            </div>
+            <div class="col-6">
+                <pre class="example"><span class="code-css">header {
+  background: url(image.jpg);
+}
+
+@media (min-resolution: 192dpi) {
+  header {
+    /* Using a larger image for retina screens */
+    background: url(image@2x.jpg);
+  }
+}<pre></div></div>
+        </div>
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+    <section class="container">
+        <h1>Shorthand</h1>
+        <div class="row">
+        <div class="col">
+          <p>You can use shorthand to list all background CSS properites in a single declaration.</p>
+        </div>
+      </div>
+
+        <div class="row">
+            <div class="col-6">
+              <p>When using the shorthand property, the recommended order of the property values is:</p>
+              <ul class="no-style">
+                  <li>background-color</li>
+                  <li>background-image</li>
+                  <li>background-repeat</li>
+                  <li>background-attachment</li>
+                  <li>background-position</li>
+              </ul>
+              <p>But the order doesn't matter.</p>
+              <p><strong>If you mix shortland with full declarations, shorthand will override.</strong></p>
+          </div>
+
+
+            <div class="col-6">
+    <pre class="example"><span class="code-css">body {
+  background: #ffffff url("img_tree.png") no-repeat scroll right top;
+}</pre></div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                <p>If you include background-size, it MUST be after background-position and separated with /.</p>
+            </div>
+
+            <div class="col-6">
+                <pre class="example"><span class="code-css">body {
+  background: url(image.png) no-repeat fixed 0px 0px / cover;
+}</span></pre></div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+    <section class="container">
+        <h1>Shorthand for multiple images</h1>
+        <div class="row">
+            <div class="col-6">
+                <p>Longhand for multiple image styles.</p>
+            </div>
+
+
+            <div class="col-6">
+                <pre class="example"><span class="code-css">body {
+  background-image: url(image1.png), url(image2.png);
+  background-repeat: no-repeat, no-repeat;
+  background-position: top right, bottom left;
+}</pre></div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                <p>Shorthand for multiple image styles.</p>
+            </div>
+
+            <div class="col-6">
+                <pre class="example"><span class="code-css">body {
+  background: url(image1.png) no-repeat top right,
+              url(image2.png) no-repeat bottom left;
+}</pre></div>
+        </div>
+    </section>
+
+
+
+
+
+    <script src="../../_js/jquery.js"></script>
+    <script src="../../_js/bootstrap.bundle.js"></script>
+</body>
+
+</html>

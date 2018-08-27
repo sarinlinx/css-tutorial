@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="../../_css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../../_css/style.css">
+
+    <title>Hyperlinks</title>
+</head>
+
+<body>
+    <a href="../../index.html">Home page</a>
+
+    <section class="container">
+
+        <div class="row">
+            <div class="col">
+                <h1>The 4 link states</h1>
+                <p>Hyperlinks can be styled differently depending on what state they are in.</p>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                <p>a:link — a normal, unvisited link</p>
+            </div>
+            <div class="col-6">
+                <pre class="example"><span class="code-css">/* unvisited link */
+  a:link {
+  color: red;
+}</span></pre>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                <p>a:visited — a link the user has visited</p>
+            </div>
+            <div class="col-6">
+                <pre class="example"><span class="code-css">/* visited link */
+  a:visited {
+  color: green;
+}</span></pre>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                <p>a:hover — a link when the user mouses over it</p>
+            </div>
+            <div class="col-6">
+                <pre class="example"><span class="code-css">/* mouse over link */
+  a:hover {
+  color: hotpink;
+}</span></pre>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                <p>a:active — a link the moment it is clicked</p>
+            </div>
+            <div class="col-6">
+                <pre class="example"><span class="code-css">/* selected link */
+  a:active {
+  color: blue;
+}</span></pre>
+            </div>
+        </div>
+
+
+
+
+
+        <div class="row">
+            <div class="col">
+                <h2>Make the link look like a red box to click on.</h2>
+                <p>You can style the hyperlink to look like a button.</p>
+
+            </div>
+        </div>
+
+
+
+        <div class="row">
+            <div class="col-6">
+                <p>If you're using a class or ID, it must come after the 'a' character'.</p>
+            </div>
+
+            <div class="col-6">
+                <pre class="example"><span class="code-html">&lt;a class="link-btn" href="#"&gt;Click Here&lt;/a&gt;</span>
+
+<span class="code-css">a.link-btn:link, a.link-btn:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a.link-btn:hover, a.link-btn:active {
+  background-color: red;
+}</span></pre>
+            </div>
+        </div>
+
+
+
+
+
+        <div class="row">
+            <div class="col-6">
+                <p>Example:</p>
+            </div>
+
+            <div class="col-6">
+                <pre class="example"><a class="link-btn" href="#">Click Here</a></pre>
+            </div>
+        </div>
+
+
+
+
+
+
+    </section>
+
+
+    <script src="../../_js/jquery.js"></script>
+    <script src="../../_js/bootstrap.bundle.js"></script>
+</body>
+
+</html>

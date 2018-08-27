@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="../../_css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../../_css/style.css">
+
+    <title>Images</title>
+</head>
+
+<body>
+    <a href="../../index.html">Home page</a>
+
+    <section class="container">
+
+
+        <h2>Reduce image size</h2>
+        <div class="row">
+
+            <div class="col-6">
+                <p>To adjust the size of an image, add a class. Then, in CSS, add only the width value. The height automatically adjusts to aspect-ratio.</p>
+            </div>
+
+            <div class="col-6">
+                <pre class="example"><span class="code-html">&lt;img class="blah" asdf&gt;</span>
+
+<span class="code-css">.blah {
+  width: 300px;
+}</span></pre>
+            </div>
+        </div>
+
+
+
+
+        <h2>Reshape image</h2>
+        <div class="row">
+            <div class="col-6">
+                <p>Add border radius. Make sure you start with a square image or it will turn it into an oval.</p>
+            </div>
+
+            <div class="col-6">
+                <pre class="example"><span class="code-css">img {
+  border-radius: 50%;
+}</span>
+
+<img class="reshapeimg-per" src="../../_img/redsquare.png"/>
+  </pre>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                <p>Here's an example using pixels.</p>
+            </div>
+
+            <div class="col-6">
+                <pre class="example"><span class="code-css">img {
+  border-radius: 22px;
+}</span>
+
+<img class="reshapeimg-px" src="../../_img/redsquare.png"/>
+  </pre>
+            </div>
+        </div>
+
+
+
+
+
+
+        <h2>Center an image</h2>
+        <div class="row">
+            <div class="col-6">
+                <p>Use margin:auto to center and image.</p>
+            </div>
+
+            <div class="col-6">
+                <pre class="example"><span class="code-css">img {
+      border-radius: 50%;
+      }</span>
+
+      <img class="reshapeimg-per" src="../../_img/redsquare.png"/>
+      </pre>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                <p>Here's an example using pixels.</p>
+            </div>
+
+            <div class="col-6">
+                <pre class="example"><span class="code-css"><span class="code-css">img {
+  display: block;
+  margin: 0 auto;
+}</span>
+      <img class="alignimg-margin" src="../../_img/redsquare.png"/>
+      </pre>
+            </div>
+        </div>
+
+    </section>
+
+
+    <script src="../../_js/jquery.js"></script>
+    <script src="../../_js/bootstrap.bundle.js"></script>
+</body>
+
+</html>
