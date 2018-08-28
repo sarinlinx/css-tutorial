@@ -42,6 +42,10 @@ h4 {
 /*___________________________________________________
 Customizations
 ___________________________________________________*/
+.highlight-word {
+  font-size: 22px;
+  font-weight: bold;
+}
 
 .standout {
   font-weight: bolder;
@@ -251,7 +255,7 @@ ___________________________________________________*/
 
 .codebox-white {
   /*border: 1px solid white;*/
-  width: 48%;
+  /* width: 48%; */
   overflow: auto;
   background: #fff;
   padding: 10px 5px 10px 5px;
@@ -344,7 +348,7 @@ ___________________________________________________*/
   background: linear-gradient(rgba(255, 0, 0, 0.35),  /*red*/
                              rgba(255, 255, 0, 0.35), /*yellow*/
                              rgba(0, 0, 255, 0.35)),  /*blue*/
-url("images/backgrounds/examples/white-bg.jpg");
+url("../_img/backgrounds/examples/white-bg.jpg");
 }
 
 .image-bg-repeat {
@@ -495,9 +499,13 @@ background-color: red;
   background-color: yellow;
 }
 .horz-nav-no-float a {
+  margin-left: 0px;
   background-color: red;
 }
 
+#no-left-float-margin {
+  margin-left: -13px;
+}
 .horz-nav-float {
 }
 .horz-nav-float a {
@@ -546,12 +554,12 @@ ol.ordered-list-d {
 }
 
 ol.custom-list-image {
-  list-style-image: url('images/backgrounds/examples/purple-dot.jpg');
+  list-style-image: url('../_img/backgrounds/examples/purple-dot.jpg');
   color: white;
 }
 
 ol.shorthand-for-custom-image {
-  list-style: circle outside url('images/backgrounds/examples/purple-dot.jpg');
+  list-style: circle outside url('../_img/backgrounds/examples/purple-dot.jpg');
   color: white;
 }
 
@@ -787,7 +795,7 @@ ol.shorthand-for-custom-image {
   color: blue;
   width: 200px;
   height: 50px;
-  background-color: #eee;
+  /* background-color: #eee; */
   overflow: visible;
 }
 
@@ -795,7 +803,7 @@ ol.shorthand-for-custom-image {
   color: blue;
   width: 200px;
   height: 50px;
-  background-color: #eee;
+  /* background-color: #eee; */
   overflow: hidden;
 }
 
