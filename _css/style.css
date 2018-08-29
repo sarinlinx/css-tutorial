@@ -642,9 +642,21 @@ ol.shorthand-for-custom-image {
   background-color: white;
 }
 
+.line-height-small {
+  color: white;
+  line-height: 5px;
+}
+
+
+.line-height-medium {
+  color: white;
+  line-height: 25px;
+}
+
+
 .line-height-large {
   color: white;
-  line-height: 35px;
+  line-height: 45px;
 }
 
 .word-spacing-small {
@@ -837,6 +849,7 @@ ol.shorthand-for-custom-image {
   background-color: white;
   border: 1px solid black;
   margin: 5px;
+  color: #000;
 }
 
 .nthrow-table tr:nth-child(odd) {
@@ -847,6 +860,7 @@ ol.shorthand-for-custom-image {
   background-color: white;
   border: 1px solid black;
   margin: 5px;
+  color: #000;
 }
 
 .nthrow-table-number tr:nth-child(3) {
