@@ -35,13 +35,13 @@ h3 {
 }
 
 h4 {
-  text-decoration: underline;
+  color:#00d4ff;
 }
-
 
 /*___________________________________________________
 Customizations
 ___________________________________________________*/
+
 .highlight-word {
   font-size: 22px;
   font-weight: bold;
@@ -142,11 +142,10 @@ ___________________________________________________*/
   box-shadow: 0 0 4px 2px #1f1f1f;
 }
 
-
-
 /*___________________________________________________
 Text Colors
 ___________________________________________________*/
+
 .code-css {
   color: yellow;
 }
@@ -188,9 +187,11 @@ ___________________________________________________*/
 .border-green {
   border: 3px solid green;
 }
+
 /*___________________________________________________
 Lists
 ___________________________________________________*/
+
 /*Main <ul> list on navigation pages
 .main-nav {
   margin: auto;
@@ -224,7 +225,9 @@ This affects ALL <li> items
 /*___________________________________________________
 Code Examples
 ___________________________________________________*/
+
 /* Main container for side by side text and code examples */
+
 .example-container {
   background: rgba(125, 115, 115, 0.15);
   /*border: 1px solid blue;*/
@@ -237,13 +240,14 @@ ___________________________________________________*/
 }
 
 /* Text container for code examples */
+
 .example-text {
   /*border: 1px solid green;*/
   display: inline-block;
   width: 48%;
   padding: 5px;
   float: left;
-  }
+}
 
 .codebox {
   /*border: 1px solid white;*/
@@ -276,12 +280,13 @@ ___________________________________________________*/
   background: #000;
   padding: 10px 5px 10px 5px;
 }
+
 /*___________________________________________________
 Note boxes
 ___________________________________________________*/
 
 .alert-important, .alert-note, .alert-tip, .alert-warning {
-	position: relative;
+  position: relative;
   padding: 15px;
   border: 1px solid #DCDCDC;
   height: auto;
@@ -316,22 +321,23 @@ ___________________________________________________*/
   vertical-align: middle;
 }
 
-
-
 /*___________________________________________________
 Examples in preformatted boxes
 ___________________________________________________*/
+
 /* background transparency example */
+
 .image-bg {
   background: url("../_img/backgrounds/examples/white-bg.jpg");
   color: #000;
 }
 
 .rgba-transparency {
-    background: rgba(199, 21, 133, .25);
+  background: rgba(199, 21, 133, .25);
 }
 
 /* gradient color over image */
+
 .linear-gradient {
   height: 40px;
   background: linear-gradient(red, green);
@@ -345,10 +351,10 @@ ___________________________________________________*/
 
 .transparent-linear-gradient {
   height: 40px;
-  background: linear-gradient(rgba(255, 0, 0, 0.35),  /*red*/
-                             rgba(255, 255, 0, 0.35), /*yellow*/
-                             rgba(0, 0, 255, 0.35)),  /*blue*/
-url("../_img/backgrounds/examples/white-bg.jpg");
+  background: linear-gradient(rgba(255, 0, 0, 0.35), /*red*/
+  rgba(255, 255, 0, 0.35), /*yellow*/
+  rgba(0, 0, 255, 0.35)), /*blue*/
+  url("../_img/backgrounds/examples/white-bg.jpg");
 }
 
 .image-bg-repeat {
@@ -447,22 +453,23 @@ url("../_img/backgrounds/examples/white-bg.jpg");
 }
 
 a.link-btn:link, a.link-btn:visited {
-background-color: #f44336;
-color: white;
-padding: 14px 25px;
-text-align: center;
-text-decoration: none;
-display: inline-block;
+  background-color: #f44336;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
 }
 
 a.link-btn:hover, a.link-btn:active {
-background-color: red;
+  background-color: red;
 }
 
 .horz-nav-display-no-inline-block {
   background-color: green;
   text-align: center;
 }
+
 .horz-nav-display-no-inline-block a {
   border: 1px solid red;
   padding: 10px;
@@ -474,6 +481,7 @@ background-color: red;
   background-color: green;
   text-align: center;
 }
+
 .horz-nav-display-inline-block a {
   border: 1px solid red;
   padding: 10px;
@@ -487,6 +495,7 @@ background-color: red;
   text-align: center;
   font-size: 0;
 }
+
 .horz-nav-display-center a {
   border: 1px solid red;
   padding: 10px;
@@ -498,6 +507,7 @@ background-color: red;
 .horz-nav-no-float {
   background-color: yellow;
 }
+
 .horz-nav-no-float a {
   margin-left: 0px;
   background-color: red;
@@ -506,8 +516,9 @@ background-color: red;
 #no-left-float-margin {
   margin-left: -13px;
 }
-.horz-nav-float {
-}
+
+.horz-nav-float {}
+
 .horz-nav-float a {
   background-color: red;
   float: left;
@@ -517,6 +528,7 @@ background-color: red;
   background-color: yellow;
   overflow: hidden;
 }
+
 .horz-nav-float-overflow a {
   background-color: red;
   float: left;
@@ -527,6 +539,7 @@ background-color: red;
   background-color: yellow;
   overflow: hidden;
 }
+
 .horz-nav-list-float a {
   background-color: red;
   float: left;
@@ -566,37 +579,53 @@ ol.shorthand-for-custom-image {
 .hsl-colors-p1 {
   background-color: hsl(120, 100%, 50%);
   color: #000;
-} /* green */
+}
+
+/* green */
 
 .hsl-colors-p2 {
   background-color: hsl(120, 100%, 75%);
   color: #000;
-} /* light green */
+}
+
+/* light green */
 
 .hsl-colors-p3 {
   background-color: hsl(120, 100%, 25%);
-} /* dark green */
+}
+
+/* dark green */
 
 .hsl-colors-p4 {
   background-color: hsl(120, 60%, 70%);
   color: #000;
-}  /* pastel green */
+}
+
+/* pastel green */
 
 .hsla-colors-p1 {
   background-color: hsl(120, 100%, 50%, 0.3);
-} /* green */
+}
+
+/* green */
 
 .hsla-colors-p2 {
   background-color: hsl(120, 100%, 75%, 0.3);
-} /* light green */
+}
+
+/* light green */
 
 .hsla-colors-p3 {
   background-color: hsl(120, 100%, 25%, 0.3);
-} /* dark green */
+}
+
+/* dark green */
 
 .hsla-colors-p4 {
   background-color: hsl(120, 60%, 70%, 0.3);
-}  /* pastel green */
+}
+
+/* pastel green */
 
 .text-decoration-overline {
   text-decoration: overline;
@@ -647,12 +676,10 @@ ol.shorthand-for-custom-image {
   line-height: 5px;
 }
 
-
 .line-height-medium {
   color: white;
   line-height: 25px;
 }
-
 
 .line-height-large {
   color: white;
@@ -790,7 +817,6 @@ ol.shorthand-for-custom-image {
   color: blue;
 }
 
-
 .first-last-type-pseudo-elements {
   color: white;
 }
@@ -840,8 +866,10 @@ ol.shorthand-for-custom-image {
   width: 250px;
   height: 100px;
   background-color: #eee;
-  overflow-x: scroll; /* Hide horizontal scrollbar */
-  overflow-y: hidden; /* Add vertical scrollbar */
+  overflow-x: scroll;
+  /* Hide horizontal scrollbar */
+  overflow-y: hidden;
+  /* Add vertical scrollbar */
   white-space: nowrap;
 }
 
@@ -888,4 +916,99 @@ ol.shorthand-for-custom-image {
 .beforeafter-quotes::after {
   content: "\"";
   color: red;
+}
+
+/* Transition examples */
+
+.trans-ex-01 {
+  width: 100px;
+  height: 100px;
+  background: red;
+  transition: width 2s;
+}
+
+.trans-ex-01:hover {
+  width: 300px;
+}
+
+.trans-ex-multi-value {
+  background-color: green;
+  width: 50px;
+  height: 50px;
+  border-radius: 0%;
+  transition: background-color 2s, left 3s, width 3s, height 3s, border-radius 3s;
+}
+
+.trans-ex-multi-value:hover {
+  background-color: blue;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+}
+
+.trans-ex-ease {
+  width: 100px;
+  height: 100px;
+  background: red;
+  transition: width 2s ease;
+}
+
+.trans-ex-ease:hover {
+  width: 300px;
+}
+
+
+.trans-ex-linear {
+  width: 100px;
+  height: 100px;
+  background: red;
+  transition: width 2s linear;
+}
+
+.trans-ex-linear:hover {
+  width: 300px;
+}
+
+.trans-ex-ease-in {
+  width: 100px;
+  height: 100px;
+  background: red;
+  transition: width 2s ease-in;
+}
+
+.trans-ex-ease-in:hover {
+  width: 300px;
+}
+
+.trans-ex-ease-out {
+  width: 100px;
+  height: 100px;
+  background: red;
+  transition: width 2s ease-out;
+}
+
+.trans-ex-ease-out:hover {
+  width: 300px;
+}
+
+.trans-ex-ease-in-out {
+  width: 100px;
+  height: 100px;
+  background: red;
+  transition: width 2s ease-in-out;
+}
+
+.trans-ex-ease-in-out:hover {
+  width: 300px;
+}
+
+.cubic-bezier {
+  width: 100px;
+  height: 100px;
+  background: red;
+  transition: width 2s cubic-bezier(0.1, 0.7, 1.0, 0.1);;
+}
+
+.cubic-bezier:hover {
+  width: 300px;
 }
