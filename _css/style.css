@@ -1055,3 +1055,31 @@ ol.shorthand-for-custom-image {
 .trans-steps-6-end:hover {
   width: 300px;
 }
+
+.trans-delay {
+  width: 100px;
+  height: 100px;
+  background: red;
+  transition: width 1s ease 0s, height 1s ease 1s, background 1s ease 2s;
+}
+
+.trans-delay:hover {
+  width: 300px;
+  height: 150px;
+  background: blue;
+}
+
+.trans-asymmetric {
+  width: 100px;
+  height: 100px;
+  background: red;
+  transition: width 1s ease 0s, height 1s ease 0s, background 1s ease 3s;
+}
+
+.trans-asymmetric:hover {
+  width: 300px;
+  height: 150px;
+  background: blue;
+  border-radius: 25%;
+  transition: border-radius 1s ease-in 0s, width 1s ease-out 1s, height 1s ease-out 2s, background 1s ease-in-out 3s;
+}

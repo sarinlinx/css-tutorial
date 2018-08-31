@@ -16,9 +16,8 @@
 
 <body>
     <a href="../../index.html">Home page</a>
-    <p class="red">Test and create examples of all of these</p>
     <section class="container">
-        <h2>Transitions</h2>
+        <h1>Transitions</h1>
         <div class="row">
             <div class="col">
                 <p>Transition styles have two properties:</p>
@@ -543,11 +542,6 @@ div:hover {
                 </div>
             </div>
 
-
-
-
-
-
             <div class="row">
                 <div class="col-6">
                     <h4>step-end</h4>
@@ -576,11 +570,6 @@ div:hover {
                     <pre class="example"><div class="trans-step-end"></div></pre>
                 </div>
             </div>
-
-
-
-
-
 
 
             <div class="row">
@@ -630,9 +619,9 @@ div:hover {
   height: 100px;
   background: red;
   transition: width 2s steps(6, end);
-  }
+}
 
-  div:hover {
+div:hover {
   width:300px;
 }</pre>
                 </div>
@@ -646,9 +635,6 @@ div:hover {
                     <pre class="example"><div class="trans-steps-6-end"></div></pre>
                 </div>
             </div>
-
-
-
         </section>
 
 
@@ -669,21 +655,43 @@ div:hover {
                 </div>
             </div>
 
+            <div class="row">
+                <div class="col-6">
+                    <h4>Example</h4>
+
+                </div>
+                <div class="col-6">
+                    <pre class="example"><span class="code-html">&lt;div&gt;&lt;/div&gt;</span>
+
+<span class="code-css">div {
+  width: 100px;
+  height: 100px;
+  background: red;
+
+  transition: width 1s ease 0s,
+              height 1s ease 1s,
+              background 1s ease 2s;
+}
+
+.div:hover {
+  width: 300px;
+  height: 150px;
+  background: blue;
+}</pre>
+                </div>
+            </div>
 
             <div class="row">
                 <div class="col-6">
                     <p>These values change at different times due to the delay value.</p>
                 </div>
                 <div class="col-6">
-                    <pre class="example"><span class="code-css">div {
-  transition: width 2s ease 0s,
-  height 2s ease 0s,
-  left 2s ease 2s,
-  background-color 2s ease 4s,
-  border-radius 2s ease 6s;
-}</pre>
+                    <pre class="example"><div class="trans-delay"></div></pre>
                 </div>
             </div>
+
+
+
         </section>
 
 
@@ -708,30 +716,57 @@ div:hover {
 
             <div class="row">
                 <div class="col-6">
+                    <h4>Example</h4>
                     <p>This shows transition styles for the initial state and end state of the object.</p>
+                    <p>Note how transitions are applied 'towards' a state. This means the following:</p>
+                    <ul>
+                        <li>The effect of the end transition is applied first when the object is changing TO the end state.</li>
+
+                        <li>The effect of the initial transition is applied when the object is changing back to the initial state.</li>
+                    </ul>
                 </div>
+
                 <div class="col-6">
-                    <pre class="example"><span class="code-css">/* initial state */
+                    <pre class="example"><span class="code-html">&lt;div&gt;&lt;/div&gt;</span>
+
+<span class="code-css">/* default initial state with transition
+  this is applied only when the original end state is over
+  and the transition is coming back to the initial state */
+
 div {
-  width: 50px;
-  height: 50px;
-  left: 0px;
-  background-color: green;
-  transition: all 2s linear 0s;
+  width: 100px;
+  height: 100px;
+  background: red;
+
+  transition: width 1s ease 0s,
+              height 1s ease 0s,
+              background 1s ease 3s;
 }
 
-/* end state */
-div:hover {
-  width: 200px;
-  height: 200px;
-  left: 500px;
-  background-color: blue;
-  transition: width 1s ease-out 0s,
-              height 1s ease-out 0s,
-              left 1s linear 1s,
-              background-color 1s ease-in-out 2s,
-              border-radius 1s ease-in 3s;
+/* add transition to end state that's different from initial state
+   this allows the transition back to be different
+   this transition is applied first when hovered */
+   
+.div:hover {
+  width: 300px;
+  height: 150px;
+  background: blue;
+  border-radius: 25%;
+
+  transition: border-radius 1s ease-in 0s,
+              width 1s ease-out 1s,
+              height 1s ease-out 2s,
+              background 1s ease-in-out 3s;
 }</pre>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-6">
+                    <p>These values change at different times due to the delay value.</p>
+                </div>
+                <div class="col-6">
+                    <pre class="example"><div class="trans-asymmetric"></div></pre>
                 </div>
             </div>
         </section>
