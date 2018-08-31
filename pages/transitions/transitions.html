@@ -111,7 +111,11 @@ div:hover {
   height: 50px;
   border-radius: 0%;
 
-  transition: background-color 2s, left 3s, width 3s, height 3s, border-radius 3s;
+  transition: background-color 2s,
+              left 3s,
+              width 3s,
+              height 3s,
+              border-radius 3s;
 }</pre>
 
             </div>
@@ -480,13 +484,6 @@ div:hover {
                     <pre class="example"><div class="cubic-bezier"></div></pre>
                 </div>
             </div>
-
-
-
-
-
-
-
         </section>
 
 
@@ -510,27 +507,156 @@ div:hover {
                             <li><strong>steps(n, end)</strong> - with the keyword end, the last step occurs at the end of the transition.</li>
 
                         </ul>
-                        <img src="../../_img/cubic-bezier.png">
+                        <img src="../../_img/step-transitions.png">
                 </div>
             </div>
 
 
+
+            <h3>example</h3>
             <div class="row">
-
-
                 <div class="col-6">
-                    <p>Examples:</p>
+                    <h4>step-start</h4>
                 </div>
                 <div class="col-6">
-                    <pre class="example"><span class="code-css">div {
-  transition: left 2s step-start;
-  transition: left 2s step-end;
-  transition: left 2s steps(6, start);
-  transition: left 2s steps(6, end);
+                    <pre class="example"><span class="code-html">&lt;div&gt;&lt;/div&gt;</span>
+
+<span class="code-css">div {
+  width: 100px;
+  height: 100px;
+  background: red;
+  transition: width 2s step-start;
+  }
+
+  div:hover {
+  width:300px;
 }</pre>
                 </div>
             </div>
+
+            <div class="row">
+                <div class="col-6">
+                    <p>Example of 'step-start'.</p>
+                </div>
+                <div class="col-6">
+                    <pre class="example"><div class="trans-step-start"></div></pre>
+                </div>
+            </div>
+
+
+
+
+
+
+            <div class="row">
+                <div class="col-6">
+                    <h4>step-end</h4>
+                </div>
+                <div class="col-6">
+                    <pre class="example"><span class="code-html">&lt;div&gt;&lt;/div&gt;</span>
+
+<span class="code-css">div {
+  width: 100px;
+  height: 100px;
+  background: red;
+  transition: width 2s step-end;
+  }
+
+  div:hover {
+  width:300px;
+}</pre>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-6">
+                    <p>Example of 'step-end'.</p>
+                </div>
+                <div class="col-6">
+                    <pre class="example"><div class="trans-step-end"></div></pre>
+                </div>
+            </div>
+
+
+
+
+
+
+
+            <div class="row">
+                <div class="col-6">
+                    <h4>steps(6, start)</h4>
+                </div>
+                <div class="col-6">
+                    <pre class="example"><span class="code-html">&lt;div&gt;&lt;/div&gt;</span>
+
+<span class="code-css">div {
+  width: 100px;
+  height: 100px;
+  background: red;
+  transition: width 2s steps(6, start);
+  }
+
+  div:hover {
+  width:300px;
+}</pre>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-6">
+                    <p>Example of 'steps(6, start)'.</p>
+                </div>
+                <div class="col-6">
+                    <pre class="example"><div class="trans-steps-6-start"></div></pre>
+                </div>
+            </div>
+
+
+
+
+
+
+
+            <div class="row">
+                <div class="col-6">
+                    <h4>steps(6, end)</h4>
+                </div>
+                <div class="col-6">
+                    <pre class="example"><span class="code-html">&lt;div&gt;&lt;/div&gt;</span>
+
+<span class="code-css">div {
+  width: 100px;
+  height: 100px;
+  background: red;
+  transition: width 2s steps(6, end);
+  }
+
+  div:hover {
+  width:300px;
+}</pre>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-6">
+                    <p>Example of 'steps(6, end)'.</p>
+                </div>
+                <div class="col-6">
+                    <pre class="example"><div class="trans-steps-6-end"></div></pre>
+                </div>
+            </div>
+
+
+
         </section>
+
+
+
+
+
+
+
 
 
 
@@ -559,6 +685,9 @@ div:hover {
                 </div>
             </div>
         </section>
+
+
+
 
 
 

@@ -35,7 +35,7 @@ h3 {
 }
 
 h4 {
-  color:#00d4ff;
+  color: #00d4ff;
 }
 
 /*___________________________________________________
@@ -957,7 +957,6 @@ ol.shorthand-for-custom-image {
   width: 300px;
 }
 
-
 .trans-ex-linear {
   width: 100px;
   height: 100px;
@@ -1006,9 +1005,53 @@ ol.shorthand-for-custom-image {
   width: 100px;
   height: 100px;
   background: red;
-  transition: width 2s cubic-bezier(0.1, 0.7, 1.0, 0.1);;
+  transition: width 2s cubic-bezier(0.1, 0.7, 1.0, 0.1);
 }
 
 .cubic-bezier:hover {
+  width: 300px;
+}
+
+.trans-step-start {
+  width: 100px;
+  height: 100px;
+  background: red;
+  transition: width 2s step-start;
+}
+
+.trans-step-start:hover {
+  width: 300px;
+}
+
+.trans-step-end {
+  width: 100px;
+  height: 100px;
+  background: red;
+  transition: width 2s step-end;
+}
+
+.trans-step-end:hover {
+  width: 300px;
+}
+
+.trans-steps-6-start {
+  width: 100px;
+  height: 100px;
+  background: red;
+  transition: width 2s steps(6, start);
+}
+
+.trans-steps-6-start:hover {
+  width: 300px;
+}
+
+.trans-steps-6-end {
+  width: 100px;
+  height: 100px;
+  background: red;
+  transition: width 2s steps(6, end);
+}
+
+.trans-steps-6-end:hover {
   width: 300px;
 }
