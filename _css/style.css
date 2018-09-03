@@ -36,6 +36,7 @@ h3 {
 
 h4 {
   color: #00d4ff;
+  padding: 1.2rem 0;
 }
 
 h5 {
@@ -1098,6 +1099,34 @@ ol.shorthand-for-custom-image {
 
 .transform-translate {
   transform: translate(50px, 50px);
+}
+
+.transform-scaleX {
+  transform: scaleX(1.5);
+}
+
+.transform-scaleY {
+  transform: scaleY(1.5);
+}
+
+.transform-scale {
+  transform: scale(1.5, -1.5);
+}
+
+.transform-skewX {
+  transform: skewX(20deg);
+}
+
+.transform-skewY {
+  transform: skewY(20deg);
+}
+
+.transform-skew {
+  transform: skew(20deg, 20deg);
+}
+
+.transform-rotate {
+  transform: rotate(45deg);
 }
 
 div#img-container {
