@@ -38,6 +38,10 @@ h4 {
   color: #00d4ff;
 }
 
+h5 {
+  color: #ff6060;
+}
+
 /*___________________________________________________
 Customizations
 ___________________________________________________*/
@@ -1082,4 +1086,25 @@ ol.shorthand-for-custom-image {
   background: blue;
   border-radius: 25%;
   transition: border-radius 1s ease-in 0s, width 1s ease-out 1s, height 1s ease-out 2s, background 1s ease-in-out 3s;
+}
+
+.transform-translateX {
+  transform: translateX(55px);
+}
+
+.transform-translateY {
+  transform: translateY(55px);
+}
+
+.transform-translate {
+  transform: translate(50px, 50px);
+}
+
+div#img-container {
+  transform: perspective(1200px rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  transform-style: flat;
+}
+
+div#img-container img {
+  transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
 }
