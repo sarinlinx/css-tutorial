@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="../../_css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../../_css/style.css">
+
+    <title>Background colors and gradients</title>
+</head>
+
+<body>
+    <a href="../../index.html">Home page</a>
+
+
+
+
+    <section class="container">
+        <h1>Setting a background color</h1>
+        <div class="row">
+            <div class="col-6">
+                <p>Setting a background color</p>
+            </div>
+
+            <div class="col-6">
+                <pre class="example"><span class="code-css">body {
+  background-color: lightblue;
+}</pre>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+        <section class="container">
+            <h1>Background transparency</h1>
+            <div class="row">
+                <div class="col-6">
+                    <p>If there is already a background added, you can add a second layer over it. You can then adjust this second layer's transparency value.</p>
+                    <p><strong>Make sure this is NO SPACE between rgba and the parenthese.</strong></p>
+                </div>
+
+                <div class="col-6">
+                    <pre class="example"><span class="code-html">&lt;div class="image-bg"&gt;
+      &lt;p class="rgba-transparency"&gt;Testing to see how the transparency works.&lt;/p&gt;
+    &lt;/div&gt;</span>
+
+    <span class="code-css">.image-bg {
+      background: url("images/note.jpg")
+    }
+
+    .rgba-transparency {
+      background: rgba(199, 21, 133, .25);
+    }</span></pre>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-6">
+                    <p>The result will be a transparent layer over top the current background.</p>
+                </div>
+
+                <div class="col-6">
+                    <pre class="example"><div class="image-bg">
+    <p class="rgba-transparency">Testing to see how the transparency works.</p>
+    </div></pre>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+
+        <section class="container">
+            <h1>Linear gradient background</h1>
+            <div class="row">
+                <div class="col-6">
+                    <p>This shows how to add a background of 2 colors that blend into each other.</p>
+                </div>
+
+                <div class="col-6">
+                    <pre class="example"><span class="code-html">&lt;p class="linear-gradient"&gt;Testing to see how the linear gradient works.&lt;/p&gt;</span>
+
+    <span class="code-css">.linear-gradient {
+      background: linear-gradient(red, green)
+    }</span></pre>
+                </div>
+            </div>
+
+
+
+            <div class="row">
+                <div class="col-6">
+                    <p>The result will be a transparent layer over top the current background.</p>
+                </div>
+
+                <div class="col-6">
+                    <pre class="example"><p class="linear-gradient">Testing to see how the linear gradient works.</p></pre>
+                </div>
+            </div>
+
+
+
+
+            <div class="row">
+                <div class="col-6">
+                    <p>You can also add a 3rd color.</p>
+                </div>
+
+                <div class="col-6">
+                    <pre class="example"><span class="code-html"><span class="code-html">&lt;p class="linear-gradient-3colors"&gt;Testing to see how the linear gradient works.&lt;/p&gt;
+        </span>
+
+    <span class="code-css">.linear-gradient-3colors {
+      background: linear-gradient-3colors(red, yellow, green),
+    }</span></pre>
+
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-6">
+                    <p>The result will be a transparent layer over top the current background.</p>
+                </div>
+
+                <div class="col-6">
+                    <pre class="example"><p class="linear-gradient-3colors">Testing to see how the linear gradient works.</p></pre>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+
+        <section class="container">
+            <h1>Transparent linear gradient over a background image</h1>
+            <div class="row">
+                <div class="col-6">
+                    <p>This shows how to add a transparent linear gradient of 3 colors over a background image.</p>
+                    <p><strong>The linear-gradient values must come first.</strong></p>
+                </div>
+                <div class="col-6">
+                    <pre class="example"><span class="code-html">&lt;div class="image-bg"&gt;
+      &lt;p class="transparent-linear-gradient"&gt;Transparent linear gradient over an background image.&lt;/p&gt;
+    &lt;div&gt;
+    </span>
+
+    <span class="code-css">.transparent-linear-gradient {
+      height: 40px;
+      background: linear-gradient(rgba(255, 0, 0, 0.35),  /*red*/
+      rgba(255, 255, 0, 0.35), /*yellow*/
+      rgba(0, 0, 255, 0.35)),  /*blue*/
+      url("images/backgrounds/examples/white-bg.jpg");
+    }</span></pre></div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-6">
+                    <p>The result will be a transparent gradient over a background image.</p>
+                </div>
+
+                <div class="col-6">
+                    <pre class="example"><div class="image-bg">
+          <p class="transparent-linear-gradient">Transparent linear gradient over an background image.</p>
+        </div></pre></div>
+            </div>
+        </section>
+
+
+
+
+    <script src="../../_js/jquery.js"></script>
+    <script src="../../_js/bootstrap.bundle.js"></script>
+</body>
+
+</html>

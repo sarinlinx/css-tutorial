@@ -46,6 +46,17 @@ h5 {
 /*___________________________________________________
 Customizations
 ___________________________________________________*/
+.breadcrumb {
+  background-color: #000;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  color: #ffcd2f;
+}
+
+.breadcrumb-item.active {
+  color: #ffcd2f;
+}
 
 .highlight-word {
   font-size: 22px;
@@ -449,6 +460,13 @@ ___________________________________________________*/
   width: 50px;
   text-align: center;
   color: #fff;
+}
+
+
+.alignimg-margin-per {
+  width: 50px;
+  display: block;
+  margin: 0 50%;
 }
 
 .alignimg-margin {
