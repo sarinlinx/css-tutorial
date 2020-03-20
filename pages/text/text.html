@@ -11,7 +11,7 @@
     <link rel="stylesheet" type="text/css" href="../../_css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <title>Pseudo Selectors</title>
+    <title>Text</title>
 </head>
 
 <body>
@@ -20,81 +20,43 @@
 
 
 
-    <section class="container">
-        <h2>Text color</h2>
-        <div class="row">
-            <div class="col-6">
-                <p>With CSS, a color is most often specified by:</p>
-                <ul>
-                    <li>A color name like "red"</li>
-                    <li>A HEX value like "#ff0000"</li>
-                    <li>An rgb value like "rgb(255, 0, 0)"</li>
-                </ul>
-            </div>
-            <div class="col-6">
-                <pre class="example"><span class="code-css">p {
-  color: red;
-  color: #ff0000;
-  color: rgb(255, 0, 0);
-}</span></pre>
-            </div>
-            <div class="alert alert-note">
-                <div class="alert-icon">
-                    <img src="../../_img/note-icon.png" width="60" height="60">
+
+
+
+
+
+
+        <section class="container">
+            <h2>Aligning text</h2>
+            <div class="row">
+                <div class="col-6">
+                    <p>Use text-align to set the horizontal alignment of text. Text can be left or right aligned, centered, or justified.</p>
                 </div>
-                <div class="alert-content">
-                    <p>For W3C compliant CSS: If you define the color property, you must also define the background-color.</p>
+                <div class="col-6">
+                    <pre class="example"><span class="code-css">h1 {
+      text-align: center;
+    }
+
+    h2 {
+      text-align: left;
+    }
+
+    h3 {
+      text-align: right;
+    }</span></pre></div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-6">
+                    <p>justify will stretch so that every line has equal width, and the left and right margins are straight (like in magazines and newspapers).</p>
                 </div>
-            </div>
-        </div>
-    </section>
-
-
-
-
-    <section class="container">
-        <h2>Text decoration</h2>
-        <div class="row">
-            <div class="col-6">
-                <p>text-decoration allows you to add or remove decorations from text.</p>
-                <p>The value text-decoration: none; is often used to remove underlines from links.</p>
-            </div>
-            <div class="col-6">
-                <pre class="example"><span class="code-css">h1 {
-  text-decoration: overline;
-}
-
-h2 {
-  text-decoration: line-through;
-}
-
-h3 {
-  text-decoration: underline;
-}
-
-h3 {
-  text-decoration: none;
-}</span></pre></div>
-        </div>
-
-        <div class="row">
-            <div class="col-6">
-                <p>Example:</p>
-            </div>
-            <div class="col-6">
-                <pre class="example"><span class="text-decoration-overline">Overline</span>
-
-<span class="text-decoration-line-through">Line Through</span>
-
-<span class="text-decoration-underline">Underline</span>
-
-<span class="text-decoration-none">None</span></pre>
-            </div>
-        </div>
-    </section>
-
-
-
+                <div class="col-6">
+                    <pre class="example"><span class="code-css">div {
+      text-align: justify;
+    }</pre>
+                </div>
+            </div>  </section>
 
 
 
@@ -347,384 +309,12 @@ div {
 
 
 
-    <section class="container">
-        <h2>text-shadow</h2>
-        <div class="row">
-            <div class="col-6">
-                <p>text-shadow adds a shadow to the text in different directions. The following example specifies the position of the horizontal shadow (3px), the position of the vertical shadow (2px) and the color of the shadow (red):</p>
-                <p>SYNTAX: text-shadow: h-shadow v-shadow blur-radius color;</p>
-            </div>
-            <div class="col-6">
-                <pre class="example"><span class="code-css">h1 {
-  text-shadow: 3px 2px red;
-}</span></pre>
-            </div>
-        </div>
 
 
-        <div class="row">
-            <div class="col-6">
-                <p>Example. Horizontal red shadow to the right.</p>
-            </div>
-            <div class="col-6">
-                <pre class="example"><span class="code-css">div {
-  text-shadow: 3px 0px red;
-}</span>
 
-<span class="txt-shadow-hor-right-red">Horizontal red text shadow to the right.</span>
-    </pre>
-            </div>
-        </div>
 
 
 
-        <div class="row">
-            <div class="col-6">
-                <p>Example. Horizontal red shadow to the left.</p>
-            </div>
-            <div class="col-6">
-                <pre class="example"><span class="code-css">div {
-  text-shadow: -3px 0px red;
-}</span>
-
-<span class="txt-shadow-hor-left-red">Horizontal red text shadow to the left.</span>
-    </pre>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-6">
-                <p>Example. Vertical downwards red shadow.</p>
-            </div>
-            <div class="col-6">
-                <pre class="example"><span class="code-css">div {
-  text-shadow: 0px 3px red;
-}</span>
-
-<span class="txt-shadow-vert-down-red">Vertical downwards red text shadow.</span>
-    </pre>
-
-            </div>
-        </div>
-
-
-        <div class="row">
-            <div class="col-6">
-                <p>Example. Vertical upwards red shadow.</p>
-            </div>
-            <div class="col-6">
-                <pre class="example"><span class="code-css">div {
-  text-shadow: 0px -3px red;
-}</span>
-
-<span class="txt-shadow-vert-up-red">Vertical upwards red text shadow.</span>
-    </pre>
-
-            </div>
-        </div>
-
-
-        <div class="row">
-            <div class="col-6">
-                <p>Example. Horizontal and Vertical yellow shadow with a blur.</p>
-            </div>
-            <div class="col-6">
-                <pre class="example"><span class="code-css">div {
-  text-shadow: 3px 3px 3px yellow;
-}</span>
-
-<span class="txt-shadow-blur-red">Text shadow with a blur.</span>
-    </pre>
-            </div>
-        </div>
-    </section>
-
-
-
-
-
-
-
-
-
-    <section>
-        <h2 class="heading-emphasis">white-space</h2>
-        <div class="row">
-            <div class="col">
-                <p>white-space specifies how white-space is handled inside an element. Value are:</p>
-                <ul>
-                    <li><strong>normal</strong> - This is default</li>
-                    <li><strong>nowrap</strong> - Text will never wrap to the next line. The text continues on the same line until a &lt;br&gt; tag is encountered.</li>
-                    <li><strong>pre</strong> - Text will never wrap to the next line. Acts like the &lt;pre&gt; tag in HTML. Text will only wrap if the HTML is formatted that way, or if you use a &lt;br&gt; tag. Text will also indent according to how the
-                        HTML is formatted.
-                    </li>
-                    <li><strong>pre-line</strong> - Same as &lt;pre&gt; in that text will wrap how HTML is formatted, or if you use a &lt;br&gt; tag. But it's different in that text will still wrap when necessary, for example, if the browser window can't
-                        view it all, it will automatically wrap. Also, HTML formatting is ignored for indented text. Only line breaks are recognized in HTML.</li>
-                    <li><strong>pre-wrap</strong> - This is the same as pre-line, except that indented text is recognized, just like 'pre'. The difference from 'pre' is that the text eventually wraps.</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section class="container">
-        <div class="row">
-            <div class="col-6">
-                <p>Example: nowrap</p>
-                <p>Ignore the scrollbar. Text will be cut off and never move down to the next line.</p>
-            </div>
-            <div class="col-6">
-                <pre class="example"><span class="code-css">p {
-  white-space: nowrap;
-}</span>
-<span class="white-space-no-wrap">This is a very long line that by default, should break to the next line of text so the reader can view all text.</span>
-    </pre>
-            </div>
-        </div>
-
-
-        <div class="row">
-            <div class="col-6">
-                <p>Example: pre</p>
-                <p>Text will be cut off and never move down to the next line. Text will indent or wrap if HTML is formatted that way. Text will wrap if a &lt;br&gt; tag is used.</p>
-            </div>
-            <div class="col-6">
-                <pre class="example"><span class="code-html">&lt;p&gt;This line breaks here
-since the HTML code is formatted that way.&lt;/p&gt;
-    This line is indented since HTML is formatted this way. But this will be cut off since pre doesn't wrap text. asdfasdfasdfasdfasdfasdfasdf</span>
-
-<span class="code-css">p {
-  white-space: pre;
-}</span>
-
-<span class="white-space-pre">This line breaks here
-since the HTML code is formatted that way.
-    This line is indented since HTML is formatted this way. But this will be cut off since pre doesn't wrap text. asdfasdfasdfasdfasdfasdfasdf</span></pre>
-            </div>
-        </div>
-
-
-
-        <div class="row">
-            <div class="col-6">
-                <p>Example: pre-line</p>
-                <p>Different from 'pre' in that text will wrap and HTML indented text is not recognized.</p>
-                <p>It's the same as 'pre' in that line breaks in HTML are recognized and &lt;br&gt; tags are recognized.</p>
-            </div>
-            <div class="col-6">
-                <pre class="example"><span class="code-html">&lt;p&gt;This line breaks here
-since the HTML code is formatted that way.
-This line is indented in  HTML, but is not recognized.
-If the HTML was on one line, this would eventually wrap to the next line at the end of the browser window.&lt;/p&gt;</span>
-
-<span class="code-css">p {
-  white-space: pre-line;
-}</span>
-
-<span class="white-space-pre-line">This line breaks here
-since the HTML code is formatted that way.
-This line is indented in  HTML, but is not recognized.
-If the HTML was on one line, this would eventually wrap to the next line at the end of the browser window.</span>
-</pre>
-            </div>
-        </div>
-
-
-
-        <div class="row">
-            <div class="col-6">
-                <p>Example: pre-wrap</p>
-                <p>Text will wrap when needed. Otherwise it's the same as 'pre'</p>
-            </div>
-            <div class="col-6">
-                <pre class="example"><span class="code-html">&lt;p&gt;This line breaks here
-    since the HTML code is formatted that way.
-      This line is indented in HTML and IS recognized.
-    If the HTML was on one line, this would eventually wrap to the next line at the end of the browser window.&lt;/p&gt;</span>
-
-<span class="code-css">p {
-  white-space: pre-wrap;
-}</span>
-
-<span class="white-space-pre-wrap">This line breaks here
-since the HTML code is formatted that way.
-  This line is indented in HTML and IS recognized.
-If the HTML was on one line, this would eventually wrap to the next line at the end of the browser window.</span>
-</pre>
-            </div>
-        </div>
-    </section>
-
-
-
-
-
-
-
-
-    <section class="container">
-        <h2>text-overflow</h2>
-        <div class="row">
-            <div class="col">
-                <p>text-overflow specifies how overflowed content (that is not displayed), should be notified to the user.</p>
-                <p>Both of the following properties are required for text-overflow:</p>
-                <ul>
-                    <li>white-space: nowrap;</li>
-                    <li>overflow: hidden;</li>
-                </ul>
-
-                <p>Possible values are:</p>
-                <ul>
-                    <li>clip - Default. The text is clipped and not accessible.</li>
-                    <li>ellipsis - Render an ellipsis ("...") to represent the clipped text.</li>
-                    <li>string - Render the given string to represent the clipped text.</li>
-                </ul>
-                <div class="alert alert-note">
-                    <div class="alert-icon">
-                        <img src="../../_img/note-icon.png" width="60" height="60">
-                    </div>
-                    <div class="alert-content">
-                        <p>This does not work on inline elements like a span tag.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <section class="container">
-        <h3>clip</h3>
-        <div class="row">
-            <div class="col-6">
-                <p>clip</p>
-            </div>
-            <div class="col-6">
-                <pre class="example"><span class="code-html">&lt;div&gt;Text that won't fit in the box is clipped and not shown.&lt;/p&gt;</span>
-
-<span class="code-css">div {
-  text-overflow: clip;
-  white-space: nowrap;
-  overflow: hidden;
-  width: 335px;
-  border: 1px solid #000000;
-  color: white;
-}</span>
-    </pre>
-            </div>
-          </div>
-
-            <div class="row">
-                <div class="col-6">
-                    <p>Example of clip.</p>
-                </div>
-                <div class="col-6">
-                    <p class="text-overflow-clip">Text that won't fit in the box is clipped and not shown.</p>
-                </div>
-            </div>
-    </section>
-
-<section class="container">
-    <h3>ellipsis</h3>
-    <div class="row">
-        <div class="col-6">
-            <p>ellipsis</p>
-        </div>
-  <div class="col-6">
-        <pre class="example"><span class="code-html">&lt;div&gt;Text that won't fit in the box is shown as an ellipsis.&lt;/p&gt;</span>
-
-<span class="code-css">div {
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-  width: 335px;
-  border: 1px solid #000000;
-  color: white;
-}</span>
-    </pre>
-    </div>
-</div>
-
-    <div class="row">
-        <div class="col-6">
-            <p>Example of ellipsis.</p>
-        </div>
-  <div class="col-6">
-            <p class="text-overflow-ellipsis">Text that won't fit in the box is clipped and not shown.</p>
-    </div>
-</div>
-</section>
-
-
-<section class="container">
-    <h3>string</h3>
-    <span class="red">find an example</span>
-</section>
-
-
-
-
-
-
-
-
-<section class="container">
-    <h2>text-decoration</h2>
-<div class="row">
-    <div class="col">
-    <p>text-decoration specifies the decoration added to text such as underline.</p>
-    <p>Optional values are:</p>
-    <ul>
-        <li>overline</li>
-        <li>underline</li>
-        <li>line-through</li>
-        <li>colors</li>
-    </ul>
-  </div>
-</div>
-
-
-    <h3 class="heading-emphasis">Examples</h3>
-    <div class="row">
-        <div class="col-6">
-            <p>overline</p>
-        </div>
-  <div class="col-6">
-        <pre class="example"><span class="code-css">div {
-  text-decoration-line: overline red;
-}</span>
-
-<span class="text-decoration-overline">This text is overlined in red</span>
-    </pre>
-    </div>
-  </div>
-
-    <div class="row">
-        <div class="col-6">
-            <p>underline</p>
-        </div>
-  <div class="col-6">
-        <pre class="example"><span class="code-css">div {
-  text-decoration-line: underline green;
-}</span>
-
-<span class="text-decoration-underline">This text is underlined in green</span>
-    </pre>
-    </div>
-</div>
-
-    <div class="row">
-        <div class="col-6">
-            <p>line-through</p>
-        </div>
-  <div class="col-6">
-    <pre class="example"><span class="code-css">div {
-  text-decoration-line: line-through blue;
-}</span>
-
-<span class="text-decoration-line-through">This text has a blue line through it</span>
-    </pre>
-    </div>
-</div>
-</section>
 
 
 

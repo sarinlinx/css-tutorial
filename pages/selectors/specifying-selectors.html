@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="../../_css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../../_css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Specifying Selectors</title>
+</head>
+
+<body>
+    <a href="../../index.html">Home page</a>
+
+
+
+        <section class="container">
+            <h1>Specifying element selectors</h1>
+
+            <p>You can specifically assign a class to only one HTML element using a period to separate them.</p>
+            <div class="row">
+                <div class="col-6">
+                    <p>This CSS applies only to h1 elements with a class of 'center'.</p>
+                </div>
+                <div class="col-6">
+                    <pre class="example"><span class="code-css">h1.center {
+      text-align: center;
+    }</span></pre>
+                </div>
+            </div>
+            <!--end row-->
+        </section>
+
+
+
+
+            <section class="container">
+                <h1>Descendent selectors</h1>
+                <div class="row">
+                    <div class="col">
+                        <p>Use multiple selectors, separated by a space to match the descendent elements.</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-6">
+                        <p>Example: Select a link in a paragraph and change the color to red.</p>
+                    </div>
+                    <div class="col-6">
+                        <pre class="example"><span class="code-html">&lt;p&gt;Please click &lt;a href="#"&gt;HERE!!!&lt;/a&gt;&lt;/p&gt;</span>
+
+        <span class="code-css">p a {
+          color: red;
+        }</span>
+
+        <p class="white">Please click <a class="descendent-selector-anchor-in-p" href="#">HERE!!!</a></p></pre>
+                    </div>
+                </div>
+            </section>
+            <!--end row-->
+
+
+            <section class="container">
+                <div class="row">
+                    <div class="col">
+                        <h2>Multiple descendent selectors</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <p>Select paragraphs and links inside &lt;section&gt;</p>
+                    </div>
+                    <div class="col-6">
+                        <pre class="example"><span class="code-html">&lt;section&gt;
+          &lt;p&gt;Please click &lt;a href="#"&gt;HERE!!!&lt;/a&gt;&lt;/p&gt;
+        &lt;/section&gt;</span>
+
+            <span class="code-css">section p a {
+          color: blue;
+        }</span>
+            <section class="descendent-selector-p-and-anchor-in-section">
+            <p>Please click <a href="#">HERE!!!</a></p>
+            </section></pre></div>
+                </div>
+            </section>
+
+
+
+
+        <section class="container">
+            <h2 class="heading-emphasis">Descendant selectors</h2>
+
+            <div class="row">
+                <div class="col">
+                    <p>Descendant selectors add a space between the selectors. This makes it possible to match all elements that are descendants of a specified element.</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-6">
+                    This example looks inside all &lt;div&gt; elements and selects any &lt;p&gt; elements inside.
+                </div>
+                <div class="col-6">
+                    <pre class="example"><span class="code-css">div p {
+      background-color: yellow;
+    }</span></pre>
+                </div>
+                <!--close row-->
+            </div>
+
+
+
+            <div class="row">
+                <div class="col-6">
+                    You can also skip levels. This example looks inside all &lt;ancestor&gt; elements and selects any &lt;descendant&gt; elements inside.
+                </div>
+                <div class="col-6">
+                    <pre class="example"><span class="code-html">&lt;div class="ancestor"&gt;
+      &lt;div class="parent"&gt;
+        &lt;div class="child"&gt;<span class="white">This is not styled</span>&lt;/div&gt;
+          &lt;div class="descendant"&gt;<span class="white">This IS styled</span>&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;</pre></div>
+            </div>
+
+            <div class="row">
+                <div class="col-6">
+                    CSS to select the descendant.
+                </div>
+                <div class="col-6">
+                    <pre class="example">
+    <span class="code-css">.ancestor .descendant {
+      color: blue;
+    }</pre></div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-6">
+                    Result:
+                </div>
+                <div class="col-6">
+                    <pre class="example"><span class="white">This is not styled</span>
+    <span class="blue">This IS styled</span></pre>
+                </div>
+                <!--End row-->
+            </div>
+
+            <div class="row">
+                <div class="col-6">
+                    <p>Here is another example that looks inside any &lt;section&gt; elements for &lt;a&gt; elements.</p>
+                </div>
+                <div class="col-6">
+                    <pre class="example"><span class="code-html">&lt;section&gt;
+      &lt;div class="example"&gt;
+        &lt;p&gt;Link goes here &lt;a href="#"&gt;link&lt;/a&gt;.&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;</pre>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-6">
+                    CSS to select the anchor tag within the section tag.
+                </div>
+                <div class="col-6">
+                    <pre class="example">
+    <span class="code-css">section a {
+      /*styles*/
+    }</pre></div>
+                <!--End row-->
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+
+        <section class="container">
+            <h2 class="heading-emphasis">Child selectors</h2>
+            <div class="row">
+                <div class="col-6">
+                    <p>Select ONLY the child element using > symbol between parent and child elements.</p>
+                    <p>This example ONLY looks in the &lt;section&gt; element for a direct &lt;a&gt; element.
+                </div>
+                <div class="col-6">
+                    <pre class="example"><span class="code-html">&lt;section&gt;
+      &lt;a href="#"&gt;child 1&lt;/a&gt;
+      &lt;a href="#"&gt;child 2&lt;/a&gt;
+
+      &lt;div&gt;
+        &lt;a href="#"&gt;descendant&lt;/a&gt;
+      &lt;/div>
+    &lt;/section&gt;</span></pre></div>
+            </div>
+
+            <div class="row">
+                <div class="col-6">
+                    <p>CSS to select the first two anchor tag children inside the section tag. The 3rd isn't a child so it's not select.</p>
+                </div>
+                <div class="col-6">
+                    <pre class="example">
+    <span class="code-css">section > a {
+      color: green;
+    }</pre></div>
+            </div>
+
+            <div class="row">
+                <div class="col-6">
+                    Result:
+                </div>
+                <div class="col-6">
+                    <pre class="example"><span class="green">child 1</span>
+    <span class="green">child 2</span>
+    <span class="blue"><span class="white">descendant</span></pre>
+                </div>
+            </div>
+            <!--close row-->
+        </section>
+
+
+
+
+
+
+
+
+        <section class="container">
+            <h2 class="heading-emphasis">Adjacent Sibling Selectors</h2>
+            <div class="row">
+                <div class="col-6">
+                    <p>This example ONLY selects the paragraph element directly after an &lt;h2&gt; element.</p>
+                    <p>Adjacent Sibling Selectors only select the element immediately following a specified element. They are separated with a + symbol.</p>
+                </div>
+                <div class="col-6">
+                    <pre class="example"><span class="code-html">&lt;p>Paragraph 1&lt;/p&gt;
+
+    &lt;h2&gt;Heading&lt;/h2&gt;
+    &lt;p&gt;Paragraph 2&lt;/p&gt;
+    &lt;p&gt;Paragraph 3&lt;/p&gt;</span></pre></div>
+            </div>
+
+            <div class="row">
+                <div class="col-6">
+                    CSS to select the paragraph immediately following the h2 tag. The 3rd doesn't immediately follow so it's not selected.
+                </div>
+                <div class="col-6">
+                    <pre class="example">
+    <span class="code-css">h2 + p {
+      color: blue;
+    }</pre></div>
+            </div>
+
+            <div class="row">
+                <div class="col-6">
+                    Result:
+                </div>
+                <div class="col-6">
+                    <pre class="example"><span class="white">Paragraph 1</span>
+    <span class="white">Heading</span>
+    <span class="blue">Paragraph 2</span>
+    <span class="white">Paragraph 3</span>
+    </span></pre>
+                </div>
+            </div>
+            <!--close row-->
+        </section>
+
+
+
+
+
+
+
+
+        <section class="container">
+            <h2>General Sibling Selector</h2>
+
+            <div class="row">
+                <div class="col-6">
+                    <p>General Sibling Selectors select all specified elements following a specified element. They are separated with a ~ symbol.</p>
+                    <p>This example selects all paragraphs following the &lt;div&gt; element.</p>
+                </div>
+                <div class="col-6">
+                    <pre class="example"><span class="code-html">&lt;p&gt;Paragraph 1.&lt;/p&gt;
+    &lt;div&gt;
+      &lt;p&gt;Paragraph 2.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;p&gt;Paragraph 3.&lt;/p&gt;
+    &lt;p&gt;Paragraph 4.&lt;/p&gt;</pre></div>
+            </div>
+
+            <div class="row">
+                <div class="col-6">
+                    CSS to select only the paragraphs that follow the div tag.
+                </div>
+                <div class="col-6">
+                    <pre class="example"><span class="code-css">div ~ p {
+      color: red;
+    }</pre></div>
+            </div>
+
+            <div class="row">
+                <div class="col-6">
+                    <p>Result:</p>
+                </div>
+                <div class="col-6">
+                    <pre class="example"><span class="white">Paragraph 1</span>
+    <span class="white">Paragraph 2</span>
+    <span class="red">Paragraph 3</span>
+    <span class="red">Paragraph 4</span></span></pre>
+                </div>
+            </div>
+            <!--close row-->
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="../../_js/jquery.js"></script>
+    <script src="../../_js/bootstrap.bundle.js"></script>
+</body>
+
+</html>

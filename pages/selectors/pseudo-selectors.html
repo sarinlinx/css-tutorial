@@ -101,6 +101,127 @@
 
 
 
+        <section class="container">
+            <h1>Pseudo-Class Selectors</h1>
+            <div class="row">
+                <div class="col">
+                    <p>pseudo selectors are keywords added after a selector with a colon symbol.</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-6">
+                    <p>Change the color when hovering over a link.</p>
+                </div>
+                <div class="col-6">
+                    <pre class="example"><span class="code-css">a:hover {
+      color: green;
+    }</span>
+
+    <span class="pseudo-link-hover">Hover over this link to see it change to green.</span></pre>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section class="container">
+            <h1>Selecting first and last children of parent elements</h1>
+            <div class="row">
+                <div class="col">
+                    <p>Apply a pseudo selector to a child element of a parent to specifically target that child.</p>
+                    <div class="alert alert-note">
+                        <div class="alert-icon">
+                            <img src="../../_img/note-icon.png" width="60" height="60">
+                        </div>
+                        <div class="alert-content">
+                            <p>This must be added to the child element.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-6">
+                    <p>Select the first and last child elements from the parent.</p>
+                    <p>NOTE how the first-child and last-child selectors are added to the child elements, not the parent.</p>
+
+                </div>
+                <div class="col-6">
+                    <pre class="example"><span class="code-html">&lt;section&gt;
+      &lt;p&gt;Paragraph&lt;/p&gt; &lt;!-- this is red --&gt;
+      &lt;p&gt;Paragraph&lt;/p&gt;
+      &lt;p&gt;Paragraph&lt;/p&gt; &lt;!-- this is blue --&gt;
+    &lt;/section></span>
+
+    <span class="code-css">p:first-child {
+      color: red;
+    }
+
+    p:last-child {
+      color: blue;
+    }</span>
+
+        <section>
+    <span class="first-last-child-pseudo-elements">Paragraph &lt;!-- this is red --&gt;</span>
+    <span class="first-last-child-pseudo-elements">Paragraph</span>
+    <span class="first-last-child-pseudo-elements">Paragraph &lt;!-- this is blue --&gt;</span>
+        </section></pre>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+
+        <section class="container">
+            <h1>Selecting first and last type from a parent element.</h1>
+            <div class="row">
+                <div class="col">
+                    <p>This is different from first-child last-child since it doesn't matter what order the HTML is in.</p>
+                    <p>The first type of the specified element will be selected.</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-6">
+                    <p>Select the first and last paragraph elements in a parent.</p>
+                    <p>Notice how the paragraph tags are not first or last inthe HTML, but this pseudo element allows you to target them since they are the first and last of that specific type of element.</p>
+                </div>
+
+                <div class="col-6">
+                    <pre class="example"><span class="code-html">&lt;section&gt;
+      &lt;p&gt;Paragraph&lt;/p&gt; &lt;!-- this is red --&gt;
+      &lt;p&gt;Paragraph&lt;/p&gt;
+      &lt;p&gt;Paragraph&lt;/p&gt; &lt;!-- this is blue --&gt;
+      &lt;a href="#"&gt;link&lt;/a&gt;
+    &lt;/section&gt;</span>
+
+    <span class="code-css">p:first-of-type {
+      color: red;
+    }
+
+    p:last-of-type {
+      color: blue;
+    }</span>
+
+    <div class="white">
+      <span class="first-last-type-pseudo-elements">Paragraph</span> <!-- this is red -->
+      <span class="first-last-type-pseudo-elements">Paragraph</span>
+      <span class="first-last-type-pseudo-elements">Paragraph</span> <!-- this is blue -->
+      <a class="white" href="#">link</a>
+    </div></pre>
+                </div>
+            </div>
+
+        </section>
+
+
+
+
 
 
 

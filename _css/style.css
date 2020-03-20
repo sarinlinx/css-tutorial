@@ -1155,3 +1155,15 @@ div#img-container {
 div#img-container img {
   transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
 }
+
+.relative-parent {
+  width: 75%;
+  position: relative;
+  border: 1px solid cyan;
+}
+
+.absolute-date {
+  position: absolute;
+  top: 0; /*right at top with zero pixels between element*/
+  right: 0;/*no space between container and element*/
+}

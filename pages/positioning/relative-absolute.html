@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="../../_css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../../_css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Relative vs Absolute</title>
+</head>
+
+<body>
+    <a href="../../index.html">Home page</a>
+
+
+
+
+
+
+    <section class="container">
+        <h2>Absolute</h2>
+        <div class="row">
+            <div class="col-6">
+                <p>The parent element must be set to relative.</p>
+            </div>
+            <div class="col-6">
+<pre class="example"><span class="code-css">.blog-post {
+  width: 75%;
+  <span class="standout">position: relative;</span>
+  border: 1px solid cyan;
+}
+
+.date {
+  <span class="standout">position: absolute;</span>
+  top: 0; /*right at top with zero pixels between element*/
+  right: 0;/*no space between container and element*/
+}</span>
+
+<span class="code-html">&lt;div class="parent-div"&gt;
+  &lt;p&gt;Blog post section&lt;/p&gt;
+  &lt;p&gt;Blog post section&lt;/p&gt;
+  &lt;p&gt;Blog post section&lt;/p&gt;
+  &lt;p class="date">This appears on the top right.&lt;/p&gt;
+&lt;/div&gt;
+</span></pre></div>
+        </div>
+
+        <h3>Example</h3>
+        <p><a href="../examples/relative-vs-absolute.html" target="_blank">Click to view example.</a></p>
+
+
+
+
+         </section>
+
+
+
+
+
+    <script src="../../_js/jquery.js"></script>
+    <script src="../../_js/bootstrap.bundle.js"></script>
+</body>
+
+</html>

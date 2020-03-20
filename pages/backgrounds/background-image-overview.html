@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="../../_css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../../_css/style.css">
+
+    <title>Background Images</title>
+</head>
+
+<body>
+    <a href="../../index.html">Home page</a>
+
+
+
+
+
+
+    <section class="container">
+        <h1>Setting a background image</h1>
+        <div class="row">
+            <div class="col-6">
+                <p>Add a background image.</p>
+            </div>
+
+            <div class="col-6">
+                <pre class="example"><span class="code-css">body {
+  background-image: url("paper.gif");
+}</pre>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                <p>To specify multiple images, separate the URLs with a comma.</p>
+            </div>
+
+            <div class="col-6">
+                <pre class="example"><span class="code-css">body {
+  background-image: url("image1.png"),
+  url("image2.png");
+}</pre>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+            <section class="container">
+                <h1>Different background images for different displays</h1>
+                <div class="row">
+                    <div class="col">
+                        <p>If you have a high resolution display (retina) you may want to display a different image than a smaller screen with less resolution.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <p>Use a media query.</p>
+                    </div>
+                    <div class="col-6">
+                        <pre class="example"><span class="code-css">header {
+          background: url(image.jpg);
+        }
+
+        @media (min-resolution: 192dpi) {
+          header {
+            /* Using a larger image for retina screens */
+            background: url(image@2x.jpg);
+          }
+        }<pre></div></div>
+                </div>
+
+            </section>
+
+
+
+    <script src="../../_js/jquery.js"></script>
+    <script src="../../_js/bootstrap.bundle.js"></script>
+</body>
+
+</html>

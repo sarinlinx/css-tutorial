@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="../../_css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../../_css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Selectors</title>
+</head>
+
+<body>
+    <a href="../../index.html">Home page</a>
+
+
+
+
+
+    <section class="container">
+        <h1>Attribute selectors</h1>
+        <div class="row">
+            <div class="col">
+                <p>The attribute selector locates elements with a specified attribute. Here are a few examples.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <h2>Example using the 'target' attribute</h2>
+            <div class="col-6">
+                <a href="https://www.w3schools.com/tags/att_target.asp">The target attribute</a>
+            </div>
+            <div class="col-6">
+                <pre class="example"><span class="code-html">Make sure to &lt;a href="#" <span class="white">target</span>="_blank"&gt;Click Here&lt;/a&gt;</span></pre>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                <p>Target the attribute with CSS.</p>
+            </div>
+            <div class="col-6">
+                <pre class="example"><span class="code-css">[target] {
+  color: yellow;
+}</span></pre></div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                <p>This would make the entire link text yellow.</p>
+            </div>
+            <div class="col-6">
+                <pre class="example"><span class="white">Make sure to </span><span class="yellow">Click Here</span></span></pre>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="container">
+        <h2>Example using the 'type' attribute</h2>
+        <div class="row">
+            <div class="col-6">
+                <a href="https://www.w3schools.com/tags/att_type.asp">The type attribute</a>
+            </div>
+            <div class="col-6">
+                <pre class="example"><span class="code-html">&lt;button <span class="white">type</span>="button"&gt;Click Me!&lt;/button&gt;</a></span></pre>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                <p>Target the attribute with CSS.</p>
+            </div>
+            <div class="col-6">
+                <pre class="example"><span class="code-css">[type] {
+  border-color: green;
+}</span></pre></div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                <p>The result would add a green border to the button:</p>
+            </div>
+            <div class="col-6">
+                <pre class="example"><button class="border-green" type="button">Click Me!</button></span></pre>
+            </div>
+
+
+            <p>A full list can be found here:</p>
+            <ul>
+                <li><a href="https://www.w3schools.com/tags/ref_attributes.asp">HTML attributes</a></li>
+            </ul>
+        </div>
+
+        <h2>Attribute and value selector</h2>
+        <div class="row">
+            <div class="col-6">
+                This selects the 'target' attribute <strong>only</strong> if the value is '_blank'.</a>
+            </div>
+            <div class="col-6">
+                <pre class="example"><span class="code-html">Make sure you &lt;a href="#" <span class="white">target="_blank"</span>&gt;Click Here&lt;/a&gt;</span>
+<span class="code-html">You should also &lt;a href="#"&gt;Click Here&lt;/a&gt;</span></pre></div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-6">
+                <p>Target the attribute with CSS.</p>
+            </div>
+            <div class="col-6">
+                <pre class="example"><span class="code-css">[target=_blank] {
+  color: green;
+}</span></pre></div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                <p>This would make only the link with a target of _blank green.</p>
+            </div>
+            <div class="col-6">
+                <pre class="example"><span class="white">Make sure you </span><span class="green">Click Here</span></span>
+<span class="white">Make sure you also Click Here</span></span></pre>
+            </div>
+        </div>
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="../../_js/jquery.js"></script>
+    <script src="../../_js/bootstrap.bundle.js"></script>
+</body>
+
+</html>
