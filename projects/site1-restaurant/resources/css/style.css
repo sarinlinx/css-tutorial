@@ -28,7 +28,7 @@ html, body {
   overflow-x: hidden;
 }
 
-.clearfix {
+/* .clearfix {
   zoom: 1;
 }
 
@@ -38,7 +38,7 @@ html, body {
   display: block;
   height: 0;
   visibility: hidden;
-}
+} */
 
 /* ----------------------------------------------- */
 
@@ -84,15 +84,17 @@ h2 {
   letter-spacing: 1px;
 }
 
-h3 {
+ h3 {
   font-size: 110%;
   margin-bottom: 15px;
 }
 
+/* This creates a line below h2 tags */
 h2:after {
   display: block;
   height: 2px;
   background-color: #e67e22;
+  /* must specify content for pseudo class */
   content: " ";
   width: 100px;
   margin: 0 auto;
@@ -101,7 +103,7 @@ h2:after {
 
 /* ----- PARAGRAPHS ----- */
 
-.long-copy {
+ .long-copy {
   line-height: 145%;
   width: 70%;
   margin-left: 15%;
@@ -114,25 +116,27 @@ h2:after {
 
 /* ----- ICONS ----- */
 
-.icon-big {
+ .icon-big {
+  /* set the size of the icon */
   font-size: 350%;
   display: block;
   color: #e67e22;
   margin-bottom: 10px;
 }
 
+/*
 .icon-small {
   display: inline-block;
   width: 30px;
   text-align: center;
   color: #e67e22;
   font-size: 120%;
-  margin-right: 10px;
+  margin-right: 10px;*/
   /*secrets to align text and icons*/
-  line-height: 120%;
+  /*line-height: 120%;
   vertical-align: middle;
   margin-top: -5px;
-}
+} */
 
 /* ----- LINKS ----- */
 
@@ -263,7 +267,7 @@ header {
 }
 
 /* Mobile navi */
-
+/*
 .mobile-nav-icon {
   float: right;
   margin-top: 30px;
@@ -274,10 +278,10 @@ header {
 .mobile-nav-icon i {
   font-size: 200%;
   color: #fff;
-}
+} */
 
 /* Sticky navi */
-
+/*
 .sticky {
   position: fixed;
   top: 0;
@@ -303,7 +307,7 @@ header {
 
 .sticky .logo-black {
   display: block;
-}
+} */
 
 /* ----------------------------------------------- */
 
@@ -325,10 +329,12 @@ header {
   padding: 0;
 }
 
+
 .meals-showcase {
   list-style: none;
   width: 100%;
 }
+
 
 .meals-showcase li {
   display: block;
@@ -336,26 +342,36 @@ header {
   width: 25%;
 }
 
+
 .meal-photo {
+  /* this means it has the width of its parent */
   width: 100%;
   margin: 0;
   overflow: hidden;
   background-color: #000;
 }
 
+
+/* adds opacity/transform/transition */
 .meal-photo img {
+  /* opacity color is based off the background-color of container */
   opacity: 0.7;
   width: 100%;
   height: auto;
+
   -webkit-transform: scale(1.15);
   -ms-transform: scale(1.15);
   transform: scale(1.15);
+
   -webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
   transition: transform 0.5s, opacity 0.5s;
 }
 
+
 .meal-photo img:hover {
   opacity: 1;
+
+  /* scaling to 1 will leave blank space. Add .03 to fill */
   -webkit-transform: scale(1.03);
   -ms-transform: scale(1.03);
   transform: scale(1.03);
@@ -366,7 +382,7 @@ header {
 /* HOW IT WORKS SECTION */
 
 /* ----------------------------------------------- */
-
+/*
 .section-steps {
   background-color: #f4f4f4;
 }
@@ -420,7 +436,7 @@ header {
   height: 50px;
   width: auto;
   margin-right: 10px;
-}
+} */
 
 /* ----------------------------------------------- */
 
@@ -428,7 +444,7 @@ header {
 
 /* ----------------------------------------------- */
 
-.box img {
+/* .box img {
   width: 100%;
   height: auto;
   margin-bottom: 15px;
@@ -436,7 +452,7 @@ header {
 
 .city-feature {
   margin-bottom: 5px;
-}
+} */
 
 /* ----------------------------------------------- */
 
@@ -444,7 +460,7 @@ header {
 
 /* ----------------------------------------------- */
 
-.section-testimonials {
+/* .section-testimonials {
   background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(img/back-customers.jpg);
   background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(img/back-customers.jpg);
   background-size: cover;
@@ -480,7 +496,7 @@ cite img {
   border-radius: 50%;
   margin-right: 10px;
   vertical-align: middle;
-}
+} */
 
 /* ----------------------------------------------- */
 
@@ -488,7 +504,7 @@ cite img {
 
 /* ----------------------------------------------- */
 
-.section-plans {
+/* .section-plans {
   background-color: #f4f4f4;
 }
 
@@ -538,7 +554,7 @@ cite img {
 
 .plan-box ul li {
   padding: 5px 0;
-}
+} */
 
 /* ----------------------------------------------- */
 
@@ -546,7 +562,7 @@ cite img {
 
 /* ----------------------------------------------- */
 
-.contact-form {
+/* .contact-form {
   width: 60%;
   margin: 0 auto;
 }
@@ -568,7 +584,7 @@ input[type=checkbox] {
 
 *:focus {
   outline: none;
-}
+} */
 
 /* ----------------------------------------------- */
 
@@ -576,7 +592,7 @@ input[type=checkbox] {
 
 /* ----------------------------------------------- */
 
-footer {
+/* footer {
   background-color: #333;
   padding: 50px;
   font-size: 80%;
@@ -642,7 +658,7 @@ footer p {
   color: #888;
   text-align: center;
   margin-top: 20px;
-}
+} */
 
 /* ----------------------------------------------- */
 
@@ -650,7 +666,7 @@ footer p {
 
 /* ----------------------------------------------- */
 
-.js--wp-1, .js--wp-2, .js--wp-3 {
+/* .js--wp-1, .js--wp-2, .js--wp-3 {
   opacity: 0;
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
@@ -663,4 +679,4 @@ footer p {
 
 .js--wp-1.animated, .js--wp-2.animated, .js--wp-3.animated {
   opacity: 1;
-}
+} */
