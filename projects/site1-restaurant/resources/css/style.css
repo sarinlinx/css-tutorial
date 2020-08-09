@@ -28,7 +28,7 @@ html, body {
   overflow-x: hidden;
 }
 
-/* .clearfix {
+ .clearfix { /* clear a float after an element : creates space after images before next section */
   zoom: 1;
 }
 
@@ -38,7 +38,7 @@ html, body {
   display: block;
   height: 0;
   visibility: hidden;
-} */
+}
 
 /* ----------------------------------------------- */
 
@@ -124,7 +124,7 @@ h2:after {
   margin-bottom: 10px;
 }
 
-/*
+/* formats icons */
 .icon-small {
   display: inline-block;
   width: 30px;
@@ -132,11 +132,11 @@ h2:after {
   color: #e67e22;
   font-size: 120%;
   margin-right: 10px;*/
-  /*secrets to align text and icons*/
-  /*line-height: 120%;
+  /*secrets to align text next to icons*/
+  line-height: 120%;
   vertical-align: middle;
   margin-top: -5px;
-} */
+}
 
 /* ----- LINKS ----- */
 
@@ -382,7 +382,7 @@ header {
 /* HOW IT WORKS SECTION */
 
 /* ----------------------------------------------- */
-/*
+
 .section-steps {
   background-color: #f4f4f4;
 }
@@ -392,7 +392,7 @@ header {
 }
 
 .steps-box:first-child {
-  text-align: right;
+  text-align: right; /* text-align works for all inline elements, not just text */
   padding-right: 3%;
 }
 
@@ -414,29 +414,30 @@ header {
   margin-bottom: 80px;
 }
 
+/* Styles numbers in list */
 .works-step div {
   color: #e67e22;
   font-size: 150%;
   height: 54px;
   width: 54px;
   border: 2px solid #e67e22;
-  border-radius: 50%;
-  display: inline-block;
-  text-align: center;
+  border-radius: 50%; /* turns square border into a circle */
+  display: inline-block; /*So number can be side by side with text */
+  text-align: center; /* center the number in the box */
   margin-right: 25px;
   float: left;
   padding: 5px;
 }
 
 .btn-app:link, .btn-app:visited {
-  border: 0;
+  border: 0; /* removes border all links have been given */
 }
 
 .btn-app img {
   height: 50px;
   width: auto;
   margin-right: 10px;
-} */
+}
 
 /* ----------------------------------------------- */
 
@@ -444,15 +445,15 @@ header {
 
 /* ----------------------------------------------- */
 
-/* .box img {
+ .box img { /* select img in box */
   width: 100%;
-  height: auto;
+  height: auto; /* this doesn't seem to do anything */
   margin-bottom: 15px;
 }
 
 .city-feature {
   margin-bottom: 5px;
-} */
+}
 
 /* ----------------------------------------------- */
 
@@ -460,35 +461,37 @@ header {
 
 /* ----------------------------------------------- */
 
-/* .section-testimonials {
-  background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(img/back-customers.jpg);
+ .section-testimonials {
+  background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(img/back-customers.jpg); /* the linear-gradient gives it a dark overlay */
   background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(img/back-customers.jpg);
-  background-size: cover;
+  background-size: cover; /* full width of browser */
   color: #fff;
-  background-attachment: fixed;
+  background-attachment: fixed; /* locks image in place while you scroll */
 }
+
 
 blockquote {
   padding: 2%;
   font-style: italic;
   line-height: 145%;
-  position: relative;
+  position: relative; /* this parent must be relative so pseudo class can use absolute */
   margin-top: 40px;
 }
 
 blockquote:before {
-  content: "\201C";
+  content: "\201C"; /* quotation mark ISO char */
   font-size: 500%;
   display: block;
-  position: absolute;
+  position: absolute; /* position using top and left */
   top: -5px;
   left: -5px;
 }
 
+
 cite {
   font-size: 90%;
   margin-top: 25px;
-  display: block;
+  display: block; /* forces content on its own line */
 }
 
 cite img {
@@ -496,7 +499,7 @@ cite img {
   border-radius: 50%;
   margin-right: 10px;
   vertical-align: middle;
-} */
+}
 
 /* ----------------------------------------------- */
 
@@ -504,16 +507,16 @@ cite img {
 
 /* ----------------------------------------------- */
 
-/* .section-plans {
+ .section-plans {
   background-color: #f4f4f4;
 }
 
 .plan-box {
   background-color: #fff;
   border-radius: 5px;
-  width: 90%;
-  margin-left: 5%;
-  box-shadow: 0 2px 2px #efefef;
+  width: 90%; /* % of parent width */
+  margin-left: 5%; /* this centers since it's 1/2 of remaining 10% width */
+  box-shadow: 0 2px 2px #000;/*#efefef;*/
 }
 
 .plan-box div {
@@ -529,18 +532,20 @@ cite img {
 
 .plan-box div:last-child {
   text-align: center;
-  border: 0;
+  border: 0;/* removes bottom border */
 }
+
+
 
 .plan-price {
   font-size: 300%;
   margin-bottom: 10px;
-  font-weight: 100;
+  font-weight: 100;/* reduce font-weight on larger font-sizes */
   color: #e67e22;
 }
 
 .plan-price span {
-  font-size: 30%;
+  font-size: 30%; /* This % is the % of parent, which is 300% */
   font-weight: 300;
 }
 
@@ -554,7 +559,7 @@ cite img {
 
 .plan-box ul li {
   padding: 5px 0;
-} */
+}
 
 /* ----------------------------------------------- */
 
@@ -562,11 +567,12 @@ cite img {
 
 /* ----------------------------------------------- */
 
-/* .contact-form {
+ .contact-form {
   width: 60%;
-  margin: 0 auto;
+  margin: 0 auto;/* centers form inside of parent */
 }
 
+/* selects all input elements with type of text and email */
 input[type=text], input[type=email], select, textarea {
   width: 100%;
   padding: 7px;
@@ -582,9 +588,10 @@ input[type=checkbox] {
   margin: 10px 5px 10px 0;
 }
 
+/* Removes border on all elements when clicked into */
 *:focus {
   outline: none;
-} */
+}
 
 /* ----------------------------------------------- */
 
@@ -592,16 +599,18 @@ input[type=checkbox] {
 
 /* ----------------------------------------------- */
 
-/* footer {
+ footer {
   background-color: #333;
   padding: 50px;
   font-size: 80%;
 }
 
+
 .footer-nav {
   list-style: none;
   float: left;
 }
+
 
 .social-links {
   list-style: none;
@@ -609,18 +618,18 @@ input[type=checkbox] {
 }
 
 .footer-nav li, .social-links li {
-  display: inline-block;
+  display: inline-block;/* creates horizontal menu */
   margin-right: 20px;
 }
 
 .footer-nav li:last-child, .social-links li:last-child {
-  margin-right: 0;
+  margin-right: 0;/* remove margin to far right element so it extends to border of parent */
 }
 
 .footer-nav li a:link, .footer-nav li a:visited, .social-links li a:link, .social-links li a:visited {
   text-decoration: none;
-  border: 0;
-  color: #888;
+  border: 0; /* removes original link border CSS */
+  color: #ef6565;
   -webkit-transition: color 0.2s;
   transition: color 0.2s;
 }
@@ -629,9 +638,11 @@ input[type=checkbox] {
   color: #ddd;
 }
 
+
 .social-links li a:link, .social-links li a:visited {
-  font-size: 160%;
+  font-size: 160%; /* increase size of icons */
 }
+
 
 .ion-social-facebook, .ion-social-twitter, .ion-social-googleplus, .ion-social-instagram {
   -webkit-transition: color 0.2s;
@@ -658,7 +669,7 @@ footer p {
   color: #888;
   text-align: center;
   margin-top: 20px;
-} */
+}
 
 /* ----------------------------------------------- */
 
