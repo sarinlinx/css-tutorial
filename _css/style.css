@@ -25,19 +25,19 @@ h1 {
 }
 
 h2 {
-  background: linear-gradient(to right, #00c9ea   0%, #fff 100%);
+/*  background: linear-gradient(to right, #00c9ea   0%, #fff 100%);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;*/
+  color: #abc4c7;
   padding-bottom: 15px;
   margin-top: 25px;
-  color: #00ea5b;
   margin-bottom: 20px;
   /* border-bottom: 1px solid; */
 }
 
 h3 {
   margin-top: 30px;
-  color: #00ff88;
+  color: #18e591;
   /* GREEN */
   /* color: #ff5f5f; RED*/
 }
@@ -52,13 +52,16 @@ h5 {
 }
 
 .row-background {
-  background-color: #353535;
-    transition: background-color 1s;
+  /* background-color: #292929; */
+    transition: background-color 1s,
+                color 1s;
 }
 
 .row-background:hover {
-  background-color: #5d0000;
+  background-color: #242a38;
 }
+
+
 
 /*___________________________________________________
 Customizations
