@@ -25,7 +25,7 @@ html, body {
   font-size: 20px;
   /* Makes font render properly */
   text-rendering: optimizeLegibility;
-  overflow-x: hidden;
+  overflow-x: hidden;/* keeps text from overflowing width */
 }
 
  .clearfix { /* clear a float after an element : creates space after images before next section */
@@ -266,32 +266,44 @@ header {
   border-bottom: 2px solid #e67e22;
 }
 
+
+
+
+
+
 /* Mobile navi */
-/*
+
 .mobile-nav-icon {
   float: right;
   margin-top: 30px;
-  cursor: pointer;
+  cursor: pointer; /* needed because href link in HTML is not URL, so pointer needs to be forced */
   display: none;
 }
 
 .mobile-nav-icon i {
   font-size: 200%;
   color: #fff;
-} */
+}
+
+
+
+
+
+
 
 /* Sticky navi */
-/*
+
 .sticky {
-  position: fixed;
+  position: fixed;/* stays in same position */
   top: 0;
   left: 0;
   width: 100%;
   background-color: rgba(255, 255, 255, 0.98);
   box-shadow: 0 2px 2px #efefef;
-  z-index: 9999;
+  z-index: 9999; /* this forces the sticky nav to display ABOVE any other element */
 }
 
+/* only applies if main-nav is inside sticky class */
 .sticky .main-nav {
   margin-top: 18px;
 }
@@ -301,13 +313,14 @@ header {
   color: #555;
 }
 
+/* if white logo is inside sticky class, hide it */
 .sticky .logo {
-  display: none;
+  display: none;/* hide original white logo */
 }
 
 .sticky .logo-black {
-  display: block;
-} */
+  display: block;/*display sticky black logo if inside sticky menu */
+}
 
 /* ----------------------------------------------- */
 
@@ -677,17 +690,20 @@ footer p {
 
 /* ----------------------------------------------- */
 
-/* .js--wp-1, .js--wp-2, .js--wp-3 {
-  opacity: 0;
+/* These fade in, so they must be hidden first*/
+ .js--wp-1, .js--wp-2, .js--wp-3 {
+  opacity: 0; /* invisible */
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
 }
 
+/* This does not fade in, so it doesn't need to be hidden */
 .js--wp-4 {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
 }
 
+/* When both classes are active they are connected with a .*/
 .js--wp-1.animated, .js--wp-2.animated, .js--wp-3.animated {
-  opacity: 1;
-} */
+  opacity: 1;/* display it */
+}

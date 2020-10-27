@@ -10,7 +10,7 @@
     <!-- Grid CSS file from responsivegridsystem.com -->
     <link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
     <link rel="stylesheet" type="text/css" href="vendors/css/ionicons.min.css">
-    <!-- <link rel="stylesheet" type="text/css" href="vendors/css/animate.css"> -->
+    <link rel="stylesheet" type="text/css" href="vendors/css/animate.css">
     <link rel="stylesheet" type="text/css" href="resources/css/style.css">
     <link rel="stylesheet" type="text/css" href="resources/css/queries.css">
     <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,300italic' rel='stylesheet' type='text/css'>
@@ -23,10 +23,14 @@
 <body>
 
     <header>
-        <nav>
+        <nav  class="sticky">
             <div class="row">
+
                 <img src="resources/img/logo-white.png" alt="Omnifood logo" class="logo">
+
+                <!-- add black logo for white sticky menu -->
                 <img src="resources/img/logo.png" alt="Omnifood logo" class="logo-black">
+
                 <ul class="main-nav js--main-nav">
                     <li>
                         <a href="#features">Food delivery</a>
@@ -41,12 +45,13 @@
                         <a href="#plans">Sign up</a>
                     </li>
                 </ul>
+                <!-- Hamburger icon -->
                 <a class="mobile-nav-icon js--nav-icon">
-                    <i class="ion-navicon-round"></i>
+                <i class="ion-navicon-round"></i>
                 </a>
             </div>
-        </nav>
-
+        </nav>​
+​
         <!-- Text that foats over background image -->
         <div class="hero-text-box">
             <h1>Goodbye junk food.
@@ -164,7 +169,7 @@
 
 
 
-    <section class="section-steps">
+    <section class="section-steps" id="works">
 
         <div class="row">
             <h2>How it works &mdash; Simple as 1, 2, 3</h2>
@@ -577,7 +582,14 @@
     </footer>
 
 
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="//cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
+    <script src="//cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//cdn.jsdelivr.net/selectivizr/1.0.3b/selectivizr.min.js"></script>
+    <!-- waypoints triggers a function when scrolling to element -->
+    <script src="vendors/js/jquery.waypoints.min.js"></script>
+    <!-- Your custom script should always be last -->
+    <script src="resources/js/script.js"></script>
 </body>
 
 </html>

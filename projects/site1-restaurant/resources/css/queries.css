@@ -25,13 +25,13 @@
         width: 80%;/* this is 80% since margin-left is (10% x 2) = 20% total to center */
         margin-left: 10%;
     }
-/*
+
     .steps-box { margin-top: 10px; }
     .steps-box:last-child { margin-top: 10px; }
     .works-steps { margin-bottom: 40px; }
     .works-step:last-of-type { margin-bottom: 60px; }
 
-    .app-screen { width: 50%; }
+    .app-screen { width: 50%; }/* increased size */
 
     .icon-small {
         width: 17px;
@@ -47,7 +47,7 @@
 
     .plan-price { font-size: 250%; }
     .contact-form { width: 80%; }
-*/
+
 }
 
 
@@ -55,14 +55,14 @@
 /* Small phones to small tablets: from 481px to 767px */
 /* iPad */
 @media only screen and (max-width: 767px) {
-    /*body { font-size: 16px; }
+    body { font-size: 16px; }
     section { padding: 30px 0; }
 
     .row,
     .hero-text-box { padding: 0 4%; }
     .col {
-        width: 100%;
-        margin: 0 0 4% 0;
+        width: 100%;/* causes columns to be stacked on top of each other*/
+        margin: 0 0 4% 0;/* from grid css, keeps columns in line */
     }
 
 
@@ -117,7 +117,7 @@
 
     .works-step { margin-bottom: 20px; }
     .works-step:last-of-type { margin-bottom: 20px; }
-*/
+
 }
 
 
