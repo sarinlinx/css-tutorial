@@ -57,11 +57,11 @@ h5 {
                 color 1s;
 }
 
-.row-background:hover {
-  background-color: #242a38;
+/* Nested homepage list links */
+ul li ul li a {
+  color: #54bcc2;
+  padding: -20px 0;
 }
-
-
 
 /*___________________________________________________
 Customizations
