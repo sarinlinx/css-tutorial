@@ -15,7 +15,16 @@
 </head>
 
 <body>
-    <a href="../../index.html">Home page</a>
+
+    <nav  aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="../../index.html">Home</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">CSS Selectors</li>
+        </ol>
+    </nav>
+
 
 
     <section class="container">
@@ -30,10 +39,16 @@
 
 
     <section class="container">
-        <h1>Syntax</h1>
+
+
         <div class="row">
             <div class="col">
-                <p>The basic syntax is: <strong>SELECTOR { PROPERTY: VALUE }</strong></p>
+                <h1>Syntax</h1>
+
+
+                <p>The basic syntax is:
+                    <strong>SELECTOR { PROPERTY: VALUE }</strong>
+                </p>
                 <img src="../../_img/css-syntax.png" />
 
                 <p>CSS can locate HTML elements based on their:
@@ -50,9 +65,11 @@
 
 
     <section class="container">
-        <h1>The 'Element' selector</h1>
+
         <div class="row">
             <div class="col">
+                <h1>The 'Element' selector</h1>
+
                 <p>The 'Element' selector locates an HTML element based on the element name. Examples include:</p>
 
                 <ul>
@@ -65,7 +82,7 @@
 
         <div class="row">
             <div class="col-6">
-                <p>This Paragraph selector would locate all paragraphs in the document.</p>
+                <p>This paragraph selector would locate all paragraphs in the document.</p>
             </div>
             <div class="col-6">
                 <pre class="example"><span class="code-css">p {
@@ -74,8 +91,6 @@
 </pre>
             </div>
         </div>
-        <!--end row-->
-
     </section>
 
 
@@ -84,16 +99,17 @@
 
 
     <section class="container">
-        <h1>The 'ID' selector</h1>
+
         <div class="row">
             <div class="col">
-                <p>The 'ID' selector locates an HTML element based on a specific ID value given to that element. For example:</p>
+                <h1>The 'id' selector</h1>
+                <p>The <span class="text-highlight">id</span> selector locates an HTML element based on a specific ID value given to that element. For example:</p>
             </div>
         </div>
 
         <div class="row">
             <div class="col-6">
-                <p>Assign a paragraph the 'id' of 'intro'.</p>
+                <p>Assign a paragraph the <span class="text-highlight">id</span> of <span class="text-highlight">intro</span>.</p>
             </div>
             <div class="col-6">
                 <pre class="example"><span class="code-html">&lt;p id="intro"&gt;words words words&lt;/p&gt;</span></pre>
@@ -103,7 +119,7 @@
         <!--end row-->
         <div class="row">
             <div class="col-6">
-                <p>You can then target it in your CSS file with a #.</p>
+                <p>You can then target it in your CSS file with a <span class="text-highlight">#</span>.</p>
             </div>
             <div class="col-6">
                 <pre class="example"><span class="code-css">#intro {
@@ -132,15 +148,16 @@
 
     <section class="container">
         <div class="row">
-            <h1>The 'Class' selector</h1>
+
             <div class="col">
-                <p>The 'Class' selector locates an HTML element based on a specific Class name value given to that element. For example:</p>
+            <h1>The 'class' selector</h1>
+                  <p>The <span class="text-highlight">class</span> selector locates an HTML element based on a specific Class name value given to that element. For example:</p>
             </div>
         </div>
 
         <div class="row">
             <div class="col-6">
-                <p>Assign a paragraph the 'Class' of 'center'.</p>
+                <p>Assign a paragraph the <span class="text-highlight">class</span> of <span class="text-highlight">center</span>.</p>
             </div>
             <div class="col-6">
                 <pre class="example"><span class="code-html">&lt;p class="center"&gt;words words words&lt;/p&gt;</span></pre>
@@ -165,54 +182,13 @@
                 <img src="../../_img/note-icon.png" width="60" height="60">
             </div>
             <div class="alert-content">
-                <p>You can either use single quotes or double quotes around the 'Class' name.</p>
+                <p>You can either use single quotes or double quotes around the <span class="text-highlight">class</span> name.</p>
             </div>
         </div>
 
     </section>
 
 
-
-
-
-    <section class="container">
-        <h1>Grouping selectors together</h1>
-        <div class="row">
-            <div class="col">
-                <p>You can write a single declaration for multiple selectors are once. Just separate them with a comma.</p>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-6">
-                <p>This CSS applies to h1, h2, and p tags.</p>
-            </div>
-            <div class="col-6">
-                <pre class="example"><span class="code-css">h1, h2, p {
-  text-align: center;
-  color: red;
-}</span></pre>
-            </div>
-        </div>
-        <!--end row-->
-
-
-
-        <div class="row">
-            <div class="col-6">
-                <p>Multiple classes can be grouped together.</p>
-                <p>This matches the HTML element ONLY IF both classes are set in it.</p>
-            </div>
-            <div class="col-6">
-                <pre class="example"><span class="code-html">&lt;p class="one two" id="three"&gt;&lt;/p&gt;</span>
-
-<span class="code-css">.one.two {
-  /*styles*/
-}</span></pre>
-            </div>
-        </div>
-        <!--end row-->
-    </section>
 
 
 

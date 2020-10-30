@@ -30,25 +30,25 @@ h2 {
   -webkit-text-fill-color: transparent;*/
   color: #abc4c7;
   padding-bottom: 7px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  /* border-bottom: 1px solid; */
+  margin-top: 60px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid;
 }
 
 h3 {
   margin-top: 30px;
-  color: #18e591;
-  /* GREEN */
-  /* color: #ff5f5f; RED*/
+  color: #4ebcff;
+  font-size: 1.5rem;
 }
 
 h4 {
-  color: #ff9696;;
+  color: #ff8c69;
   padding: 1.2rem 0;
+  font-size: 1.2rem;
 }
 
 h5 {
-  color: #ff6060;
+  color: #61d36d;
 }
 
 .row-background {
@@ -78,12 +78,12 @@ ___________________________________________________*/
   color: #36b9ec;
 }
 
-.highlight-word {
+.text-highlight {
   font-size: 22px;
   font-weight: bold;
 }
 
-.standout {
+.standout, .code-highlight {
   font-weight: bolder;
   font-size: 1.2rem;
 }
@@ -97,9 +97,6 @@ ___________________________________________________*/
   margin-top: 30px;
 }
 
-.code-css {
-  color: #ffe300;
-}
 
 .breadcrumb-container {
   background-color: #000;
@@ -171,6 +168,7 @@ ___________________________________________________*/
 Examples
 ___________________________________________________*/
 
+/* Example box */
 .example {
   background-color: #000;
   color: #ffbf00;
@@ -183,7 +181,7 @@ Text Colors
 ___________________________________________________*/
 
 .code-css {
-  color: yellow;
+  color: #ffe300;
 }
 
 .code-html {
@@ -196,6 +194,10 @@ ___________________________________________________*/
 
 .code-js {
   color: #FF8D7E;
+}
+
+.code-comment {
+  color: #c1c0c0;
 }
 
 .blue {
@@ -277,6 +279,7 @@ ___________________________________________________*/
   display: inline-block;
   width: 100%;
   min-height: 20px;
+
 }
 
 /* Text container for code examples */
@@ -286,7 +289,7 @@ ___________________________________________________*/
   display: inline-block;
   width: 48%;
   padding: 5px;
-  float: left;
+  /* float: left; */
 }
 
 .codebox {

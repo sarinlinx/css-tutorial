@@ -16,10 +16,12 @@
 <body>
 
     <nav aria-label="breadcrumb">
-      <ol class="breadcrumb">
-        <li  class="breadcrumb-item"><a href="../../index.html">Home</a></li>
-        <li  class="breadcrumb-item active" aria-current="page">Linking CSS</li>
-      </ol>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="../../index.html">Home</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">Linking CSS</li>
+        </ol>
     </nav>
 
 
@@ -46,21 +48,22 @@
         <div class="row">
             <div class="col">
                 <h2 class="heading-emphasis">External style sheet (Recommended)</h2>
-                <p>Linking from an external style sheet is the recommended way to load CSS into your website.</p>
             </div>
         </div>
 
         <div class="row">
-            <div class="col-6">
+            <div class="col-5">
+
+                <p>Linking from an external style sheet is the recommended way to load CSS into your website.</p>
                 <p>Link the external sheet within the &lt;head&gt; section of the HTML page.</p>
                 <p>type="text/css" isn't needed in HTML5</p>
             </div>
 
-            <div class="col-6">
+            <div class="col-7">
                 <pre class="example">
-<span class="code-css">&lt;head&gt;
-  &lt;link rel="stylesheet" type="text/css" href="mystyle.css"&gt;
-&lt;/head&gt;</span></pre>
+<span class="code-html">&lt;head&gt;</span>
+  <span class="code-css">&lt;link rel="stylesheet" type="text/css" href="mystyle.css"&gt;</span>
+<span class="code-html">&lt;/head&gt;</span></pre>
             </div>
         </div>
     </section>
@@ -72,24 +75,23 @@
         <div class="row">
             <div class="col">
                 <h2 class="heading-emphasis">Internal style sheet</h2>
-
             </div>
         </div>
 
         <div class="row">
-            <div class="col-6">
-              <p>You can add code to the &lt;head&gt; section within &lt;style&gt; tags.</p>
-              <p>However this can get difficult to read very quickly as the CSS grows.</p>
+            <div class="col-5">
+                <p>You can add code to the &lt;head&gt; section within &lt;style&gt; tags.</p>
+                <p>However this can get difficult to read very quickly as the CSS grows.</p>
             </div>
 
-            <div class="col-6">
+            <div class="col-7">
                 <pre class="example">
-<span class="code-css">&lt;head&gt;
+<span class="code-html">&lt;head&gt;</span>
   &lt;style&gt;
-    body {
-      background-color: linen;
-    }
-  &lt;/style&gt;
+<span class="code-css">body {
+  background-color: linen;
+}</span>
+<span class="code-html">  &lt;/style&gt;
 &lt;/head&gt;</span></pre>
             </div>
         </div>
@@ -104,18 +106,17 @@
         <div class="row">
             <div class="col">
                 <h2 class="heading-emphasis">Inline style</h2>
-
             </div>
         </div>
 
         <div class="row">
-            <div class="col-6">
-              <p>Inline styles are written directly into the body of the HTML page. Since there is no separation of content and style, this is an outdated method to add CSS and should never be used.</p>
+            <div class="col-5">
+                <p>Inline styles are written directly into the body of the HTML page. Since there is no separation of content and style, this is an outdated method to add CSS and should never be used.</p>
             </div>
 
-            <div class="col-6">
+            <div class="col-7">
                 <pre class="example">
-<span class="code-css">&lt;h1 style="color:blue;margin-left:30px;"&gt;This is a heading.&lt;/h1&gt;</span></pre>
+<span class="code-html">&lt;h1</span> <span class="code-css">style="color:blue;margin-left:30px;"</span><span class="code-html">&gt;This is a heading.&lt;/h1&gt;</span></span></pre>
             </div>
         </div>
     </section>
@@ -127,25 +128,24 @@
         <div class="row">
             <div class="col">
                 <h2 class="heading-emphasis">Multiple Style Sheets</h2>
-
             </div>
         </div>
 
         <div class="row">
-            <div class="col-6">
-              <p>If some properties have been defined for the same selector (element) in different style sheets, the value from the last read style sheet will be used.</p>
-              <p>The &lt;h1&gt; elements will be "orange" since it was called last</p>
+            <div class="col-5">
+                <p>If some properties have been defined for the same selector (element) in different style sheets, the value from the last read style sheet will be used.</p>
+                <p>The &lt;h1&gt; elements will be "orange" since it was called last</p>
             </div>
 
-            <div class="col-6">
+            <div class="col-7">
                 <pre class="example"><span class="code-html">&lt;head&gt;
-  &lt;link rel="stylesheet" type="text/css" href="mystyle.css"&gt;
+  &lt;link rel="stylesheet" type="text/css" href="styles.css"&gt;
 
-  &lt;style&gt;
-    h1 {
+  &lt;style&gt;</span>
+    <span class="code-css">h1 {
       color: orange;
-    }
-  &lt;/style&gt;
+    }</span>
+  <span class="code-html">&lt;/style&gt;
 &lt;/head&gt;</span></pre>
             </div>
         </div>
@@ -159,18 +159,22 @@
         <div class="row">
             <div class="col">
                 <h1>Cascading order</h1>
-                  <p>CSS will cascade in this order:</p>
+                <p>CSS will cascade in this order:</p>
                 <ul>
-                    <li><strong>Inline style</strong> (inside an HTML element)</li>
-                    <li><strong>External and internal style sheets</strong> (in the head section)</li>
-                    <li><strong>Browser default</strong></li>
+                    <li>
+                        <strong>Inline style</strong> (inside an HTML element)</li>
+                    <li>
+                        <strong>External and internal style sheets</strong> (in the head section)</li>
+                    <li>
+                        <strong>Browser default</strong>
+                    </li>
                 </ul>
 
 
 
 
-    <script src="../../_js/jquery.js"></script>
-    <script src="../../_js/bootstrap.bundle.js"></script>
+                <script src="../../_js/jquery.js"></script>
+                <script src="../../_js/bootstrap.bundle.js"></script>
 </body>
 
 </html>

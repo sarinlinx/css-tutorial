@@ -14,7 +14,14 @@
 </head>
 
 <body>
-    <a href="../../index.html">Home page</a>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="../../index.html">Home</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">Hyperlinks</li>
+        </ol>
+    </nav>
 
     <section class="container">
 
@@ -26,49 +33,61 @@
             </div>
         </div>
 
-        <div class="row">
-            <div class="col-6">
-                <p>a:link — a normal, unvisited link</p>
-            </div>
-            <div class="col-6">
-                <pre class="example"><span class="code-css">/* unvisited link */
-  a:link {
-  color: red;
-}</span></pre>
-            </div>
-        </div>
+
+
 
         <div class="row">
             <div class="col-6">
-                <p>a:visited — a link the user has visited</p>
+                <p>
+                    <span class="highlight">a:link</span> — a normal, unvisited link</p>
             </div>
             <div class="col-6">
-                <pre class="example"><span class="code-css">/* visited link */
-  a:visited {
+                <pre class="example"><span class="code-comment">/* unvisited link */</span>
+<span class="code-css">  a:link {
+  color: red;
+}</span></pre> </div>
+        </div>
+
+
+
+
+        <div class="row">
+            <div class="col-6">
+                <p><span class="highlight">a:visited</span> — a link the user has visited</p>
+            </div>
+            <div class="col-6">
+                <pre class="example"><span class="code-comment">/* visited link */</span>
+<span class="code-css">  a:visited {
   color: green;
 }</span></pre>
             </div>
         </div>
 
+
+
+
         <div class="row">
             <div class="col-6">
-                <p>a:hover — a link when the user mouses over it</p>
+                <p><span class="highlight">a:hover</span> — a link when the user mouses over it</p>
             </div>
             <div class="col-6">
-                <pre class="example"><span class="code-css">/* mouse over link */
-  a:hover {
+                <pre class="example"><span class="code-comment">/* mouse over link */</span>
+<span class="code-css">  a:hover {
   color: hotpink;
 }</span></pre>
             </div>
         </div>
 
+
+
+
         <div class="row">
             <div class="col-6">
-                <p>a:active — a link the moment it is clicked</p>
+                <p><span class="highlight">a:active</span> — a link the moment it is clicked</p>
             </div>
             <div class="col-6">
-                <pre class="example"><span class="code-css">/* selected link */
-  a:active {
+                <pre class="example"><span class="code-comment">/* selected link */</span>
+<span class="code-css">  a:active {
   color: blue;
 }</span></pre>
             </div>
@@ -78,25 +97,26 @@
 
 
 
+
+
+
         <div class="row">
             <div class="col">
-                <h2>Make the link look like a red box to click on.</h2>
-                <p>You can style the hyperlink to look like a button.</p>
-
-            </div>
+                <h1>Make the link look like button</h1>
+                          </div>
         </div>
 
 
 
         <div class="row">
             <div class="col-6">
-                <p>If you're using a class or ID, it must come after the 'a' character'.</p>
+                <p>If you're using a class or ID, it must come after the <span class="highlight">a</span> character.</p>
             </div>
 
             <div class="col-6">
-                <pre class="example"><span class="code-html">&lt;a class="link-btn" href="#"&gt;Click Here&lt;/a&gt;</span>
+                <pre class="example"><span class="code-html">&lt;a <span class="standout">class="link-btn"</span> href="#"&gt;Click Here&lt;/a&gt;</span>
 
-<span class="code-css">a.link-btn:link, a.link-btn:visited {
+<span class="code-css">a.<span class="standout">link-btn</span>:link, a.<span class="standout">link-btn</span>:visited {
   background-color: #f44336;
   color: white;
   padding: 14px 25px;
@@ -105,7 +125,7 @@
   display: inline-block;
 }
 
-a.link-btn:hover, a.link-btn:active {
+a.<span class="standout">link-btn</span>:hover, a.<span class="standout">link-btn</span>:active {
   background-color: red;
 }</span></pre>
             </div>
