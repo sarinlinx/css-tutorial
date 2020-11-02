@@ -23,6 +23,8 @@
         </ol>
     </nav>
 
+
+
     <section class="container">
 
         <div class="row">
@@ -43,7 +45,7 @@
             </div>
             <div class="col-6">
                 <pre class="example"><span class="code-comment">/* unvisited link */</span>
-<span class="code-css">  a:link {
+<span class="code-css">a:link {
   color: red;
 }</span></pre> </div>
         </div>
@@ -57,7 +59,7 @@
             </div>
             <div class="col-6">
                 <pre class="example"><span class="code-comment">/* visited link */</span>
-<span class="code-css">  a:visited {
+<span class="code-css">a:visited {
   color: green;
 }</span></pre>
             </div>
@@ -72,7 +74,7 @@
             </div>
             <div class="col-6">
                 <pre class="example"><span class="code-comment">/* mouse over link */</span>
-<span class="code-css">  a:hover {
+<span class="code-css">a:hover {
   color: hotpink;
 }</span></pre>
             </div>
@@ -87,7 +89,7 @@
             </div>
             <div class="col-6">
                 <pre class="example"><span class="code-comment">/* selected link */</span>
-<span class="code-css">  a:active {
+<span class="code-css">a:active {
   color: blue;
 }</span></pre>
             </div>
@@ -95,8 +97,16 @@
 
 
 
-
-
+        <div class="row">
+            <div class="col">
+              <h1>Order or link pseudo classes</h1>
+<p>Link classes must be in this order in CSS in order to function.</p>
+<ol>
+  <li><span class="text-highlight">a:link</span> must come first</li>
+  <li><span class="text-highlight">a:visited</span></li>
+  <li><span class="text-highlight">a:hover</span> MUST come after a:link and a:visited</li>
+  <li><span class="text-highlight">a:active</span> MUST come after a:hover</li>
+</ol></div></div>
 
 
 

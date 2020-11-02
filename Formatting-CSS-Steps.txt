@@ -44,14 +44,23 @@ For code
 
 <div class="row">
     <div class="col-6">
-        <h5>Example</h5>
+        <h5>Result</h5>
     </div>
 
     <div class="col-6">
         <div class="example-container">
-            <span class="example-text">
+
                 Text code here
-            </span>
+
         </div>
     </div>
 </div>
+
+
+
+SECTION EXAMPLE
+
+H2 for title
+
+H4 For Example title section.
+H5 For result of example

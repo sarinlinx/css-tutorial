@@ -17,7 +17,7 @@ h1 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   /* font-size: 3rem; */
-  margin-top: 20px;
+  margin-top: 60px;
   margin-bottom: 20px;
   border-bottom: 2px solid #776a6a;
   text-align: center;
@@ -847,7 +847,7 @@ ol.shorthand-for-custom-image {
   color: blue;
 }
 
-.pseudo-link-hover {
+a.pseudo-link-hover {
   color: white;
 }
 
@@ -863,15 +863,15 @@ ol.shorthand-for-custom-image {
   color: red;
 }
 
-.first-last-child-pseudo-elements:last-child {
-  color: blue;
+.first-last-child-pseudo-elements2:last-child {
+  color: red;
 }
 
-.first-last-type-pseudo-elements {
+.first-type-pseudo-elements {
   color: white;
 }
 
-.first-last-type-pseudo-elements:first-of-type {
+.first-type-pseudo-elements:first-of-type {
   color: red;
 }
 
