@@ -43,11 +43,11 @@ For code
 8. Examples
 
 <div class="row">
-    <div class="col-6">
+    <div class="col-5">
         <h5>Result</h5>
     </div>
 
-    <div class="col-6">
+    <div class="col-7">
         <div class="example-container">
 
                 Text code here
