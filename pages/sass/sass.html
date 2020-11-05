@@ -546,6 +546,147 @@ a:link {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <section class="container">
+        <div class="row">
+            <div class="col">
+                <h1>Compiling Sass locally</h1>
+                <p>Install sass using NPM.</p>
+            </div>
+        </div>
+
+
+
+        <div class="row">
+            <div class="col-5">
+                <h4>Create a package.json file</h4>
+            </div>
+
+
+            <div class="col-7">
+                <pre class="example"><span class="code-js">node init</span></pre>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-5">
+                <h4>Install sass</h4>
+                <p>Save it as a dev dependency.</p>
+            </div>
+
+
+            <div class="col-7">
+                <pre class="example"><span class="code-js">npm install node-sass --save-dev</span></pre>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-5">
+                <h4>Write a script in the package.json file to compile sass</h4>
+                <p>Edit the package.json file. Add the compile:sass command to the scripts section.</p>
+                <p>Then add the input file and output file. (This will overwrite the existing style.css file)</p>
+            <p>The -w flag watches for changes in the main.scss file. If it changes, it is automatically compiled.</div>
+
+
+            <div class="col-7">
+                <pre class="example"><span class="code-js">{
+  "name": "natours",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    <span class="code-highlight">"compile:sass": "node-sass sass/main.scss css/style.css -w"</span>
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^5.0.0"
+  }
+}</span></pre>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-5">
+                <h4>Run this command to compile.</h4>
+                  <p>Since the -w flag is being used, the script will remain running in your terminal and update whenever you save your main.scss file.</p>
+            </div>
+
+
+            <div class="col-7">
+                <pre class="example"><span class="code-js">npm run compile:sass</span></pre>
+            </div>
+        </div>
+
+
+      </section>
+
+
+
+
+
+
+
+
+
+
+<section class="container">
+  <div class="row">
+    <div class="col">
+      <h1>Automatically reload page on file change</h1>
+    </div>
+  </div>
+
+
+
+      <div class="row">
+          <div class="col-5">
+              <h4>Install liveserver NPM package</h4>
+              <p>Install globally by using the -g flag: -g</p>
+
+          </div>
+
+
+          <div class="col-7">
+              <pre class="example"><span class="code-js">npm install live-server -g</span></pre>
+          </div>
+      </div>
+
+
+      <div class="row">
+          <div class="col-5">
+              <h4>Call from command line</h4>
+              <p>This opens the page automatically in your default browser.</p>
+
+          </div>
+
+
+          <div class="col-7">
+              <pre class="example"><span class="code-js">live-server</span></pre>
+          </div>
+      </div>
+
+
+    </section>
+
+
+
+
 </body>
 
 </html>
