@@ -1,0 +1,44 @@
+.header {
+  /* This box should be 95% of viewport */
+  height: 95vh;
+  /* gradient, comma, then image */
+  /* hex codes for rgba only work in SASS */
+  background-image: linear-gradient(to right bottom, rgba($color-primary-light, 0.8), rgba($color-primary-dark, 0.8)), url(../img/hero.jpg);
+  /* takes up full width of viewport */
+  background-size: cover;
+  /* top of image will always stay at top of screen when resizing */
+  background-position: top;
+  /* clip-path changes shape of image by adjusting 4 corners using x y values */
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  /* must set to relative so you can position logo as absolute */
+  position: relative;
+
+/* use & for any sub-declarations that mention .header */
+
+/* write this instead of a .header__logo-box section
+this compiles into a .header__logo-box section in CSS */
+  &__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+  }
+
+  &__logo {
+    /* size of logo, width scales automatically */
+    height: 3.5rem;
+  }
+
+  &__text-box {
+    /* to center */
+    position: absolute;
+    /* the top and left value position from the parent element, so they are not visually centered*/
+    top: 40%;
+    left: 50%;
+    /* this centers the element visually by adjusting 50% of the element, not the parent*/
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+
+}

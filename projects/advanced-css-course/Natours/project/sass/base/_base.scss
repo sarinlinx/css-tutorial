@@ -1,0 +1,21 @@
+/* universal selector, selects all elements on page */
+/* Add ::after and ::before so all pseudo elements also get these settings */
+*, *::after, *::before {
+  /* removes margins and padding from all elements like headers and paragraphs*/
+  margin: 0;
+  padding: 0;
+  /* This forces anything on page to inherit box-sizing: border-box from the body */
+  box-sizing: inherit;
+}
+
+html {
+  /* It's bad practice to set the font-size to a pixel since users can change the font size in their browser.
+  16px is default, but we will set it to 10px using a %
+  62.5% of 16px is 10px */
+  font-size: 62.5%;
+}
+
+body {
+  /* changes box model so borders and padding are not added to total width or heigh specified for that box*/
+  box-sizing: border-box;
+}
