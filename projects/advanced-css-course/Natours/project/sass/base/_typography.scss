@@ -14,7 +14,7 @@ body {
   backface-visibility: hidden;
   margin-bottom: 6rem;
 
-  &-primary--main {
+  &--main {
     display: block;
     font-size: 6rem;
     font-weight: 400;
@@ -31,7 +31,7 @@ body {
     */
   }
 
-  &-primary--sub {
+  &--sub {
     display: block;
     font-size: 2rem;
     font-weight: 700;
@@ -40,4 +40,44 @@ body {
     animation: moveInRight 1s ease-out;
   }
 
+}
+
+.heading-secondary {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+
+  // Set gradient on text
+  //first set to inline-block
+  display: inline-block;
+  // first set background color of block
+  background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+  //background clipped to where text is
+  -webkit-background-clip: text;
+  //You cannot see the gradient yet because the text now sits on top of background so it's gray
+  //make text transparent so you can see background color
+  color: transparent;
+
+  letter-spacing: 2px;
+  transition: all .2s;
+
+  &:hover {
+    //tilts on hover
+    transform: skewY(2deg) skewX(15deg) scale(1.1);
+    text-shadow: .5rem 1rem 2rem rgba($color-black, .2);
+  }
+}
+
+.heading-tertiary {
+  font-size: $default-font-size;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.paragraph {
+  font-size: $default-font-size;
+
+  &:not(last-child) {
+    margin-bottom: 3rem;
+  }
 }

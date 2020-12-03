@@ -564,7 +564,7 @@ a:link {
     <section class="container">
         <div class="row">
             <div class="col">
-                <h1>Compiling Sass locally</h1>
+                <h1><span id="installing-sass-locally">Compiling Sass locally</span></h1>
                 <p>Install sass using NPM.</p>
             </div>
         </div>
@@ -574,11 +574,32 @@ a:link {
         <div class="row">
             <div class="col-5">
                 <h4>Create a package.json file</h4>
+                <p>This should be created in the home directory of your project.</p>
+                <p>You are prompted for the following questions:</p>
+                <ul>
+
+<li>1. Accept name or give it a new one.</li>
+
+<li>2. Version: Accept</li>
+
+<li>3. Description: Leave blank or enter something</li>
+
+<li>4. Entry point: Accept or enter the project's main file</li>
+
+<li>5. test command: Leave blank or enter a command such as <a href="https://github.com/standard/standard">Standard</a>.</li>
+
+<li>6. git repository: Leave blank or enter the git repository URL</li>
+
+<li>7. keywords: Leave blank or enter keywords others could use when searching for your module.</li>
+
+<li>8: author: </li>
+
+<li>9. License: this defaults to ISC - most open-source Node.js projects are MIT</li></ul>
             </div>
 
 
             <div class="col-7">
-                <pre class="example"><span class="code-js">node init</span></pre>
+                <pre class="example"><span class="code-js">npm init</span></pre>
             </div>
         </div>
 
