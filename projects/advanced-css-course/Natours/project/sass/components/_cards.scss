@@ -1,0 +1,59 @@
+.card {
+    // add perspective so transform looks 3d
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+
+    // position relative for absolute positioned sides of cards
+    position: relative;
+    height: 50rem;
+
+    &__side {
+        color: #fff;
+        font-size: 2rem;
+        height: 50rem;
+        transition: all .8s ease;
+
+        // use absolute position to stack --front and --back on top of each other
+        //this also collapses parent height since these elements were removed from natural flow
+        // to fix give same height as parent
+        position: absolute;
+        top: 0;
+        left: 0;
+        // Give them width so they are even with each other
+        width: 100%;
+        // hides the back part of an element
+        backface-visibility: hidden;
+        border-radius: 3px;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+
+        &--front {
+            background-color: $color-white;
+        }
+
+        // this is already rotated 180deg since it's the back of the card
+        // on hover it should change to zero degrees
+        &--back {
+
+            transform: rotateY(180deg);
+
+
+            &-1 {
+                background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);
+            }
+        }
+    }
+
+
+
+    //hover roates front side 180deg
+    //when card is hovered, .card__side is transformed
+    // .card:hover .card__side
+    &:hover &__side--front {
+        transform: rotateY(180deg);
+    }
+
+    // Since this is already rotated 180deg, change to zero
+    &:hover &__side--back {
+        transform: rotateY(0);
+    }
+}
