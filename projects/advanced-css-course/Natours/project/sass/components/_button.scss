@@ -47,16 +47,18 @@
       background-color: $color-white;
     }
   }
-  /*
-  &--green {
-    background-color: #55c57a;
-    color: #fff;
+
+   &--green {
+    background-color: $color-primary;
+    color: $color-white;
   }
 
   &--green::after {
-    background-color: #55c57a;
+    background-color: $color-primary;
   }
-  */
+  
+
+
   /* Make it appear same as original button */
   &::after {
     /* Must specify content property so it apperas */
