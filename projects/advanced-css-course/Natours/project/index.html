@@ -328,7 +328,7 @@
                     <!-- dont' use src in the video tag. Use <source> tag instead-->
                     <source src="img/video.mp4" type="video/mp4">
                     <source src="img/video.webm" type="video/mp4">
-                        Your browser is not supported!
+                    Your browser is not supported!
                 </video>
 
             </div>
@@ -413,6 +413,62 @@
 
 
 
+        <section class="section-book">
+
+            <div class="row">
+
+                <div class="book">
+                    <div class="book__form">
+                        <form action="" class="form">
+
+                            <div class="u-margin-bottom-medium">
+                                <h2 class="heading-secondary">Start booking now</h2>
+                            </div>
+
+                            <div class="form__group">
+                                <input id="name" type="text" class="form__input" placeholder="Full Name" required>
+                                <label for="name" class="form__label">Full name</label>
+
+                            </div>
+
+                            <div class="form__group">
+                                <input id="email" type="email" class="form__input" placeholder="Email Address" required>
+                                <label for="email" class="form__label">Email address</label>
+
+                            </div>
+
+                            <!-- Radio buttons -->
+                            <div class="">
+
+                                <!-- Inputs must have same name so only one can be selected -->
+                                <!-- Cannot style radio buttons in CSS. Must create span that will be selected when label is clicked, instead of input which will be hidden-->
+                                <div class="form__radio-group u-margin-bottom-medium">
+                                    <input type="radio" class="form__radio-input" id="small" name="size">
+                                    <label for="small" class="form__radio-label">
+                                        <span class="form__radio-button"></span>
+                                        Small tour group</label>
+                                </div>
+
+                                <div class="form__radio-group u-margin-bottom-medium">
+                                    <input type="radio" class="form__radio-input" id="large" name="size">
+                                    <label for="large" class="form__radio-label">
+                                        <span class="form__radio-button"></span>Large tour group</label>
+                                </div>
+
+
+                            </div>
+
+                            <div class="form__group">
+                                <button class="btn btn--green">Next step &rarr;</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
 
 
 
@@ -420,6 +476,50 @@
     </main>
 
 
+
+
+
+
+
+
+
+
+
+
+    <footer class="footer">
+
+        <div class="footer__logo-box">
+            <img src="img/logo-green-2x.png" alt="Full logo" class="footer__logo">
+        </div>
+
+        <div class="row">
+
+            <div class="col-1-of-2">
+                <div class="footer__navigation">
+                    <ul class="footer__list">
+                        <li class="footer__item"><a href="#" class="footer__link">Company</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">Contact us</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">Careers</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">Privacy</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">Terms</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-1-of-2">
+                <p class="footer__copyright">
+                    Built my <a href="" class="footer__link">Name hear</a> online course <a href="#"
+                        class="footer__link">Advanced CSS and Sass</a>. Copyright &copy; by NAME.
+                </p>
+            </div>
+
+        </div>
+
+
+
+
+
+    </footer>
 
 
 

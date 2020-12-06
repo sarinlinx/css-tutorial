@@ -12,8 +12,8 @@
     /* the btn::after position:absolute property looks for this relative reference */
     position: relative;
     font-size: $default-font-size;
-    /* border: none; */
-    /* cursor: pointer; */
+    border: none;
+    cursor: pointer;
   }
 
   &:hover {
