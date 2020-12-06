@@ -16,6 +16,9 @@
         border-radius: 50%;
         // always on top
         z-index: 2000;
+        box-shadow: 0 1rem 3rem rgba($color-black, .1);
+        cursor: pointer;
+        text-align: center;
     }
 
 
@@ -31,21 +34,27 @@
         // make it appear above everything else
         z-index: 1000;
 
-        //Make it huge so it covers the entire screen
-        transform: scale(80);
+        transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
     }
 
 
     &__nav {
         //top right of viewport and covers entire viewport
         height: 100vh;
-        width: 100%;
         position: fixed;
         top: 0;
-        right: 0;
+        //this causes the menu to pull in from the left
+        left: 0;
         // this should be on top of the background so it's in between 1000 and 2000
         z-index: 1500;
 
+
+        //hide menu items
+        opacity: 0;
+        //removes them from page so they can't be clicked even though they are invisible
+        width: 0;
+
+        transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     }
 
 
@@ -57,6 +66,7 @@
         transform: translate(-50%, -50%);
         list-style: none;
         text-align: center;
+        width: 100%;
     }
 
 
@@ -84,7 +94,7 @@
             transition: all .4s;
 
             span {
-                margin-right: 1rem;
+                margin-right: 1.5rem;
                 display: inline-block
             }
         }
@@ -95,6 +105,92 @@
             color: $color-primary;
             transform: translateX(1rem);
         }
+    }
+
+
+    //FUNCTIONALITY
+
+
+    //use general sibling selector
+    &__checkbox:checked~&__background {
+        //Make it huge so it covers the entire screen
+        transform: scale(80);
+    }
+
+    &__checkbox:checked~&__nav {
+        //show navigation
+        opacity: 1;
+        width: 100%;
+    }
+
+    //ICON
+    &__icon {
+        position: relative;
+        margin-top: 3.5rem;
+
+        &,
+        &::before,
+        &::after {
+            width: 3rem;
+            height: 2px;
+            background-color: $color-grey-dark-3;
+            display: inline-block;
+        }
+
+        //to allow pseudo elements to appear on page you must set a content and display property
+        &::before,
+        &::after {
+            content: "";
+
+            position: absolute;
+            left: 0;
+
+            transition: all .2s;
+        }
+
+        //spacing of icon line one at top and one at bottom
+        &::before {
+            top: -.8rem;
+        }
+
+        &::after {
+            top: .8rem;
+        }
+
 
     }
+
+    //When button is hovered icons animate
+    &__button:hover &__icon::before {
+        top: -1rem;
+    }
+
+    &__button:hover &__icon::after {
+        top: 1rem;
+    }
+
+
+
+    // when checkbox is checked select sibling's icon
+    //this is the center horizontal line in the icon
+    &__checkbox:checked+&__button &__icon {
+        //disappear
+        background-color: transparent;
+    }
+
+    // rotate the top and botom icons
+    &__checkbox:checked+&__button &__icon::before {
+        //rotate 180deg - 45deg so it flips around
+        transform: rotate(135deg);
+        //set to zero so the top and bottom icons form an X
+        top: 0;
+    }
+
+    &__checkbox:checked+&__button &__icon::after {
+        //rotate
+        transform: rotate(-135deg);
+        //set to zero so the top and bottom icons form an X
+        top: 0;
+    }
+
 }
