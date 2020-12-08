@@ -14,6 +14,16 @@
   /* must set to relative so you can position logo as absolute */
   position: relative;
 
+
+  @include respond(phone) {
+    //fix angel of background image
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+  }
+
+
+
+
 /* use & for any sub-declarations that mention .header */
 
 /* write this instead of a .header__logo-box section

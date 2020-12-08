@@ -4,7 +4,6 @@ body {
   font-size: 16px;
   line-height: 1.7;
   color: $color-grey-dark;
-  padding: 30px;
 }
 
 .heading-primary {
@@ -13,6 +12,9 @@ body {
   /* Hack: Fixes final shake of animation bug in CSS */
   backface-visibility: hidden;
   margin-bottom: 6rem;
+
+
+
 
   &--main {
     display: block;
@@ -29,7 +31,19 @@ body {
     /* animation-delay: 3s;
        animation-iteration-count: 3;
     */
+
+
+    @include respond(phone) {
+      letter-spacing: 1rem;
+      font-family: 5rem;
+    }
+
+
   }
+
+
+
+
 
   &--sub {
     display: block;
@@ -38,9 +52,19 @@ body {
     letter-spacing: 1.75rem;
     /* Animation Shorthand */
     animation: moveInRight 1s ease-out;
+
+
+
+    @include respond(phone) {
+      letter-spacing: .5rem;
+    }
+
   }
 
 }
+
+
+
 
 .heading-secondary {
   font-size: 3.5rem;
@@ -60,6 +84,17 @@ body {
 
   letter-spacing: 2px;
   transition: all .2s;
+
+
+@include respond(tab-port) {
+  font-size: 3rem;
+
+}
+
+@include respond(phone) {
+  font-size: 2.5rem;
+  
+}
 
   &:hover {
     //tilts on hover

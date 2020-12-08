@@ -1,15 +1,38 @@
 .row {
   /* 1140px / 10 = 114 rem */
+  //if width is lower than the grid width then it occupies 100% of the availble width
   max-width: $grid-width;
   // background-color: #eee;
   /* center block element inside another block element */
   margin: 0 auto;
+
+
+
+
+
+
   /* remove margin from last row using not pseudo class */
   /*  The not pseudo class selects everything except the last child */
   //This is equivalent to .row:last-child()
   &:not(:last-child) {
     margin-bottom: $gutter-vertical;
+
+
+    @include respond(tab-port) {
+      margin-bottom: $gutter-vertical-small;
+    }
   }
+
+
+
+  @include respond(tab-port) {
+    //change max-width on row
+    max-width: 50rem;
+    //add padding
+    padding: 0 3rem;
+  }
+  
+
 
   @include clearfix;
 
@@ -19,12 +42,43 @@
     // background-color: orangered;
     //This collapses height of child elements. User clearfix to resolve
     float: left;
+
     /*since gutter is only applied to the right of an element the
     you must remove the gutter from the element all the way on the right */
     &:not(:last-child) {
       margin-right: $gutter-horizontal;
+
+
+      //remove margin
+      @include respond(tab-port) {
+        margin-right: 0;
+        //add bottom margin
+        margin-bottom: $gutter-vertical-small;
+
+      }
+
+
     }
+
+
+    //tab-port breakpoint changes
+
+    @include respond(tab-port) {
+      //easiest way on mobile devices set to 100% width
+      //this creates one column
+      width: 100% !important;
+    }
+
+
+
   }
+
+
+
+
+
+
+
 
   .col-1-of-2 {
     //100% of width subtract gutter. Must use {} for var
@@ -44,7 +98,7 @@
   }
 
   .col-2-of-3 {
-//width is 2 (1-of-3) cols plus a single gutter
+    //width is 2 (1-of-3) cols plus a single gutter
     width: calc((2 * (100% - 2 * #{$gutter-horizontal}) / 3) + #{$gutter-horizontal});
   }
 
