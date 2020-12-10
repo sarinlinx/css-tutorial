@@ -124,9 +124,35 @@
 
                 <div class="col-1-of-2">
                     <div class="composition">
+
+
+                        <!-- Resolution switching -->
+                        <!-- Set width descriptor of each image to inform browser-->
+                        <!-- sizes att informs browser of size of image at different viewport width and display resolution -->
+                        <!-- Divide small image width by brreakpoint width 701/900 = .19 which is almost 20% to get the viewport width-->
+                        <!-- 171/600 breakpoint = 30% -->
+                        <!-- add default size if no conditions apply set width to what's default in CSS for this element-->
+                        <!-- finally include src in case user is using older browser that doesn't support srcset -->
+                        <img srcset="img/nat-1.jpg 300w, img/nat-1-large.jpg 1000w"
+                            sizes="(max-width: 900px) 20vw, (max-width: 600px) 30vw, 300px" alt="photo 1"
+                            class="composition__photo composition__photo--p1" src="img/nat-1-large.jpg">
+
+                        <img srcset="img/nat-2.jpg 300w, img/nat-2-large.jpg 1000w"
+                            sizes="(max-width: 900px) 20vw, (max-width: 600px) 30vw, 300px" alt="photo 2"
+                            class="composition__photo composition__photo--p2" src="img/nat-2-large.jpg">
+
+                        <img srcset="img/nat-3.jpg 300w, img/nat-3-large.jpg 1000w"
+                            sizes="(max-width: 900px) 20vw, (max-width: 600px) 30vw, 300px" alt="photo 3"
+                            class="composition__photo composition__photo--p3" src="img/nat-3-large.jpg">
+
+
+
+
+                        <!-- OLD image code
                         <img src="img/nat-1-large.jpg" alt="photo 1" class="composition__photo composition__photo--p1">
                         <img src="img/nat-2-large.jpg" alt="photo 2" class="composition__photo composition__photo--p2">
                         <img src="img/nat-3-large.jpg" alt="photo 3" class="composition__photo composition__photo--p3">
+-->
                     </div>
                 </div>
             </div>
@@ -537,7 +563,21 @@
     <footer class="footer">
 
         <div class="footer__logo-box">
-            <img src="img/logo-green-2x.png" alt="Full logo" class="footer__logo">
+
+            <picture class="footer__logo">
+                <!-- at least 1 image, but you can use more than 1 source -->
+                <!-- srcset in the <source> tag is the default image -->
+                <!-- media= sets the media query for this image -->
+                <source srcset="img/logo-green-small-1x.png 1x, img/logo-green-small-2x.png 2x"
+                    media="(max-width: 37.5em)" src="img/logo-green-small-1x.png">
+
+                <img srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x" alt="Full logo" class="footer__logo">
+                </source>
+            </picture>
+
+
+
+
         </div>
 
         <div class="row">

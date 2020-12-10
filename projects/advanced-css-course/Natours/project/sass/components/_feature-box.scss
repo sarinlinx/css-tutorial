@@ -9,6 +9,14 @@
     // transition for hover css
     transition: transform .3s;
 
+
+    @include respond(tab-port) {
+        padding: 2rem;
+    }
+
+
+
+
     // The icons above the boxes
     &__icon {
         font-size: 6rem;
@@ -23,6 +31,10 @@
         //You cannot see the gradient yet because the text now sits on top of background so it's gray
         //make text transparent so you can see background color
         color: transparent;
+
+        @include respond(tab-port) {
+            margin-bottom: 0;
+        }
     }
 
     //box change on hover
@@ -30,6 +42,5 @@
         transform: translateY(-1.5rem) scale(1.03);
     }
 
-  
-}
 
+}

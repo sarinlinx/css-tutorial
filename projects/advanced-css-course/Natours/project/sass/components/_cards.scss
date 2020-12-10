@@ -223,4 +223,106 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // lots to change so copy everything into a single big media query, then edit out what you don't need
+
+    @include respond(tab-port) {
+        height: auto;
+        //move here since there is no longer a back side
+        border-radius: 3px;
+        //move here since there is no longer a back side
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+        background-color: $color-white;
+
+
+
+
+
+        &__side {
+            //height of each side of the card. must match height of card
+            height: auto;
+            //no longer 2 sides
+            position: relative;
+            //remove box shadow
+            box-shadow: none;
+
+
+
+            &--back {
+                //not needed since small screens will not rotate cards
+                transform: rotateY(0deg);
+                // this cat the background on an angle
+                clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+
+            }
+        }
+
+        &:hover &__side--front {
+            //Front side will not rotate on small screens
+            transform: rotateY(0);
+        }
+
+        &__details {
+            padding: 1rem 3rem;
+        }
+
+        &__cta {
+            position: relative;
+            //center
+            top: 0%;
+            left: 0%;
+            transform: translate(0);
+            width: 100%;
+            padding: 7rem 4rem 4rem 4rem;
+        }
+
+
+        &__price-box {
+            margin-bottom: 3rem;
+        }
+
+        &__price-value {
+            font-size: 4rem;
+
+        }
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

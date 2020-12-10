@@ -26,6 +26,15 @@
 
         transition: all .3s;
 
+
+
+
+        @include respond(tab-port) {
+            width: 100%;           
+        }
+
+
+
         //style focus state of form fields
         &:focus {
             outline: none;
@@ -86,12 +95,27 @@
         // Set the radio buttons side by side
         width: 49%;
         display: inline-block;
+
+
+        @include respond(tab-port) {
+            width: 100%;
+            margin-bottom: 2rem;
+           
+        }
+
+
     }
 
-&__radio-input {
-    //hide the original HTML radio inputs
-    display: none;
-}
+
+
+
+
+
+
+    &__radio-input {
+        //hide the original HTML radio inputs
+        display: none;
+    }
 
     &__radio-label {
         font-size: $default-font-size;
@@ -140,7 +164,7 @@
     // select all radio inputs that are checked
     // then select sibling label that follows it
     // finally the span class that's a child of the label
-    &__radio-input:checked+&__radio-label &__radio-button::after {
+    &__radio-input:checked~&__radio-label &__radio-button::after {
         opacity: 1;
     }
 }

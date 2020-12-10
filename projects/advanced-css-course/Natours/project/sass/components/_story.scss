@@ -11,6 +11,21 @@
     transform: skewX(-12deg);
 
 
+
+
+    @include respond(tab-port){
+        width: 100%;
+        padding: 5rem;
+        padding-left: 7rem;
+    }
+
+    @include respond (phone) {
+        transform: skewX(0);
+    }
+
+
+
+
     &__shape {
         width: 15rem;
         height: 15rem;
@@ -29,6 +44,15 @@
         position: relative;
 
         border: 1px solid red;
+
+
+
+
+        @include respond (phone) {
+            transform: skewX(0);
+        }
+
+
     }
 
     &__img {
@@ -48,6 +72,13 @@
         //this only skews the text
         // the __shape already has a transform used
         transform: skewX(12deg);
+
+
+
+        @include respond (phone) {
+            transform: skewX(0);
+        }
+
     }
 
     &__caption {
