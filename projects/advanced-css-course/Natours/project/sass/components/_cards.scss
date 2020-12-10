@@ -28,6 +28,7 @@
         // Give them width so they are even with each other
         width: 100%;
         // hides the back part of an element
+        -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
         border-radius: 3px;
         // This does not allow the image to overflow the rounded card container

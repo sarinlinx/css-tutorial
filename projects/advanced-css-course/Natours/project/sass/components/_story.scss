@@ -13,7 +13,7 @@
 
 
 
-    @include respond(tab-port){
+    @include respond(tab-port) {
         width: 100%;
         padding: 5rem;
         padding-left: 7rem;
@@ -35,17 +35,20 @@
         //element must be floated and have width and height
         -webkit-shape-outside: circle(50% at 50% 50%);
         shape-outside: circle(50% at 50% 50%);
-        // use clip-path to make element look like a circle
-        -webkit-clip-path: circle(50% at 50% 50%);
-        clip-path: circle(50% at 50% 50%);
+
 
         // skew back 12deg since section is skewed -12deg
         transform: translateX(-3rem) skewX(12deg);
         position: relative;
+        // cuts out overflowed image
+        overflow: hidden;
 
-        border: 1px solid red;
-
-
+        //If clip-path is supported run this code
+        @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+            // use clip-path to make element look like a circle
+            -webkit-clip-path: circle(50% at 50% 50%);
+            clip-path: circle(50% at 50% 50%);
+        }
 
 
         @include respond (phone) {

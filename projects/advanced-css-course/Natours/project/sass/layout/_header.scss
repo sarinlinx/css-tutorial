@@ -1,18 +1,56 @@
 .header {
-  /* This box should be 95% of viewport */
-  height: 95vh;
+  /* This box should be 85% of viewport so user can see the header continues the page*/
+  height: 85vh;
   /* gradient, comma, then image */
   /* hex codes for rgba only work in SASS */
-  background-image: linear-gradient(to right bottom, rgba($color-primary-light, 0.8), rgba($color-primary-dark, 0.8)), url(../img/hero.jpg);
+  // small background loaded for low res screens
+  background-image: linear-gradient(to right bottom, rgba($color-primary-light, 0.8), rgba($color-primary-dark, 0.8)), url(../img/hero-small.jpg);
   /* takes up full width of viewport */
   background-size: cover;
   /* top of image will always stay at top of screen when resizing */
   background-position: top;
+
+  /* must set to relative so you can position logo as absolute */
+  position: relative;
+
+
+  //If clip-path is supported run this code
+@supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
   /* clip-path changes shape of image by adjusting 4 corners using x y values */
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-  /* must set to relative so you can position logo as absolute */
-  position: relative;
+
+  height: 95vh;
+}
+
+
+  // background image media query
+  // 192 dpi is resolution of retina screen
+  //code applied when resolution above 192dpi AND with  is larger than 600px
+  //load high res image
+  //NOTE for some reason, this fixes the bug in chrome to view 2X images
+  //conver to em: 600/16 = 37.5
+  //2000 / 16 = 125em
+  /*
+  @media (min-resolution: 192dpi) and (min-width: 37.5em) {
+    background-image: linear-gradient(to right bottom, rgba($color-secondary-light, 0.8), rgba($color-primary-dark, 0.8)), url(../img/hero.jpg);
+  }
+
+//display highres image if screen size is OVER 2000
+  @media (min-width: 125em) {
+    background-image: linear-gradient(to right bottom, rgba($color-secondary-light, 0.8), rgba($color-primary-dark, 0.8)), url(../img/hero.jpg);
+  }
+*/
+
+  //This combines the two queries above with a comma
+  //Add extra line because safari doesn't support min-resolution
+  //-webkit-min-device-pixel-ratio should be at least 2 which is 2x
+  @media (min-resolution: 192dpi) and (min-width: 600px),
+  (-webkit-min-device-pixel-ratio: 2) and (min-width: 600px),
+  (min-width: 2000px) {
+    background-image: linear-gradient(to right bottom, rgba($color-secondary-light, 0.8), rgba($color-secondary-dark, 0.8)), url(../img/hero.jpg);
+  }
+
 
 
   @include respond(phone) {
@@ -24,9 +62,9 @@
 
 
 
-/* use & for any sub-declarations that mention .header */
+  /* use & for any sub-declarations that mention .header */
 
-/* write this instead of a .header__logo-box section
+  /* write this instead of a .header__logo-box section
 this compiles into a .header__logo-box section in CSS */
   &__logo-box {
     position: absolute;

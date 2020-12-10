@@ -8,8 +8,6 @@
     left: 0;
     background-color: rgba($color-black, .8);
     z-index: 9999;
-
-
     //hide popup so it can be animated
     opacity: 0;
     visibility: hidden;
@@ -17,6 +15,15 @@
     transition: all .3s;
 
 
+
+    //feature query. Exclude from a different browser that doesn't support it
+    //This says what to do IF the propert is supported
+    @supports(-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {
+        //apply blur behind popup
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        background-color: rgba($color-white, .3);
+    }
 
 
 
