@@ -45,9 +45,9 @@
   //This combines the two queries above with a comma
   //Add extra line because safari doesn't support min-resolution
   //-webkit-min-device-pixel-ratio should be at least 2 which is 2x
-  @media (min-resolution: 192dpi) and (min-width: 600px),
-  (-webkit-min-device-pixel-ratio: 2) and (min-width: 600px),
-  (min-width: 2000px) {
+  @media only screen and (min-resolution: 192dpi) and (min-width: 600px),
+  only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 600px),
+  only screen and (min-width: 2000px) {
     background-image: linear-gradient(to right bottom, rgba($color-secondary-light, 0.8), rgba($color-secondary-dark, 0.8)), url(../img/hero.jpg);
   }
 

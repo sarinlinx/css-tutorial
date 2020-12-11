@@ -249,7 +249,11 @@
 
     // lots to change so copy everything into a single big media query, then edit out what you don't need
 
-    @include respond(tab-port) {
+    // This was the origin line, but it does not take into consideration touch devices with large widths
+    // @include respond(tab-port) {
+    //rewrite it like this to include these types of devices. hover: none
+    @media only screen and (max-width: 56.25em),
+    only screen and (hover: none) {
         height: auto;
         //move here since there is no longer a back side
         border-radius: 3px;

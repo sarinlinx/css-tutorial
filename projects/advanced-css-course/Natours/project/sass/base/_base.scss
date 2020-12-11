@@ -63,3 +63,11 @@ body {
 
 
 }
+
+
+//this changes color of background when dragging mouse over text
+::selection {
+  background-color: $color-primary;
+color: $color-white;
+
+}
