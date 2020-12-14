@@ -16,11 +16,11 @@
     align-items: center; //vertically centers logo, search, user nav
     justify-content: center;
 
-    // @media only screen and (max-width: $bp-smallest) {
-    //     order: 1;
-    //     flex: 0 0 100%;
-    //     background-color: var(--color-grey-light-2);
-    // }
+    @media only screen and (max-width: $bp-smallest) {
+        order: 1; // moves search bar to last in section since 0 is the default value for all itmes
+        flex: 0 0 100%; // shouldn't grow or shrink, this allows it to move to next line sooner since header is using flex: wrap
+        background-color: var(--color-grey-light-2);
+    }
 
     &__input {
         font-family: inherit; ///because input elements do not automatically inherit fonts from parent
@@ -151,7 +151,7 @@
     margin-top: 3.5rem;
 
     @media only screen and (max-width: $bp-medium) {
-        display: flex;
+        display: flex; // causes menu to become horizontal
         margin: 0;
     }
 
@@ -168,7 +168,7 @@
         }
 
         @media only screen and (max-width: $bp-medium) {
-            flex: 1;
+            flex: 1; // menu items grow as much as possible, so they occupy entire menu bar
         }
     }
 
@@ -181,15 +181,16 @@
         height: 100%; // same height as list item
         width: 3px;
         background-color: var(--color-primary);
-        transform: scaleY(0);// scales vertical bar before text to zero
+        transform: scaleY(0); // scales vertical bar before text to zero
         //transform-origin: bottom; // you could set this so the effect starts at the bottom of the element. Default is center
-        transition: transform .2s, 
-            width .4s cubic-bezier(1, 0, 0, 1) .2s, 
+        transition: transform .2s,
+            width .4s cubic-bezier(1, 0, 0, 1) .2s,
             background-color .1s;
     }
 
     &__item:hover::before,
-    &__item--active::before { // this sets the first items as active and hovered
+    &__item--active::before {
+        // this sets the first items as active and hovered
         transform: scaleY(1); // the ::before effect expands to 100%
         width: 100%;
     }
@@ -212,12 +213,12 @@
         align-items: center; // centers vertically
 
         @media only screen and (max-width: $bp-medium) {
-            justify-content: center;
+            justify-content: center; // horizontally aligns menu items
             padding: 2rem;
         }
 
         @media only screen and (max-width: $bp-small) {
-            flex-direction: column;
+            flex-direction: column; // stacks menu icon on top of text
             padding: 1.5rem .5rem;
         }
     }
@@ -229,7 +230,7 @@
         fill: currentColor; // color of this element or parent element
 
         @media only screen and (max-width: $bp-small) {
-            margin-right: 0;
+            margin-right: 0; // centers icons
             margin-bottom: .7rem;
             width: 1.5rem;
             height: 1.5rem;
@@ -317,12 +318,12 @@
         color: #fff;
         margin-left: 3rem;
         padding: 0 2.25rem;
-        align-self: stretch;  // This occupies all space available. It overrides align-items: center for this section
+        align-self: stretch; // This occupies all space available. It overrides align-items: center for this section
 
         display: flex;
         flex-direction: column; // stacks items
         align-items: center;
-        justify-content: center;  
+        justify-content: center;
 
         @media only screen and (max-width: $bp-small) {
             padding: 0 1.5rem;
@@ -476,7 +477,7 @@
     }
 
     &__friends {
-        display: flex;
+        display: flex; // always side by side
     }
 
     &__photo {
@@ -592,12 +593,13 @@
     background-image: linear-gradient(to right, var(--color-primary-light), var(--color-primary-dark));
     color: #fff;
     position: relative;
-    overflow: hidden;
+    overflow: hidden; // hides invisible button text
     cursor: pointer;
 
+    // repeated code
     &>* {
-        display: inline-block;
-        height: 100%;
+        display: inline-block; // so you can use padding
+        height: 100%; // height and width of parent element
         width: 100%;
         transition: all .2s;
     }
@@ -607,10 +609,10 @@
     }
 
     &__invisible {
-        position: absolute;
+        position: absolute; // so you can position it outside of button
         padding: 2rem 0;
         left: 0;
-        top: -100%;
+        top: -100%; // this moves up 100% of element
     }
 
     &:hover {
@@ -622,7 +624,7 @@
     }
 
     &:hover &__invisible {
-        top: 0;
+        top: 0; // moves into center of button
     }
 
     &:focus {

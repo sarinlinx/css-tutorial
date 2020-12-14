@@ -7,8 +7,8 @@
     min-height: 50rem;
 
     @media only screen and (max-width: $bp-largest) {
-        margin: 0;
-        max-width: 100%;
+        margin: 0; // removes background margin
+        max-width: 100%; // fixes width under 1200px
         width: 100%;
     }
 }
@@ -24,7 +24,7 @@
     align-items: center; // centers vertically 
 
     @media only screen and (max-width: $bp-smallest) {
-        flex-wrap: wrap;
+        flex-wrap: wrap; // allows items to wrap to new line if there's not enough space in container
         align-content: space-around;
         height: 11rem;
     }
@@ -34,7 +34,7 @@
     display: flex;
 
     @media only screen and (max-width: $bp-medium) {
-        flex-direction: column;
+        flex-direction: column; // changes to stacked view. causes side menu to go to top so main area occupies entire width of screen
     }
 }
 
@@ -65,11 +65,11 @@
     border-bottom: var(--line);
 
     @media only screen and (max-width: $bp-medium) {
-        padding: 3rem;
+        padding: 3rem; // down from 4.5rem
     }
 
     @media only screen and (max-width: $bp-small) {
-        flex-direction: column;
+        flex-direction: column; // stacks sections on small devices
     }
 }
 
