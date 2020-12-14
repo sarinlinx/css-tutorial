@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>max-width</title>
+
+    <style>
+        #container {
+            width: 75%;
+            border: 2px solid red;
+        }
+
+        #div1 {
+            height: 200px;
+            width: 75%;
+            background-color: powderblue;
+            color: #000;
+        }
+
+
+
+        #div4 {
+            height: 200px;
+            max-width: 75%;
+            background-color: rgb(85, 238, 131);
+            color: rgb(32, 32, 32);
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <h3>Example</h3>
+
+    <section id="container">
+
+        <div id="div1">
+            <p>width: 75%</p>
+            <p>This text does not wrap because container does not change size.</p>
+            <p>111111111111111111111111 222222222222222222222222 333333333333333333333333 444444444444444444444444
+                555555555555555555555555</p>
+        </div>
+
+        <p>&nbsp;</p>
+
+        <div id="div4">
+            <p>max-width: 75%</p>
+            <p>This text wraps because the container shrinks with the window size.</p>
+            <p>111111111111111111111111 222222222222222222222222 333333333333333333333333 444444444444444444444444
+                555555555555555555555555</p>
+        </div>
+
+    </section>
+
+
+
+
+
+
+</body>
+
+</html>
