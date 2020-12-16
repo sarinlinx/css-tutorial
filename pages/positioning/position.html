@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" type="text/css" href="../../_css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="../../_css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <style>
+    #normaldiv {
+      border: 1px solid yellow;
+    }
+
+    #relative {
+      position: relative;
+      left: 50px;
+      border: 1px solid red;
+
+    }
+
+    #relativediv {
+      position: relative;
+      height: 100px;
+      border: 1px solid red;
+
+    }
+
+    #absolute-left {
+      position: absolute;
+      left: 50px;
+      border: 1px solid green;
+    }
+
+    #absolute-right {
+      position: absolute;
+      right: 50px;
+      border: 1px solid green;
+    }
+
+    #relative-container {
+      width: 75%;
+      position: relative;
+      border: 1px solid cyan;
+    }
+
+    #absolute-section {
+      position: absolute;
+      top: 0;
+      /*right at top with zero pixels between element*/
+      right: 0;
+      /*no space between container and element*/
+      border: 1px solid red;
+    }
+  </style>
+
+
+  <title>position</title>
+</head>
+
+<body>
+  <a href="../../index.html">Home page</a>
+
+
+
+
+
+  <section class="container">
+    <div class="row">
+
+      <div class="row">
+        <div class="col">
+          <h1>position </h1>
+
+          <p>The position property specifies the type of positioning method used for an
+            element.</p>
+          <p>There are five different position values: </p>
+          <ul>
+            <li>static</li>
+            <li>relatie</li>
+            <li>fixed</li>
+            <li>absolue</li>
+            <li>sticky</li>
+          </ul>
+          <p>Elements are then positioned using the top, bottom, left, and right
+            properties. However, these properties will not work unless the position property is set first. They also
+            work differently depending on the position
+            value.</p>
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+
+
+
+
+  <section class="container">
+    <div class="row">
+      <div class="col">
+        <h2>position: static </h2>
+        <p>HTML elements are positioned static by default.</p>
+
+        <p>Static positioned elements are not affected by the top, bottom, left, and right properties.</p>
+
+        <p> An element with position: static; is not positioned in any special way; it is always positioned according to
+          the normal flow of the page:</p>
+      </div>
+    </div>
+
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <section class="container">
+    <div class="row">
+      <div class="col">
+        <h2>position: relative</h2>
+
+        <p>An element with position: relative; is positioned relative to its normal position.</p>
+        <p>Setting the top, right, bottom, and left properties of a relatively-positioned element will cause it to be
+          adjusted
+          away from its normal position. Other content will not be adjusted to fit into any gap left by the element.</p>
+      </div>
+    </div>
+
+
+
+
+    <div class="row">
+
+      <div class="col-6">
+        <p>Ex</p>
+      </div>
+
+      <div class="col-6">
+        <pre class="example"><span class="code-css">#normaldiv {
+  border: 1px solid yellow;
+}
+
+#relative {
+  <span class="code-highlight">position: relative;
+  left: 50px;</span>
+  border: 1px solid red;
+
+}</span></pre>
+      </div>
+    </div>
+
+
+
+
+    <div class="row">
+      <div class="col">
+        <h3>Example</h3>
+
+        <div id="normaldiv">
+          <p>Normal div with no positioning</p>
+        </div>
+
+        <div id="relative">
+          <p>Div with position: relative</p>
+        </div>
+
+      </div>
+    </div>
+
+
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+  <section class="container">
+    <div class="row">
+      <div class="col">
+        <h2>position: absolute</h2>
+
+        <p>An element with position: absolute; is positioned relative to the nearest positioned ancestor (instead of
+          positioned relative to the viewport, like fixed).</p>
+        <p> However; if an absolute positioned element has no positioned ancestors, it uses the document body, and moves
+          along with page scrolling.</p>
+      </div>
+    </div>
+
+
+
+
+    <div class="row">
+
+      <div class="col-6">
+        <p>The parent element must be set to relative.</p>
+      </div>
+
+      <div class="col-6">
+        <pre class="example"><span class="code-css">#relativediv {
+  position: relative;
+  height: 100px;
+}
+
+#absolute {
+  <span class="code-highlight">position: absolute;
+  left: 50px;</span>
+  border: 1px solid red;
+}</span></pre>
+      </div>
+    </div>
+
+
+
+
+    <div class="row">
+      <div class="col">
+        <h3>Example left</h3>
+
+        <div id="relativediv">
+          <p>Normal div with relative positioning</p>
+
+          <div id="absolute-left">
+            <p>Div with position: absolute</p>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+
+
+
+    <div class="row">
+
+      <div class="col-6">
+        <p>The parent element must be set to relative.</p>
+      </div>
+
+      <div class="col-6">
+        <pre class="example"><span class="code-css">#relativediv {
+  position: relative;
+  height: 100px;
+}
+
+#absolute {
+  <span class="code-highlight">position: absolute;
+  right: 50px;</span>
+  border: 1px solid red;
+}</span></pre>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col">
+        <h3>Example right</h3>
+
+        <div id="relativediv">
+          <p>Normal div with relative positioning</p>
+
+          <div id="absolute-right">
+            <p>Div with position: absolute</p>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <section class="container">
+    <h2>Absolute</h2>
+    <div class="row">
+      <div class="col-6">
+        <p>The parent element must be set to relative.</p>
+      </div>
+      <div class="col-6">
+        <pre class="example"><span class="code-css">.relative-container {
+  width: 75%;
+  <span class="standout">position: relative;</span>
+  border: 1px solid cyan;
+}
+
+.absolute-section {
+  <span class="standout">position: absolute;</span>
+  top: 0; /*right at top with zero pixels between element*/
+  right: 0;/*no space between container and element*/
+  border: 1px solid red;
+}</span>
+
+<span class="code-html">&lt;div class="relative-container"&gt;
+  &lt;p&gt;Blog post section&lt;/p&gt;
+  &lt;p&gt;Blog post section&lt;/p&gt;
+  &lt;p&gt;Blog post section&lt;/p&gt;
+
+  &lt;p class="absolute-section">This appears on the top right.&lt;/p&gt;
+&lt;/div&gt;
+</span></pre>
+      </div>
+    </div>
+
+    <h3>Example</h3>
+    <p><a href="../../examples/images/relative-vs-absolute/relative-vs-absolute.html" target="_blank">Click to
+        view
+        example.</a></p>
+
+
+    <div class="row">
+      <div class="col">
+
+        <h3>Example</h3>
+        <div id="relative-container">
+          <p>Blog post section</p>
+          <p>Blog post section</p>
+          <p>Blog post section</p>
+          <p id="absolute-section">This appears on the top right.</p>
+        </div>
+      </div>
+
+
+
+
+  </section>
+
+
+
+
+</body>
+
+</html>
