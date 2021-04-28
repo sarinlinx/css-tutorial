@@ -14,20 +14,37 @@
         .bg-opacity-0 {
             background-color: green;
         }
-
+        
         .bg-opacity-1 {
             background-color: green;
             opacity: 0.1;
         }
-
+        
         .bg-opacity-3 {
             background-color: green;
             opacity: 0.3;
         }
-
+        
         .bg-opacity-6 {
             background-color: green;
             opacity: 0.6;
+        }
+        /* RGBA */
+        
+        .bg-opacity-rgba-0 {
+            background: rgba(0, 128, 0, 1)
+        }
+        
+        .bg-opacity-rgba-1 {
+            background: rgba(0, 128, 0, 0.1)
+        }
+        
+        .bg-opacity-rgba-3 {
+            background: rgba(0, 128, 0, 0.3)
+        }
+        
+        .bg-opacity-rgba-6 {
+            background: rgba(0, 128, 0, 0.6)
         }
     </style>
 
@@ -71,17 +88,28 @@
         <h1>Opacity</h1>
         <div class="row">
             <div class="col-6">
-                <p>The opacity property specifies the opacity/transparency of an element. It can take a value from 0.0 -
-                    1.0. The lower value, the more transparent:</p>
-                <p>When using the opacity property to add transparency to the background of an element, all of its child
-                    elements inherit the same transparency. This can make the text inside a fully transparent element
-                    hard to read.</p>
+                <p>The opacity property specifies the opacity/transparency of an element. It can take a value from 0.0 - 1.0. The lower value, the more transparent:</p>
+                <p>When using the opacity property to add transparency to the background of an element, all of its child elements inherit the same transparency. This can make the text inside a fully transparent element hard to read.</p>
             </div>
 
             <div class="col-6">
-                <pre class="example"><span class="code-css">.image-bg {
-background-color: green;
-opacity: 0.3;
+                <pre class="example"><span class="code-css">.bg-opacity-1 {
+  background-color: green;
+  opacity: 0.1;
+}
+
+.bg-opacity-3 {
+  background-color: green;
+  opacity: 0.3;
+}
+
+.bg-opacity-6 {
+  background-color: green;
+  opacity: 0.6;
+}
+
+.bg-opacity-0 {
+  background-color: green;
 }
 </span></pre>
             </div>
@@ -93,12 +121,10 @@ opacity: 0.3;
             </div>
 
             <div class="col-6">
-               
-                <div class="bg-opacity-0">Green</div>
                 <div class="bg-opacity-1">Green</div>
                 <div class="bg-opacity-3">Green</div>
                 <div class="bg-opacity-6">Green</div>
-              
+                <div class="bg-opacity-0">Green</div>
             </div>
         </div>
 
@@ -112,12 +138,60 @@ opacity: 0.3;
 
 
 
+
+
+
+    <section class="container">
+        <h1>Opacity RGBA</h1>
+        <div class="row">
+            <div class="col-6">
+                <p>If you do not want to apply opacity to child elements, like in our example above, use RGBA color values. The following example sets the opacity for the background color and not the text:</p>
+            </div>
+
+            <div class="col-6">
+                <pre class="example"><span class="code-css">.bg-opacity-rgba-1 {
+    background: rgba(0, 128, 0, 0.1)
+}
+
+.bg-opacity-rgba-3 {
+    background: rgba(0, 128, 0, 0.3)
+}
+
+.bg-opacity-rgba-6 {
+    background: rgba(0, 128, 0, 0.6)
+}
+
+.bg-opacity-rgba-0 {
+    background: rgba(0, 128, 0, 1)
+}</span></pre>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                <p>Ex</p>
+            </div>
+
+            <div class="col-6">
+                <div class="bg-opacity-rgba-1">Green</div>
+                <div class="bg-opacity-rgba-3">Green</div>
+                <div class="bg-opacity-rgba-6">Green</div>
+                <div class="bg-opacity-rgba-0">Green</div>
+            </div>
+        </div>
+
+    </section>
+
+
+
+
+
+
     <section class="container">
         <h1>Background transparency</h1>
         <div class="row">
             <div class="col-6">
-                <p>If there is already a background added, you can add a second layer over it. You can then adjust this
-                    second layer's transparency value.</p>
+                <p>If there is already a background added, you can add a second layer over it. You can then adjust this second layer's transparency value.</p>
                 <p><strong>Make sure this is NO SPACE between rgba and the parenthese.</strong></p>
             </div>
 
