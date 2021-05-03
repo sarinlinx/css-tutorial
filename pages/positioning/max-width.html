@@ -13,21 +13,34 @@
             width: 75%;
             border: 2px solid red;
         }
-
-        #div1 {
-            height: 200px;
-            width: 75%;
+        
+        #div-px {
+            height: 150px;
+            width: 500px;
             background-color: powderblue;
             color: #000;
         }
-
-
-
-        #div4 {
-            height: 200px;
-            max-width: 75%;
+        
+        #div-percent {
+            height: 150px;
+            width: 50%;
+            background-color: powderblue;
+            color: #000;
+        }
+        
+        #div-max-width {
+            height: 150px;
+            max-width: 50%;
             background-color: rgb(85, 238, 131);
             color: rgb(32, 32, 32);
+        }
+        
+        #div-pxandpercent {
+            height: 150px;
+            width: 500px;
+            max-width: 50%;
+            background-color: powderblue;
+            color: #000;
         }
     </style>
 </head>
@@ -39,20 +52,53 @@
 
     <section id="container">
 
-        <div id="div1">
-            <p>width: 75%</p>
+
+        <div id="div-px">
+            <p>height: 150px;</p>
+            <p>width: 500px;</p>
             <p>This text does not wrap because container does not change size.</p>
-            <p>111111111111111111111111 222222222222222222222222 333333333333333333333333 444444444444444444444444
-                555555555555555555555555</p>
+            <p>111111111111111111111111 222222222222222222222222 333333333333333333333333
+            </p>
         </div>
 
-        <p>&nbsp;</p>
+    </section>
 
-        <div id="div4">
-            <p>max-width: 75%</p>
-            <p>This text wraps because the container shrinks with the window size.</p>
-            <p>111111111111111111111111 222222222222222222222222 333333333333333333333333 444444444444444444444444
-                555555555555555555555555</p>
+    <br>
+
+    <section id="container">
+        <div id="div-percent">
+            <p>height: 150px;</p>
+            <p>width: 50%;</p>
+            <p>The text wraps, but will overflow the container.</p>
+            <p>111111111111111111111111 222222222222222222222222 333333333333333333333333
+            </p>
+        </div>
+    </section>
+
+    <br>
+    <section id="container">
+
+        <div id="div-max-width">
+            <p>height: 150px;</p>
+            <p>max-width: 50%;</p>
+            <p>The text wraps, but will overflow the container. The width does not go beyond 50% of the container.</p>
+            <p>111111111111111111111111 222222222222222222222222 333333333333333333333333
+            </p>
+        </div>
+
+    </section>
+
+
+    <br>
+    <section id="container">
+
+        <div id="div-pxandpercent">
+            <p>height: 150px;</p>
+            <p>width: 500px;</p>
+            <p>max-width: 50%;</p>
+            <p>The size of the div is set with a width. But as you shrink, max-width allows it to shrink while never becoming smaller than 50% of the container.</p>
+            <p>111111111111111111111111 222222222222222222222222 333333333333333333333333
+            </p>
         </div>
 
     </section>

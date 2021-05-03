@@ -14,57 +14,56 @@
         .bg-opacity-0 {
             background-color: green;
         }
-
+        
         .bg-opacity-1 {
             background-color: green;
             opacity: 0.1;
         }
-
+        
         .bg-opacity-3 {
             background-color: green;
             opacity: 0.3;
         }
-
+        
         .bg-opacity-6 {
             background-color: green;
             opacity: 0.6;
         }
-
+        
         #linear-gradient-to-right {
             height: 100px;
             background-image: linear-gradient(to right, red, blue);
         }
-
+        
         #linear-gradient-to-bottom-right {
             height: 100px;
             background-image: linear-gradient(to bottom right, red, blue);
         }
-
-
+        
         #deg-0 {
             height: 100px;
             background-image: linear-gradient(0deg, red, blue);
         }
-
+        
         #deg-90 {
             height: 100px;
             background-image: linear-gradient(90deg, red, blue);
         }
-
+        
         #deg-180 {
             height: 100px;
             background-image: linear-gradient(180deg, red, blue);
         }
-
+        
         #deg--90 {
             height: 100px;
             background-image: linear-gradient(-90deg, red, blue);
         }
-
+        
         #transparent-gradient-1 {
-  height: 100px;
-  background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
-}
+            height: 100px;
+            background-image: linear-gradient(to right, rgba(255, 0, 0, 0), rgba(255, 0, 0, 1));
+        }
     </style>
 
 
@@ -87,19 +86,15 @@
                 <h2>Syntax</h2>
                 <pre class="example">background-image: linear-gradient(direction, color-stop1, color-stop2, ...);</pre>
 
-                <p><strong>direction</strong>: Default is top down. You can also specify different directions it should
-                    move in. For example:</p>
+                <p><strong>direction</strong>: Default is top down. You can also specify different directions it should move in. For example:</p>
                 <ul>
                     <li>to right </li>
                     <li>to bottom</li>
                     <li>to bottom right</li>
                     <li>180deg</li>
                 </ul>
-                <p><strong>Stops</strong>: To create a linear gradient you must define at least two color stops. Color
-                    stops are the colors you
-                    want
-                    to render smooth transitions among. This value consists of a color value, followed by an optional
-                    stop position (a percentage between 0% and 100% or a length along the gradient axis)</p>
+                <p><strong>Stops</strong>: To create a linear gradient you must define at least two color stops. Color stops are the colors you want to render smooth transitions among. This value consists of a color value, followed by an optional stop position
+                    (a percentage between 0% and 100% or a length along the gradient axis)</p>
 
             </div>
         </div>
@@ -137,8 +132,7 @@
                 </div>
 
                 <div class="col-6">
-                    <pre
-                        class="example"><p class="linear-gradient">Testing to see how the linear gradient works.</p></pre>
+                    <pre class="example"><p class="linear-gradient">Testing to see how the linear gradient works.</p></pre>
                 </div>
             </div>
 
@@ -167,8 +161,7 @@
                 </div>
 
                 <div class="col-6">
-                    <pre
-                        class="example"><p class="linear-gradient-3colors">Testing to see how the linear gradient works.</p></pre>
+                    <pre class="example"><p class="linear-gradient-3colors">Testing to see how the linear gradient works.</p></pre>
                 </div>
             </div>
         </section>
@@ -266,6 +259,7 @@
             <div class="row">
                 <div class="col-6">
                     <p>This moves the gradient zero degrees.</p>
+                    <p>This is the same as "to top".</p>
                 </div>
 
                 <div class="col-6">
@@ -298,6 +292,7 @@
             <div class="row">
                 <div class="col-6">
                     <p>This moves the gradient 90 degrees.</p>
+                    <p>This is the same as "to right".</p>
                 </div>
 
                 <div class="col-6">
@@ -330,6 +325,7 @@
             <div class="row">
                 <div class="col-6">
                     <p>This moves the gradient 180 degrees.</p>
+                    <p>This is the same as "to bottom".</p>
                 </div>
 
                 <div class="col-6">
@@ -363,6 +359,7 @@
             <div class="row">
                 <div class="col-6">
                     <p>This moves the gradient -90 degrees.</p>
+                    <p>This is the same as "to left".</p>
                 </div>
 
                 <div class="col-6">
@@ -410,7 +407,7 @@
         <div class="row">
             <div class="col">
                 <h1>Transparent Gradients</h1>
-                <p>This uses rgba colors</p>
+                <p>This uses rgba colors with an opacity value.</p>
             </div>
         </div>
 
@@ -466,17 +463,17 @@
                 </div>
                 <div class="col-6">
                     <pre class="example"><span class="code-html">&lt;div class="image-bg"&gt;
-      &lt;p class="transparent-linear-gradient"&gt;Transparent linear gradient over an background image.&lt;/p&gt;
-    &lt;div&gt;
-    </span>
+  &lt;p class="transparent-linear-gradient"&gt;Transparent linear gradient over an background image.&lt;/p&gt;
+&lt;div&gt;
+</span>
 
-    <span class="code-css">.transparent-linear-gradient {
-      height: 40px;
-      background: linear-gradient(rgba(255, 0, 0, 0.35),  /*red*/
-      rgba(255, 255, 0, 0.35), /*yellow*/
-      rgba(0, 0, 255, 0.35)),  /*blue*/
-      url("images/backgrounds/examples/white-bg.jpg");
-    }</span></pre>
+<span class="code-css">.transparent-linear-gradient {
+  height: 40px;
+  background: linear-gradient(rgba(255, 0, 0, 0.35),  /*red*/
+  rgba(255, 255, 0, 0.35), /*yellow*/
+  rgba(0, 0, 255, 0.35)),  /*blue*/
+  url("images/backgrounds/examples/white-bg.jpg");
+}</span></pre>
                 </div>
             </div>
 
