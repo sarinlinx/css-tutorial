@@ -9,7 +9,47 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" type="text/css" href="../../_css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="../../_css/style.css">
-
+    <style>
+        #medium {
+            font-size: medium;
+        }
+        
+        #xx-small {
+            font-size: xx-small;
+        }
+        
+        #x-small {
+            font-size: x-small;
+        }
+        
+        #small {
+            font-size: small;
+        }
+        
+        #large {
+            font-size: large;
+        }
+        
+        #x-large {
+            font-size: x-large;
+        }
+        
+        #xx-large {
+            font-size: xx-large;
+        }
+        
+        #smaller {
+            font-size: smaller;
+        }
+        
+        #larger {
+            font-size: larger;
+        }
+        
+        #percent {
+            font-size: 70%;
+        }
+    </style>
     <title>Fonts</title>
 </head>
 
@@ -45,7 +85,7 @@
         <h2>Relative size</h2>
         <div class="row">
             <div class="col-6">
-                <p>Sets the size relative to surrounding elements. This allows a user to change the text size in browsers.</p>
+                <p>1em is equal to the current font size. The default text size in browsers is 16px. So, the default size of 1em is 16px. This allows a user to change the text size in browsers.</p>
                 <p>Note: If you do not specify a font size, the default size for normal text, like paragraphs, is 16px (16px=1em).</p>
                 <h4>font-size in em</h4>
                 <p>To allow users to resize the text (in the browser menu), many developers use em instead of pixels.</p>
@@ -102,45 +142,45 @@
 
                 <tr>
                     <td>medium</td>
-                    <td>Sets the font-size to a medium size. This is default</td>
+                    <td><span id="medium">Sets the font-size to a medium size. This is default</span></td>
                 </tr>
                 <tr>
                     <td>xx-small</td>
-                    <td>Sets the font-size to an xx-small size</td>
+                    <td><span id="xx-small">Sets the font-size to an xx-small size</span></td>
                 </tr>
                 <tr>
                     <td>x-small</td>
-                    <td>Sets the font-size to an extra small size</td>
+                    <td><span id="x-small">Sets the font-size to an extra small size</span></td>
                 </tr>
                 <tr>
                     <td>small</td>
-                    <td>Sets the font-size to a small size</td>
+                    <td><span id="small">Sets the font-size to a small size</span></td>
                 </tr>
                 <tr>
                     <td>large</td>
-                    <td>Sets the font-size to a large size</td>
+                    <td><span id="large">Sets the font-size to a large size</span></td>
                 </tr>
                 <tr>
                     <td>x-large</td>
-                    <td>Sets the font-size to an extra large size</td>
+                    <td><span id="x-large">Sets the font-size to an extra large size</span></td>
                 </tr>
                 <tr>
                     <td>xx-large</td>
-                    <td>Sets the font-size to an xx-large size</td>
+                    <td><span id="xx-large">Sets the font-size to an xx-large size</span></td>
                 </tr>
                 <tr>
                     <td>smaller</td>
-                    <td>Sets the font-size to a smaller size than the parent element
+                    <td><span id="smaller">Sets the font-size to a smaller size than the parent element</span>
                     </td>
                 </tr>
                 <tr>
                     <td>larger</td>
-                    <td>Sets the font-size to a larger size than the parent element</td>
+                    <td><span id="larger">Sets the font-size to a larger size than the parent element</span></td>
                 </tr>
 
                 <tr>
                     <td><i>%</i></td>
-                    <td>Sets the font-size to a percent of&nbsp; the parent element's font size</td>
+                    <td><span id="percent">Sets the font-size to a percent of the parent element's font size. This is set to 70%</span></td>
 
                 </tr>
             </tbody>
@@ -164,6 +204,25 @@
 h1 {
   font-size: 2.5em;
 }</span></pre>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+    <section class="container">
+        <h2>Using the viewport width (vw)</h2>
+        <div class="row">
+            <div class="col-6">
+
+                <p>The text size can be set with a vw unit, which means the "viewport width". That way the text size will follow the size of the browser window</p>
+                <p>Viewport is the browser window size. 1vw = 1% of viewport width. If the viewport is 50cm wide, 1vw is 0.5cm.</p>
+            </div>
+            <div class="col-6">
+                <pre class="example"><span class="code-html">&lt;h1 style="font-size:10vw"&gt;Hello World&lt;/h1&gt;</span></pre>
             </div>
         </div>
     </section>
