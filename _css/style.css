@@ -17,7 +17,7 @@ h1 {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     /* font-size: 3rem; */
-    margin-top: 25px;
+    margin-top: 40px;
     margin-bottom: 20px;
     padding-bottom: 15px;
     border-bottom: 2px solid #776a6a;
@@ -28,7 +28,7 @@ h2 {
     /*  background: linear-gradient(to right, #00c9ea   0%, #fff 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;*/
-    color: #abc4c7;
+    color: #08c2d6;
     padding-bottom: 7px;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -37,7 +37,7 @@ h2 {
 
 h3 {
     margin-top: 30px;
-    color: #4ebcff;
+    color: #a0e85c;
     font-size: 1.5rem;
 }
 
@@ -88,8 +88,8 @@ ___________________________________________________*/
 
 .standout,
 .code-highlight {
-    font-weight: bolder;
-    font-size: 1.2rem;
+    font-weight: bold;
+    font-size: 1.1rem;
 }
 
 .bg-shade {

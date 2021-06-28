@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="../../_css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../../_css/style.css">
+
+    <title>Basic reset</title>
+</head>
+
+<body>
+    <a href="../../index.html">Home page</a>
+
+    <section class="container">
+
+
+
+        <div class="row">
+            <div class="col">
+                <h1>Basic reset</h1>
+                <p>This ensures the page displays the same in all browsers.</p>
+
+            </div>
+        </div>
+
+
+
+
+        <h2>Add CSS to the Universal selector *</h2>
+        <div class="row">
+
+            <div class="col-4">
+                <p>###</p>
+            </div>
+
+            <div class="col-8">
+                <pre class="example"><span class="code-css"><span class="code-comment">/* universal selector, selects all elements on page */</span>
+
+* {
+  <span class="code-comment">/* removes margins and padding from all elements 
+  like headers and paragraphs*/</span>
+  margin: 0;
+  padding: 0;
+  <span class="code-comment">/* changes box model so borders and padding are not added to 
+  total width or heigh specified for that box*/</span>
+  box-sizing: border-box;
+}
+
+<span class="code-comment">/* set fonts on body so it's inherited in rest of page */</span>
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #777;
+}</pre>
+            </div>
+        </div>
+
+
+
+
+    </section>
+
+
+    <script src="../../_js/jquery.js"></script>
+    <script src="../../_js/bootstrap.bundle.js"></script>
+</body>
+
+</html>
