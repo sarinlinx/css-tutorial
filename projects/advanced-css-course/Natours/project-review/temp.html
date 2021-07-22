@@ -10,15 +10,266 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
 
     <!-- <link rel="stylesheet" href="css/icon-font.css"> -->
-    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
     <link rel="shortcut icon" type="image/png" href="img/favicon.png">
 
     <title>Natours | Exciting tours for adventurous people</title>
+    <style>
+        *,
+        *::after,
+        *::before {
+            margin: 0;
+            padding: 0;
+            box-sizing: inherit
+        }
+        
+        html {
+            font-size: 62.5%
+        }
+        
+        body {
+            box-sizing: border-box;
+            padding: 3rem;
+            font-family: "Lato", sans-serif;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 1.7;
+            color: #777;
+        }
+        
+        .row {
+            max-width: 114rem;
+            margin: 0 auto
+        }
+        
+        .row:not(:last-child) {
+            margin-bottom: 8rem
+        }
+        
+        .row::after {
+            content: "";
+            display: table;
+            clear: both
+        }
+        
+        .row [class^="col-"] {
+            float: left
+        }
+        
+        .row [class^="col-"]:not(:last-child) {
+            margin-right: 6rem
+        }
+        
+        .section-book {
+            padding: 15rem 0;
+            background-image: linear-gradient(to right bottom, #7ed56f, #28b485)
+        }
+        
+        .book {
+            background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url(../img/nat-10.jpg);
+            background-size: 100%;
+            border-radius: 3px;
+            box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.25)
+        }
+        
+        .book__form {
+            width: 50%;
+            padding: 6rem
+        }
+        
+        .form__group:not(:last-child) {
+            margin-bottom: 2rem
+        }
+        
+        .form__input {
+            font-family: inherit;
+            color: inherit;
+            font-size: 1.5rem;
+            padding: 1.5rem 2rem;
+            border-radius: 2px;
+            background-color: rgba(255, 255, 255, 0.5);
+            border: none;
+            border-bottom: 3px solid transparent;
+            width: 90%;
+            display: block;
+            transition: all .3s
+        }
+        
+        @media only screen and (max-width: 56.25em) {
+            .form__input {
+                width: 100%
+            }
+        }
+        
+        .form__input:focus {
+            outline: none;
+            box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+            border-bottom: 3px solid #55c57a
+        }
+        
+        .form__input:focus:invalid {
+            border-bottom: 3px solid #ff7730
+        }
+        
+        .form__input::-webkit-input-placeholder {
+            color: #999
+        }
+        
+        .form__label {
+            font-size: 1.2rem;
+            font-weight: 700;
+            display: block;
+            margin-left: 2rem;
+            margin-top: .7rem;
+            transition: all .3s
+        }
+        
+        .form__input:-moz-placeholder-shown+.form__label {
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-4rem)
+        }
+        
+        .form__input:-ms-input-placeholder+.form__label {
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-4rem)
+        }
+        
+        .form__input:placeholder-shown+.form__label {
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-4rem)
+        }
+        
+        .form__radio-group {
+            width: 49%;
+            display: inline-block
+        }
+        
+        @media only screen and (max-width: 56.25em) {
+            .form__radio-group {
+                width: 100%;
+                margin-bottom: 2rem
+            }
+        }
+        
+        .form__radio-input {
+            display: none
+        }
+        
+        .form__radio-label {
+            font-size: 1.6rem;
+            cursor: pointer;
+            position: relative;
+            padding-left: 5rem
+        }
+        
+        .form__radio-button {
+            height: 3rem;
+            width: 3rem;
+            display: inline-block;
+            border: 5px solid #55c57a;
+            border-radius: 50%;
+            position: absolute;
+            top: -.4rem;
+            left: 0
+        }
+        
+        .form__radio-button::after {
+            content: "";
+            display: block;
+            height: 1.3rem;
+            width: 1.3rem;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #55c57a;
+            opacity: 0;
+            transition: opacity .2s
+        }
+        
+        .form__radio-input:checked~.form__radio-label .form__radio-button::after {
+            opacity: 1
+        }
+        
+        .btn,
+        .btn:link,
+        .btn:visited {
+            text-transform: uppercase;
+            text-decoration: none;
+            padding: 1.5rem 4rem;
+            display: inline-block;
+            border-radius: 10rem;
+            transition: all 0.2s;
+            position: relative;
+            font-size: 1.6rem;
+            border: none;
+            cursor: pointer
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2)
+        }
+        
+        .btn:hover::after {
+            transform: scaleX(1.4) scaleY(1.6);
+            opacity: 0
+        }
+        
+        .btn:active,
+        .btn .btn:focus {
+            outline: none;
+            transform: translateY(-1px);
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2)
+        }
+        
+        .btn--white {
+            background-color: #fff;
+            color: #777
+        }
+        
+        .btn--white::after {
+            background-color: #fff
+        }
+        
+        .btn--green {
+            background-color: #55c57a;
+            color: #fff
+        }
+        
+        .btn--green::after {
+            background-color: #55c57a
+        }
+        
+        .btn::after {
+            content: "";
+            display: inline-block;
+            height: 100%;
+            width: 100%;
+            border-radius: 10rem;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            transition: all 0.4s
+        }
+        
+        .btn--green {
+            background-color: #55c57a;
+            color: #fff
+        }
+        
+        .btn--green::after {
+            background-color: #55c57a
+        }
+    </style>
 </head>
 
 <body>
-
-
 
 
 
@@ -28,85 +279,72 @@
     <main>
 
 
-        <section class="section-stories">
 
-            <!-- video background -->
-            <div class="bg-video">
-
-                <video class="bg-video__content" autoplay muted loop>
-                    <!-- dont' use src in the video tag. Use <source> tag instead-->
-                    <source src="img/video.mp4" type="video/mp4">
-                    <source src="img/video.webm" type="video/mp4">
-                    Your browser is not supported!
-                </video>
-
-            </div>
-
-            <div class="u-center-text u-margin-bottom-big">
-                <h2 class="heading-secondary">We make people genuienly happy</h2>
-            </div>
-
+        <section class="section-book">
 
             <div class="row">
-                <div class="story">
 
-                    <figure class="story__shape">
-                        <img class="story__img" src="img/nat-8.jpg" alt="person on a tour">
-                        <figcaption class="story__caption">
-                            Mary Smith
-                        </figcaption>
-                    </figure>
+                <div class="book">
+                    <div class="book__form">
+                        <form action="" class="form">
 
-                    <div class="story__text">
-                        <h3 class="heading-tertiary u-margin-bottom-small">I had the best week ever with my family</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, est ipsum. Praesentium, consectetur, rem. In minus, ut suscipit facere provident autem sapiente magnam delectus quis est labore velit repellendus aperiam.
-                        </p>
+                            <div class="u-margin-bottom-medium">
+                                <h2 class="heading-secondary">Start booking now</h2>
+                            </div>
+
+                            <div class="form__group">
+                                <input id="name" type="text" class="form__input" placeholder="Full Name" required>
+                                <label for="name" class="form__label">Full name</label>
+
+                            </div>
+
+                            <div class="form__group">
+                                <input id="email" type="email" class="form__input" placeholder="Email Address" required>
+                                <label for="email" class="form__label">Email address</label>
+
+                            </div>
+
+                            <!-- Radio buttons -->
+                            <div class="">
+
+                                <!-- Inputs must have same name so only one can be selected -->
+                                <!-- Cannot style radio buttons in CSS. Must create span that will be selected when label is clicked, instead of input which will be hidden-->
+                                <div class="form__radio-group u-margin-bottom-medium">
+                                    <input type="radio" class="form__radio-input" id="small" name="size">
+                                    <label for="small" class="form__radio-label">
+                                        <span class="form__radio-button"></span>
+                                        Small tour group</label>
+                                </div>
+
+                                <div class="form__radio-group u-margin-bottom-medium">
+                                    <input type="radio" class="form__radio-input" id="large" name="size">
+                                    <label for="large" class="form__radio-label">
+                                        <span class="form__radio-button"></span>Large tour group</label>
+                                </div>
+
+
+                            </div>
+
+                            <div class="form__group">
+                                <button class="btn btn--green">Next step &rarr;</button>
+                            </div>
+                        </form>
                     </div>
-
                 </div>
+
             </div>
-
-
-
-
-
-
-            <div class="row">
-                <div class="story">
-
-                    <figure class="story__shape ">
-
-                        <img class="story__img" src="img/nat-9.jpg" alt="person on a tour">
-
-                        <figcaption class="story__caption">
-                            Jack Wilson
-                        </figcaption>
-
-                    </figure>
-
-                    <div class="story__text">
-                        <h3 class="heading-tertiary u-margin-bottom-small">WOW! My life is completely different now</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, est ipsum. Praesentium, consectetur, rem. In minus, ut suscipit facere provident autem sapiente magnam delectus quis est labore velit repellendus aperiam.
-                        </p>
-                    </div>
-
-                </div>
-            </div>
-
-
-
-            <div class="u-center-text u-margin-top-huge">
-                <a href="#" class="btn-text">Read all stories &rarr;</a>
-            </div>
-
 
         </section>
 
 
 
-      </main>
+
+
+    </main>
+
+
+
+
 
 
 
