@@ -1,0 +1,551 @@
+\* {
+    /* changes box model so borders and padding are not added to
+  total width or heigh specified for that box*/
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+SC&display=swap');
+
+/*
+@font-face {
+    font-family: 'CormorantSC';
+    src: url('fonts/CormorantSC-Regular.ttf')
+}*/
+
+body {
+    padding: 1rem 25rem;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 1.7;
+    background-color: #1f2833;
+    color: #c5c6c7;
+    /* This box should be 95% of viewport */
+    height: 95vh;
+    /* gradient, comma, then image */
+    background-image: linear-gradient(to right bottom, rgba(64, 64, 64, 0.9), rgba(0, 0, 0, 0.9)), url(background-code.jpg);
+    /* takes up full width of viewport */
+    background-size: cover;
+    /* top of image will always stay at top of screen when resizing */
+    background-position: top;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+@media only screen and (max-width: 1800px) {
+    body {
+        padding: 1rem 18rem;
+    }
+}
+
+@media only screen and (max-width: 1500px) {
+    body {
+        padding: 1rem 12rem;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    body {
+        padding: 1rem 3rem;
+    }
+}
+
+
+/*_____________________________
+LINKS
+______________________________*/
+
+a:link {
+    color: #ffc881;
+}
+
+a:hover {
+    color: #c2acff;
+    ;
+}
+
+a:active {
+    color: #c0e1ff;
+}
+
+a:visited {
+    color: #ff894f;
+}
+
+.heading-primary--container {
+    position: relative;
+    margin-top: 2rem;
+    text-align: center;
+    background: linear-gradient(to right, transparent 15%, rgba(111, 111, 111, .4) 50%, transparent 85%);
+}
+
+.heading-primary {
+    margin-top: 3rem;
+    font-size: 5.5rem;
+    font-family: 'Cormorant SC', cursive;
+    padding-bottom: 1rem;
+    letter-spacing: 2px;
+    /* text gradient */
+    display: inline;
+    background-image: linear-gradient(to top, #8ca9ff, #f6e4ad);
+    /* gold
+    background-image: linear-gradient(to top, #ff6b00, #e2e2e2);
+*/
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+h1 {
+    font-size: 3.5rem;
+    font-family: 'Cormorant SC', serif;
+    display: inline;
+    background-image: linear-gradient(to bottom, #c5c6c7, #fb8e00);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+h2 {
+    font-size: 2rem;
+    display: inline;
+    background-image: linear-gradient(to right, #60e3d9, #45a29e);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+h3 {
+    display: inline;
+    background-image: linear-gradient(to right, #5cd656, #01b145);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+h4 {
+    display: inline;
+    background-image: linear-gradient(to right, #ff6d6d, #e33333);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+
+/* Add line breaks after each inline header element */
+
+.heading-primary::after,
+h1::after,
+h2::after,
+h3::after,
+h4::after {
+    content: "\a";
+    white-space: pre;
+}
+
+.header-section {
+    color: #d8d8d8;
+    font-size: 3rem;
+    background: linear-gradient(90deg, #006aa2, #003c6d);
+    margin: 5rem 0 1rem 0;
+    padding-left: 1rem;
+}
+
+
+/*____________________________________________
+SPACER CLASSES
+_____________________________________________*/
+
+.h1-spacer-top {
+    margin-top: 3rem;
+}
+
+.h2-spacer-top {
+    margin-top: .2rem;
+}
+
+.h3-spacer-top {
+    margin-top: 1rem;
+}
+
+.h4-spacer-top {
+    margin-top: 1rem;
+}
+
+.h1-spacer-bottom {
+    margin-bottom: .5rem;
+}
+
+.h2-spacer-bottom {
+    margin-bottom: 1rem;
+}
+
+.h3-spacer-bottom {
+    margin-bottom: 1rem;
+}
+
+.h4-spacer-bottom {
+    margin-top: .2rem;
+}
+
+li,
+p {
+    line-height: 36px;
+}
+
+
+/*______________________________________________
+NAVIGATION
+_______________________________________________*/
+
+.navbar {
+    display: block;
+    background-color: rgb(0, 0, 0);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+    padding-left: 25rem;
+}
+
+.navbar a {
+    float: left;
+    /* display: block; */
+    color: #f2f2f2;
+    /* text-align: center; */
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    /* transition: color 2s; */
+    background: #000;
+}
+
+.navbar a:hover {
+    color: rgb(111, 150, 255);
+}
+
+
+/*______________________________________________
+CUSTOMIZATIONS
+_______________________________________________*/
+
+.example {
+    padding: 0px 10px;
+    background-color: #000;
+    color: #ebaf6d;
+    overflow: auto;
+}
+
+.warning {
+    background: linear-gradient(90deg, #b92020, #782f25);
+    padding: 10px;
+    margin-bottom: 20px;
+    color: #fff3e6;
+}
+
+.text-object {
+    color: #aab3ff;
+}
+
+.code {
+    font-family: monospace, sans-serif;
+    font-weight: 400;
+    color: #b2cdff;
+    background-color: #000;
+    border: 1px solid #b2cdff;
+    border-radius: 2px;
+    padding: 1px 4px;
+}
+
+.code-highlight {
+    color: #78ff9b;
+    font-size: 17px;
+}
+
+.warning-container {
+    padding: 1rem;
+    background: linear-gradient(to right, rgba(1, 112, 116, .1) 15%, rgba(40, 40, 40, .1) 50%, rgba(5, 88, 95, .1) 85%);
+}
+
+
+/*______________________________________________
+HOMEPAGE
+_______________________________________________*/
+
+.heading-primary--container__homepage {
+    /*position: relative;*/
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    margin-top: 2rem;
+    text-align: center;
+    background: linear-gradient(to right, transparent 15%, rgba(111, 111, 111, .4) 50%, transparent 85%);
+}
+
+.heading-primary__homepage {
+    margin-top: 3rem;
+    font-size: 5.5rem;
+    font-family: 'Cormorant SC', cursive;
+    padding-bottom: 1rem;
+    letter-spacing: 2px;
+    /* text gradient */
+    display: inline;
+    background-image: linear-gradient(to top, #8ca9ff, #f6e4ad);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.section-container {
+    linear-gradient(to right,
+    rgb(0 0 0 / 19%),
+    rgb(42 42 42 / 8%));
+    /*  background: linear-gradient(to right, rgba(1,112,116,.1) 15%, rgba(40, 40, 40, .1) 50%, rgba(5,88,95,.1) 85%);*/
+}
+
+.link-container {
+    padding: 0 0 2rem 2rem;
+}
+
+.header-secondary--container {
+    position: relative;
+    background: linear-gradient( 90deg, #d4d4d4, #ffffffab);
+    margin: 1rem 0 1rem 0;
+    padding-left: 1rem;
+    max-width: 50%;
+}
+
+.header-secondary--text {
+    display: inline;
+    font-size: 1.5rem;
+    background-image: linear-gradient(to right, #006aa2, #003c6d);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.flag-icon {
+    margin-bottom: -19px;
+}
+
+
+/*________________________________
+SEARCH AREA
+_________________________________*/
+
+#header {
+    font-family: Florence;
+    background: linear-gradient(to right, #d8f7ff 0%, #50f9e2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding-bottom: 4px;
+    font-weight: bold;
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+#readme {
+    background: linear-gradient(90deg, #006aa2, #003c6d);
+    padding: 10px;
+    margin-bottom: 20px;
+    color: #fff3e6;
+}
+
+.steps {
+    margin-bottom: 20px;
+}
+
+.step-text {
+    font-size: 1.2rem;
+    /* text gradient */
+    display: inline-block;
+    background-image: linear-gradient(to top, #ff6b00, #e2e2e2);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+#btn {
+    font-family: "Proxima Nova", sans-serif;
+    color: #fff;
+    background: linear-gradient(90deg, #4d00ff, #4d00ff);
+    border: solid 1px #004997;
+    border-radius: 3px;
+    display: inline-block;
+    font-size: 1rem;
+    line-height: 1rem;
+    padding: 0.5rem 1rem 0.325rem;
+    margin: 0 0 1rem 5rem;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 600;
+    text-shadow: none;
+    vertical-align: baseline;
+    outline: none;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#btn:hover {
+    background-color: #005cbd;
+}
+
+#chrome-link {
+    color: #FFC76B;
+}
+
+.searcharea {
+    display: inline-block;
+}
+
+.searcharea #backing-up {
+    margin-left: 2rem;
+    font-family: "Lucida Console", Arial, Helvetica;
+    border-radius: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    /*color: #004eff;*/
+    /* text gradient */
+    background: linear-gradient(to right, #00d8cc, #0086ff);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+#loading-gif {
+    padding-bottom: 2px;
+}
+
+.searcharea #bu-confirmation {
+    font-family: "Lucida Console", Arial, Helvetica;
+    display: inline-block;
+    background: linear-gradient(to right, #18ef42 0%, #06eacb 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 4px;
+    font-weight: bold;
+    margin-left: 5rem;
+}
+
+.searcharea span#backing-up {
+    display: none;
+}
+
+.searcharea span#bu-confirmation {
+    display: none;
+}
+
+
+/*search input grows with window resize*/
+
+#searcharea input#search {
+    width: 40%;
+    height: 30px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+
+/*JSON data*/
+
+#update {
+    margin-top: 1rem;
+    /*  font-family: Georgia, "Times New Roman", Times, serfic;*/
+    background-image: linear-gradient(90deg, #191919, #000000);
+}
+
+
+/*remove bullets in <li> */
+
+#update li {
+    list-style: none;
+    margin 0;
+    padding: 0;
+    /*color: #fff;*/
+}
+
+#update ul li {
+    padding: 0px 5px;
+    /*background: rgba(12, 87, 255, 0.43);
+  color: #fff;*/
+}
+
+#update h4 {
+    margin: 0;
+    padding: 0;
+    font-size: 1.1em;
+    padding-bottom: 2px;
+    padding-top: 2px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-bottom: 1px dotted #CCC: margin-bottom: 10px;
+    /*color: #fff;*/
+}
+
+#no-matches {
+    background: linear-gradient(to right, #ececec 0%, #95a2bd 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2rem;
+    list-style: none;
+}
+
+#update a {
+    color: #ffdaad;
+    font-size: 1rem;
+}
+
+
+/*_______________________________________________
+  CUSTOM GRID
+  _______________________________________________*/
+
+.row {
+    /* 1140px / 10 = 114 rem */
+    max-width: 114rem;
+    /* center block element inside another block element */
+    margin: 0 auto;
+    /* remove margin from last row using not pseudo class */
+    /*  The not pseudo class selects everything except the last child */
+}
+
+.row:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.row [class^="col-"] {
+    float: left;
+    /*since gutter is only applied to the right of an element the
+    you must remove the gutter from the element all the way on the right */
+}
+
+.row [class^="col-"]:not(:last-child) {
+    margin-right: 6rem;
+}
+
+.row .col-1-of-2 {
+    width: calc((100% - 6rem) / 2);
+}
+
+.row .col-1-of-3 {
+    width: calc((100% - 2 * 6rem) / 3);
+}
+
+.row .col-1-of-4 {
+    width: calc((100% - 3 * 6rem) / 4);
+}
+
+.row .col-2-of-3 {
+    width: calc((2 * (100% - 2 * 6rem) / 3) + 6rem);
+}
+
+.row .col-2-of-4 {
+    width: calc((2 * (100% - 3 * 6rem) / 4) + 6rem);
+}
+
+.row .col-3-of-4 {
+    width: calc((3 * (100% - 3 * 6rem) / 4) + 2 * 6rem);
+}

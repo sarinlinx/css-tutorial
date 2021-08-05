@@ -18,20 +18,19 @@
             border: 1px solid black;
             margin-bottom: 0;
         }
-
+        
         .two.three {
             color: white;
         }
-
+        
         div.parent>p.child {
             color: white;
-
         }
-
+        
         div.maindiv+p.paragraph {
             color: white;
         }
-
+        
         div~.genparagraph {
             color: white;
         }
@@ -103,13 +102,15 @@
             <div class="col">
                 <h2><span id="multiple-element-selector">Multiple element selector (comma)</span></h2>
                 <p>You can write a single declaration for multiple selectors at once. Just separate them with a comma.</p>
+                <h3>This is used for styling links. For example: <strong>.classname, a {}</strong></h3>
             </div>
         </div>
 
         <div class="row">
             <div class="col">
-              <h4>Ex 1</h4>
-            </div></div>
+                <h4>Ex 1</h4>
+            </div>
+        </div>
 
         <div class="row">
             <div class="col-6">
@@ -134,7 +135,7 @@
         <div class="row">
             <div class="col">
                 <h2><span id="grouped-class-selector">Grouped class selector (period)</span></h2>
-                  <p>If an element has multiple classes, you can select it by referencing its classes separated by a period.</p>
+                <p>If an element has multiple classes, you can select it by referencing its classes separated by a period.</p>
             </div>
         </div>
 
@@ -216,10 +217,10 @@
                         <h5>Result</h5>
                     </div>
 
-  <div class="col-6">
-    <span class="example-container">
+                    <div class="col-6">
+                        <span class="example-container">
 <p class="pcenter">center class assigned to this element.</p></span>
-</div>
+                    </div>
                 </div>
 
 
@@ -284,14 +285,14 @@
                 <div class="row">
                     <div class="col-6">
                         <h5>Result</h5>
-                      </div>
+                    </div>
 
-                        <div class="col-6">
+                    <div class="col-6">
                         <div class="example-container">
-                        <p class="white">Please click
-                            <a class="descendent-selector-anchor-in-p" href="#">HERE!!!</a>
-                        </p>
-                      </div>
+                            <p class="white">Please click
+                                <a class="descendent-selector-anchor-in-p" href="#">HERE!!!</a>
+                            </p>
+                        </div>
                     </div>
                 </div>
 
@@ -320,22 +321,22 @@
   color: blue;
 }</span></pre>
                     </div>
-                  </div>
+                </div>
 
-                    <div class="row">
-                        <div class="col-6">
-                            <h5>Result</h5>
-                          </div>
-                            <div class="col-6">
-                              <span class="example-container">
+                <div class="row">
+                    <div class="col-6">
+                        <h5>Result</h5>
+                    </div>
+                    <div class="col-6">
+                        <span class="example-container">
                             <section class="descendent-selector-p-and-anchor-in-section">
                                 <p>Please click
                                     <a href="#">HERE!!!</a>
                                 </p>
                             </section>
                           </span>
-                        </div>
                     </div>
+                </div>
 
 
 
@@ -380,17 +381,17 @@
                 <div class="row">
                     <div class="col-6">
                         <h5>Result</h5>
-</div>
+                    </div>
 
-  <div class="col-6">
-    <div class="example-container">
-                        <p>
-                            <span class="white">This is not styled</span>
-                        </p>
-                        <p>
-                            <span class="blue">This IS styled</span>
-                        </p>
-                      </div>
+                    <div class="col-6">
+                        <div class="example-container">
+                            <p>
+                                <span class="white">This is not styled</span>
+                            </p>
+                            <p>
+                                <span class="blue">This IS styled</span>
+                            </p>
+                        </div>
                     </div>
                 </div>
 
@@ -406,13 +407,15 @@
                 <div class="row">
                     <div class="col">
                         <h2><span id="child-selector">Child selector (>)</span></h2>
-                      <p>The child selector selects all elements that are the direct children of a specified element.</p></div>
+                        <p>The child selector selects all elements that are the direct children of a specified element.</p>
+                    </div>
                 </div>
 
                 <div class="row">
                     <div class="col">
-                      <h4>Ex 1</h4>
-                    </div></div>
+                        <h4>Ex 1</h4>
+                    </div>
+                </div>
 
                 <div class="row">
                     <div class="col-6">
@@ -439,11 +442,11 @@
 
                 <div class="row">
                     <div class="col-6">
-                <h5>Result</h5>
-              </div>
+                        <h5>Result</h5>
+                    </div>
 
                     <div class="col-6">
-                      <span class="example-container">
+                        <span class="example-container">
                         <div class="parent">
                             <p class="child">Paragraph 1 in the div.</p>
                             <p class="child">Paragraph 2 in the div.</p>
@@ -454,7 +457,7 @@
                             <p class="child">Paragraph 4 in the div.</p>
                         </div>
                     </span>
-                  </div>
+                    </div>
                 </div>
 
 
@@ -475,20 +478,21 @@
                     <div class="col">
                         <h2><span id="adjacent-sibling-selector">Adjacent selector (+)</span></h2>
                         <p>The adjacent sibling selector selects all elements that are the adjacent siblings (immediately follow) of a specified element.
-                             <p>Sibling elements must have the same parent element</p>
+                            <p>Sibling elements must have the same parent element</p>
                     </div>
                 </div>
 
-<div class="row">
-  <div class="col">
-      <h4>Ex 1</h4>
-    </div></div>
+                <div class="row">
+                    <div class="col">
+                        <h4>Ex 1</h4>
+                    </div>
+                </div>
 
                 <div class="row">
 
                     <div class="col-6">
 
-                            <p>This example selects all &lt;p&gt; elements that are placed immediately after &lt;div&gt; elements:</p>
+                        <p>This example selects all &lt;p&gt; elements that are placed immediately after &lt;div&gt; elements:</p>
                     </div>
 
                     <div class="col-6">
@@ -509,10 +513,10 @@
 
                 <div class="row">
                     <div class="col-6">
-                <h5>Result</h5>
-              </div>
-                                  <div class="col-6">
-                                    <span class="example-container">
+                        <h5>Result</h5>
+                    </div>
+                    <div class="col-6">
+                        <span class="example-container">
                         <div class="maindiv">
                             <p class="paragraph">Paragraph 1 in the div.</p>
                             <p class="paragraph">Paragraph 2 in the div.</p>
@@ -521,7 +525,7 @@
                         <p class="paragraph">Paragraph 3. Not in a div, but is the sibling the immediately follows.</p>
                         <p class="paragraph">Paragraph 4. Not in a div.</p>
                     </span>
-                  </div>
+                    </div>
                 </div>
 
 
@@ -529,47 +533,48 @@
 
 
                 <div class="row">
-                  <div class="col">
-                      <h4>Ex 2</h4>
-                    </div></div>
+                    <div class="col">
+                        <h4>Ex 2</h4>
+                    </div>
+                </div>
 
-                    <div class="row">
-                        <div class="col-6">
+                <div class="row">
+                    <div class="col-6">
 
-                            <p>This example ONLY selects the paragraph element directly after an &lt;h2&gt; element.</p>
-                            <p>Adjacent Sibling Selectors only select the element immediately following a specified element. They are separated with a + symbol.</p>
-                        </div>
+                        <p>This example ONLY selects the paragraph element directly after an &lt;h2&gt; element.</p>
+                        <p>Adjacent Sibling Selectors only select the element immediately following a specified element. They are separated with a + symbol.</p>
+                    </div>
 
-                        <div class="col-6">
-                          <pre class="example"><span class="code-html">&lt;p>Paragraph 1&lt;/p&gt;
+                    <div class="col-6">
+                        <pre class="example"><span class="code-html">&lt;p>Paragraph 1&lt;/p&gt;
 &lt;h2&gt;Heading&lt;/h2&gt;
 &lt;p&gt;Paragraph 2&lt;/p&gt;
 &lt;p&gt;Paragraph 3&lt;/p&gt;</span></pre></div>
-                    </div>
+                </div>
 
-                    <div class="row">
-                        <div class="col-6">
-                            CSS to select the paragraph immediately following the h2 tag. The 3rd doesn't immediately follow so it's not selected.
-                        </div>
-                        <div class="col-6">
-                            <pre class="example">
+                <div class="row">
+                    <div class="col-6">
+                        CSS to select the paragraph immediately following the h2 tag. The 3rd doesn't immediately follow so it's not selected.
+                    </div>
+                    <div class="col-6">
+                        <pre class="example">
 <span class="code-css">h2 + p {
   color: blue;
 }</pre></div>
-                    </div>
+                </div>
 
-                    <div class="row">
-                        <div class="col-6">
-                            <h5>Result</h5>
-                        </div>
-                        <div class="col-6">
-                            <pre class="example-container"><span class="white">Paragraph 1</span>
+                <div class="row">
+                    <div class="col-6">
+                        <h5>Result</h5>
+                    </div>
+                    <div class="col-6">
+                        <pre class="example-container"><span class="white">Paragraph 1</span>
 <span class="white">Heading</span>
 <span class="blue">Paragraph 2</span>
 <span class="white">Paragraph 3</span>
 </span></pre>
-                        </div>
                     </div>
+                </div>
 
 
 
@@ -584,13 +589,16 @@
                 <div class="row">
                     <div class="col">
                         <h2><span id="general-sibling-selector">General sibling selector (~)</span></h2>
-                      <p>The adjacent sibling selector selects all elements (with the same parent) that immediately follow that parent.</p></div>
+                        <p>The adjacent sibling selector selects all elements (with the same parent) that immediately follow that parent.</p>
+                    </div>
                 </div>
 
 
                 <div class="row">
                     <div class="col">
-                      <h4>Ex 1</h4></div></div>
+                        <h4>Ex 1</h4>
+                    </div>
+                </div>
 
                 <div class="row">
                     <div class="col-6">
@@ -619,11 +627,11 @@
 
                 <div class="row">
                     <div class="col-6">
-                <h5>Result</h5>
-              </div>
+                        <h5>Result</h5>
+                    </div>
 
                     <div class="col-6">
-                      <span class="example-container">
+                        <span class="example-container">
                         <p class="genparagraph">Paragraph 1.</p>
 
                         <div>
