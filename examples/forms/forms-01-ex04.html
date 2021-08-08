@@ -124,6 +124,89 @@
                 width: 100%
             }
         }
+        /* Remove margin from last group element */
+        
+        .form__group:not(:last-child) {
+            margin-bottom: 2rem;
+        }
+        
+        .form__input {
+            /* input elements do not inherit fonts and color by default
+        change default browser font for forms to font-family of page */
+            font-family: inherit;
+            color: inherit;
+            font-size: 1.5rem;
+            /* Looks better when more padding is on sides */
+            padding: 1.5rem 2rem;
+            border-radius: 2px;
+            background-color: rgba(255, 255, 255, 0.5);
+            border: none;
+            /*set initial border to transparent 
+        this prevents the 3px (from .form__input:focus) from pushing down the fields below the first box */
+            border-bottom: 3px solid transparent;
+            width: 90%;
+            display: block;
+            transition: all .3s;
+        }
+        
+        .form__input:focus {
+            /* remove browser default outline */
+            outline: none;
+            /* add box shadow for users not using a mouse so they can see what field is focused */
+            box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+            /* This 3px will cause the field to shift down when focused
+            To fix, add border-bottom: 3px solid transparent; to the primary input selector */
+            border-bottom: 3px solid #55c57a;
+        }
+        
+        .form__input:focus:invalid {
+            /* invalid reference is built into the browser */
+            /* if form field text is invalid when focused*/
+            border-bottom: 3px solid #ff7730;
+        }
+        
+        .form__input::-webkit-input-placeholder {
+            /* Changes color of text when you type into field (safari and chrome)*/
+            color: #999;
+        }
+        /* This label text is an extra effect
+        It is placed below the text field
+        It ony shows AFTER text is entered into field */
+        
+        .form__label {
+            font-size: 1.2rem;
+            font-weight: 700;
+            display: block;
+            margin-left: 2rem;
+            margin-top: .7rem;
+            transition: all .3s;
+        }
+        /* This label text is an extra effect
+        It is placed below the text field
+        It ony shows AFTER text is entered into field */
+        
+        .form__label {
+            font-size: 1.2rem;
+            font-weight: 700;
+            display: block;
+            margin-left: 2rem;
+            margin-top: .7rem;
+            transition: all .3s;
+        }
+        /* placeholder-shown is built into browser
+        when it is shown (meaning nothing has been typed yet), hide label 
+        You must select the label since that is what you want to style
+        Use adjacent sibling selector + 
+        The label must also be after the input for this to work because that's how the HTML is written*/
+        
+        .form__input:placeholder-shown+.form__label {
+            /* hide label */
+            opacity: 0;
+            /* this removes it from the page, not just hides it. opacity is also used because you cannot animate visibility */
+            visibility: hidden;
+            /* set initial state so it will move when focused */
+            transform: translateY(-4rem);
+        }
     </style>
 
     <body>

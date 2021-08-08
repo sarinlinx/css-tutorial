@@ -1,19 +1,14 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <!-- Needed for responsive web design. Says website should be rendered with width of device -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
 
-    <!-- <link rel="stylesheet" href="css/icon-font.css"> -->
-    <!-- <link rel="stylesheet" href="css/style.css"> -->
-    <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+    <title>Navigation example</title>
 
-    <title>Natours | Exciting tours for adventurous people</title>
     <style>
         *,
         *::after,
@@ -35,45 +30,7 @@
             font-size: 16px;
             line-height: 1.7;
             color: #777;
-        }
-        
-        .heading-secondary {
-            font-size: 3.5rem;
-            text-transform: uppercase;
-            font-weight: 700;
-            display: inline-block;
             background-image: linear-gradient(to right, #7ed56f, #28b485);
-            -webkit-background-clip: text;
-            color: transparent;
-            letter-spacing: 2px;
-            transition: all .2s
-        }
-        
-        @media only screen and (max-width: 56.25em) {
-            .heading-secondary {
-                font-size: 3rem
-            }
-        }
-        
-        @media only screen and (max-width: 37.5em) {
-            .heading-secondary {
-                font-size: 2.5rem
-            }
-        }
-        
-        .heading-secondary:hover {
-            transform: skewY(2deg) skewX(15deg) scale(1.1);
-            text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2)
-        }
-        
-        .u-margin-bottom-medium {
-            margin-bottom: 4rem !important
-        }
-        
-        @media only screen and (max-width: 56.25em) {
-            .u-margin-bottom-medium {
-                margin-bottom: 3rem !important
-            }
         }
         
         .row {
@@ -99,47 +56,17 @@
             margin-right: 6rem;
         }
         
-        .navigation__checkbox {
-            display: none
-        }
-        
-        .navigation__button {
-            background-color: #fff;
-            height: 7rem;
-            width: 7rem;
-            position: fixed;
-            top: 6rem;
-            right: 6rem;
-            border-radius: 50%;
-            z-index: 2000;
-            box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
-            cursor: pointer;
-            text-align: center
-        }
-        
-        @media only screen and (max-width: 56.25em) {
-            .navigation__button {
-                top: 4rem;
-                right: 4rem
-            }
-        }
-        
-        @media only screen and (max-width: 37.5em) {
-            .navigation__button {
-                top: 3.5rem;
-                right: 3.5rem
-            }
-        }
-        
         .navigation__background {
             height: 6rem;
             width: 6rem;
             border-radius: 50%;
+            /* Take element out of page flow */
             position: fixed;
             top: 6.5rem;
             right: 6.5rem;
             background-image: radial-gradient(#7ed56f, #28b485);
             z-index: 1000;
+            /* animation grows to fill page */
             transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1)
         }
         
@@ -157,18 +84,60 @@
             }
         }
         
-        .navigation__nav {
-            height: 100vh;
+        .navigation__button {
+            background-color: #fff;
+            /* 7rem because background is 6rem. This ensures it gets covered */
+            height: 7rem;
+            width: 7rem;
             position: fixed;
+            /* 6rem so it is on top of background which is 6.5rem
+            6 is needed because the height and width above are 7 */
+            top: 6rem;
+            right: 6rem;
+            border-radius: 50%;
+            z-index: 2000;
+            box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            /* So hamburger lines are centered */
+            text-align: center
+        }
+        
+        @media only screen and (max-width: 56.25em) {
+            .navigation__button {
+                top: 4rem;
+                right: 4rem
+            }
+        }
+        
+        @media only screen and (max-width: 37.5em) {
+            .navigation__button {
+                top: 3.5rem;
+                right: 3.5rem
+            }
+        }
+        
+        .navigation__checkbox {
+            display: none
+        }
+        
+        .navigation__nav {
+            /* top right of viewport and covers entire viewport */
+            height: 100vh;
+            /* starts on top right of viewport */
             top: 0;
             left: 0;
+            position: fixed;
+            /* this should be on top of the background so it's in between 1000 and 2000 */
             z-index: 1500;
+            /* hide menu items */
             opacity: 0;
+            /* removes them from page so they can't be clicked even though they are invisible */
             width: 0;
             transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55)
         }
         
         .navigation__list {
+            /* center list items */
             position: absolute;
             top: 50%;
             left: 50%;
@@ -184,6 +153,7 @@
         
         .navigation__link:link,
         .navigation__link:visited {
+            /* must be inline-block so settings like padding and transform work */
             display: inline-block;
             font-size: 3rem;
             font-weight: 300;
@@ -191,6 +161,8 @@
             color: #fff;
             text-decoration: none;
             text-transform: uppercase;
+            /* This creates a long horizontal section split in half
+            when hovered, the right side moves to the left, so it looks like the color changes */
             background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #fff 50%);
             background-size: 220%;
             transition: all .4s
@@ -204,16 +176,20 @@
         
         .navigation__link:hover,
         .navigation__link:active {
+            /* shift background to left when hovered */
             background-position: 100%;
             color: #55c57a;
             transform: translateX(1rem)
         }
+        /* use general sibling selector */
         
         .navigation__checkbox:checked~.navigation__background {
+            /* Make it huge so it covers the entire screen */
             transform: scale(80)
         }
         
         .navigation__checkbox:checked~.navigation__nav {
+            /* show navigation */
             opacity: 1;
             width: 100%
         }
@@ -222,6 +198,7 @@
             position: relative;
             margin-top: 3.5rem
         }
+        /* Create a horizontal line */
         
         .navigation__icon,
         .navigation__icon::before,
@@ -234,11 +211,14 @@
         
         .navigation__icon::before,
         .navigation__icon::after {
+            /* to allow pseudo elements to appear on page you must set a content and display property */
             content: "";
+            /* so you can set their position */
             position: absolute;
             left: 0;
             transition: all .2s
         }
+        /* //spacing of icon line one at top and one at bottom */
         
         .navigation__icon::before {
             top: -.8rem
@@ -255,48 +235,62 @@
         .navigation__button:hover .navigation__icon::after {
             top: 1rem
         }
+        /* when checkbox is checked select sibling's icon
+         this is the center horizontal line in the icon */
         
         .navigation__checkbox:checked+.navigation__button .navigation__icon {
+            /* hide */
             background-color: transparent
         }
+        /* rotate the top and botom icons */
         
         .navigation__checkbox:checked+.navigation__button .navigation__icon::before {
+            /* rotate 180deg - 45deg so it flips around */
             transform: rotate(135deg);
+            /* set to zero so the top and bottom icons form an X */
             top: 0
         }
         
         .navigation__checkbox:checked+.navigation__button .navigation__icon::after {
+            /* rotate */
             transform: rotate(-135deg);
+            /* set to zero so the top and bottom icons form an X */
             top: 0
         }
     </style>
-</head>
 
-<body>
-
-    <div class="navigation">
-        <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
-
-        <label for="navi-toggle" class="navigation__button">
-        <span class="navigation__icon">&nbsp;</span>
-    </label>
-
-        <div class="navigation__background">&nbsp;</div>
-
-        <nav class="navigation__nav">
-            <ul class="navigation__list">
-                <li class="navigation__item"><a href="#" class="navigation__link"><span>01</span>About Natours</a></li>
-                <li class="navigation__item"><a href="#" class="navigation__link"><span>02</span>Your benefits</a></li>
-                <li class="navigation__item"><a href="#" class="navigation__link"><span>03</span>Popular tours</a></li>
-                <li class="navigation__item"><a href="#" class="navigation__link"><span>04</span>Stories</a></li>
-                <li class="navigation__item"><a href="#" class="navigation__link"><span>05</span>Book now</a></li>
-            </ul>
-        </nav>
-    </div>
+    <body>
 
 
 
 
-</body>
+
+        <div class="navigation">
+            <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+
+            <label for="navi-toggle" class="navigation__button">
+            <span class="navigation__icon">&nbsp;</span>
+            </label>
+
+            <div class="navigation__background">&nbsp;</div>
+
+            <nav class="navigation__nav">
+                <ul class="navigation__list">
+                    <li class="navigation__item"><a href="#" class="navigation__link"><span>01</span>About Natours</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link"><span>02</span>Your benefits</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link"><span>03</span>Popular tours</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link"><span>04</span>Stories</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link"><span>05</span>Book now</a></li>
+                </ul>
+            </nav>
+        </div>
+
+
+
+
+
+
+
+    </body>
 
 </html>
