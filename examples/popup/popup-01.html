@@ -10,7 +10,7 @@
     <link rel="stylesheet" type="text/css" href="../../_css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="../../_css/style.css">
 
-    <title>Navigation</title>
+    <title>Popup</title>
 </head>
 
 <style>
@@ -22,41 +22,25 @@
 
     <section class="container">
 
-        <p>Create a Navigation menu with spinning hamburger icon and page popup menu</p>
-        <p>When you click it, a page overtakes the entire screen with page links.</p>
+        <p>Create a Popup that covers the entire page when link is clicked.</p>
 
 
 
-        <h2>Step #1 - Add HTML</h2>
+        <h2>Step #1 - Add HTML container</h2>
         <div class="row">
 
             <div class="col-4">
-                <p>Create a navigation container.</p>
-                <p>Add a checkbox</p>
-                <p>Add a button</p>
-                <p>Add a background</p>
-                <p>Add links</p>
+                <p>You can add HTML anywhere in the document.</p>
             </div>
 
             <div class="col-8">
-                <pre class="example"><span class="code-html">&lt;div class="navigation"&gt;
-  &lt;input type="checkbox" class="navigation__checkbox" id="navi-toggle"&gt;
+                <pre class="example"><span class="code-html">&lt;div class="row"&gt;
+  &lt;div class="popup" id="popup"&gt;
+      &lt;div class="popup__content"&gt;
 
-  &lt;label for="navi-toggle" class="navigation__button"&gt;
-  &lt;span class="navigation__icon"&gt;&nbsp;&lt;/span&gt;
-    &lt;/label&gt;
-
-  &lt;div class="navigation__background"&gt;&nbsp;&lt;/div&gt;
-
-  &lt;nav class="navigation__nav"&gt;
-      &lt;ul class="navigation__list"&gt;
-          &lt;li class="navigation__item"&gt;&lt;a href="#" class="navigation__link"&gt;&lt;span&gt;01&lt;/span&gt;About Natours&lt;/a&gt;&lt;/li&gt;
-          &lt;li class="navigation__item"&gt;&lt;a href="#" class="navigation__link"&gt;&lt;span&gt;02&lt;/span&gt;Your benefits&lt;/a&gt;&lt;/li&gt;
-          &lt;li class="navigation__item"&gt;&lt;a href="#" class="navigation__link"&gt;&lt;span&gt;03&lt;/span&gt;Popular tours&lt;/a&gt;&lt;/li&gt;
-          &lt;li class="navigation__item"&gt;&lt;a href="#" class="navigation__link"&gt;&lt;span&gt;04&lt;/span&gt;Stories&lt;/a&gt;&lt;/li&gt;
-          &lt;li class="navigation__item"&gt;&lt;a href="#" class="navigation__link"&gt;&lt;span&gt;05&lt;/span&gt;Book now&lt;/a&gt;&lt;/li&gt;
-      &lt;/ul&gt;
-  &lt;/nav&gt;
+        
+      &lt;/div&gt;
+  &lt;/div&gt;
 &lt;/div&gt;</span></pre>
             </div>
         </div>
@@ -66,7 +50,7 @@
             <div class="col">
                 <h4>Example</h4>
                 <ul>
-                    <li><a href="nav-01-ex01.html" target="_blank">Example</a></li>
+                    <li><a href="popup-01-ex01.html" target="_blank">Example</a></li>
                 </ul>
 
             </div>
@@ -86,268 +70,38 @@
 
 
 
-
-
-
-
-
-        <h2>Step #2 - Add CSS for background</h2>
+        <h2>Step #2 - Style container and popup</h2>
         <div class="row">
 
             <div class="col-4">
-                <p>Create circle with background radial-gradient.</p>
-                <p>This will be fixed to the top right of page.</p>
+                <p>Give the background a dark transparent color. This covers the entire page.</p>
+                <p>Give the popup container a white background.</p>
             </div>
 
             <div class="col-8">
-                <pre class="example"><span class="code-css"> .navigation__background {
-  height: 6rem;
-  width: 6rem;
-  border-radius: 50%;
-  <span class="code-comment">/* Take element out of page flow */</span>
+                <pre class="example"><span class="code-css">.popup {
+  <span class="code-comment">/* cover entire page in dark background */</span>
+  height: 100vh;
+  <span class="code-comment">/* not really necessary */</span>
+  width: 100%;
   position: fixed;
-  top: 6.5rem;
-  right: 6.5rem;
-  background-image: radial-gradient(#7ed56f, #28b485);
-  <span class="code-comment">/* so it is always on top */</span>
-  z-index: 1000;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 9999;               
 }
 
-@media only screen and (max-width: 56.25em) {
-  .navigation__background {
-      top: 4.5rem;
-      right: 4.5rem
-  }
-}
-
-@media only screen and (max-width: 37.5em) {
-  .navigation__background {
-      top: 3.5rem;
-      right: 3.5rem
-  }
-}</span></pre>
-            </div>
-        </div>
-
-
-        <div class="row">
-            <div class="col">
-                <h4>Example</h4>
-                <ul>
-                    <li><a href="nav-01-ex02.html" target="_blank">Example</a></li>
-                </ul>
-
-            </div>
-        </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <h2>Step #3 - Add CSS for button</h2>
-        <div class="row">
-
-            <div class="col-4">
-                <p>Style white button over top the green background.</p>
-                <p>Hide the checkbox since it should never display.</p>
-            </div>
-
-            <div class="col-8">
-                <pre class="example"><span class="code-css">.navigation__button {
-  background-color: #fff;
-  /* 7rem because background is 6rem. This ensures it gets covered */
-  height: 7rem;
-  width: 7rem;
-  position: fixed;
-  /* 6rem so it is on top of background which is 6.5rem
-  6 is needed because the height and width above are 7 */
-  top: 6rem;
-  right: 6rem;
-  border-radius: 50%;
-  z-index: 2000;
-  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-  <span class="code-comment">/* so hamburger lines are centered */</span>
-  text-align: center
-}
-
-@media only screen and (max-width: 56.25em) {
-  .navigation__button {
-      top: 4rem;
-      right: 4rem
-  }
-}
-
-@media only screen and (max-width: 37.5em) {
-  .navigation__button {
-      top: 3.5rem;
-      right: 3.5rem
-  }
-}
-
-.navigation__checkbox {
-  display: none
-}</span></pre>
-            </div>
-        </div>
-
-
-        <div class="row">
-            <div class="col">
-                <h4>Example</h4>
-                <ul>
-                    <li><a href="nav-01-ex03.html" target="_blank">Example</a></li>
-                </ul>
-
-            </div>
-        </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <h2>Step #4 - Add CSS for navigation links</h2>
-        <div class="row">
-
-            <div class="col-4">
-                <p>When the white button is clicked, the page fully becomes this navigation__nav section.</p>
-                <p>It is centered using the navigation__list inside it.</p>
-            </div>
-
-            <div class="col-8">
-                <pre class="example"><span class="code-css">.navigation__nav {
-    width: 100%;
-    <span class="code-comment">/* top right of viewport and covers entire viewport */</span>
-    height: 100vh;
-    <span class="code-comment">/* starts on top right of viewport */</span>
-    top: 0;
-    left: 0;
-    position: fixed;
-    <span class="code-comment">/* this should be on top of the background so it's in between 1000 and 2000 */</span>
-    z-index: 1500;
-}
-
-.navigation__list {
-  <span class="code-comment">/* center list items */</span>
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    list-style: none;
-    text-align: center;
-    width: 100%
-}</span></pre>
-            </div>
-        </div>
-
-
-        <div class="row">
-            <div class="col">
-                <h4>Example</h4>
-                <ul>
-                    <li><a href="nav-01-ex04.html" target="_blank">Example</a></li>
-                </ul>
-
-            </div>
-        </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <h2>Step #5 - Style links</h2>
-        <div class="row">
-
-            <div class="col-4">
-                <p>Give the body a background so you can see the white
-                </p>
-                <p>Center links</p>
-            </div>
-
-            <div class="col-8">
-                <pre class="example"><span class="code-css">.navigation__list {
-  <span class="code-comment">/* center list items */</span>
+.popup__content {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  list-style: none;
-  text-align: center;
-  width: 100%
-}
-
-.navigation__item {
-  margin: 1rem
-}
-
-.navigation__link:link,
-.navigation__link:visited {
-  <span class="code-comment">/* must be inline-block so settings like padding and transform work */</span>
-  display: inline-block;
-  font-size: 3rem;
-  font-weight: 300;
-  padding: 1rem 2rem;
-  color: #fff;
-  text-decoration: none;
-  text-transform: uppercase;
-  <span class="code-comment">/* This creates a long horizontal section split in half
-  when hovered, the right side moves to the left, so it looks like the color changes */</span>
-  background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #fff 50%);
-  <span class="code-comment">/* Add a large background-size. This pushes the background to the right to completely cover it.</span>
-  background-size: 220%;
-  transition: all .4s
+  width: 75%;
+  <span class="code-comment">/* only use height now since there's no content */</span>
+  height: 50rem;
+  background-color: #fff;
+  box-shadow: 0 2rem 4rem rgab(#000, 0.2);
+  border-radius: 3px;                 
 }</span></pre>
             </div>
         </div>
@@ -357,7 +111,7 @@
             <div class="col">
                 <h4>Example</h4>
                 <ul>
-                    <li><a href="nav-01-ex05.html" target="_blank">Example</a></li>
+                    <li><a href="popup-01-ex02.html" target="_blank">Example</a></li>
                 </ul>
 
             </div>
@@ -382,28 +136,47 @@
 
 
 
-        <h2>Step #6 - Create effect on link hover</h2>
+
+
+        <h2>Step #3 - Add left and right sections in HTML</h2>
         <div class="row">
 
             <div class="col-4">
-                <p>When the links are hovered, it appears like the background slides in.</p>
+                <p>Add left section with images.</p>
+
+                <p>Add right section with text.</p>
             </div>
 
             <div class="col-8">
-                <pre class="example"><span class="code-css">.navigation__link:link span,
-.navigation__link:visited span {
-    margin-right: 1.5rem;
-    display: inline-block
-}
+                <pre class="example"><span class="code-html">
+&lt;div class="row"&gt;
+  &lt;div class="popup" id="popup"&gt;
+    &lt;div class="popup__content"&gt;
 
-.navigation__link:hover,
-.navigation__link:active {
-  <span class="code-comment">/* shift background to left when hovered */</span>
-    background-position: 100%;
-    color: #55c57a;
-    <span class="code-comment">slightly moves */</span>
-    transform: translateX(1rem)
-}</span></pre>
+      <span class="code-highlight">&lt;div class="popup__left"&gt;
+          &lt;img src="img/nat-8.jpg" alt="Tour photo" class="popup__img"&gt;
+          &lt;img src="img/nat-9.jpg" alt="Tour photo" class="popup__img"&gt;
+      &lt;/div&gt;
+      
+      &lt;div class="popup__right"&gt;
+          &lt;!-- Close button takes you back to #section-tours --&gt;
+          &lt;a href="#section-tours" class="popup__close"&gt;&times;&lt;/a&gt;
+
+          &lt;h2 class="heading-secondary u-margin-bottom-small"&gt;Start booking now&lt;/h2&gt;
+          &lt;h3 class="heading-tertiary u-margin-bottom-small"&gt;Important &ndash; Please read these terms before booking
+          &lt;/h3&gt;
+          &lt;p class="popup__text"&gt;
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed sed risus pretium quam. Aliquam sem et tortor consequat id. Volutpat odio facilisis mauris sit amet massa vitae. Mi bibendum
+              neque egestas congue. Placerat orci nulla pellentesque dignissim enim sit. Vitae semper quis lectus nulla at volutpat diam ut venenatis. Malesuada pellentesque elit eget gravida cum sociis natoque penatibus et. Proin fermentum
+              leo vel orci porta non pulvinar neque laoreet. Gravida neque convallis a cras semper. Molestie at elementum eu facilisis sed odio morbi quis. Faucibus vitae aliquet nec ullamcorper sit amet risus nullam eget. Nam libero justo laoreet
+              sit. Amet massa vitae tortor condimentum lacinia quis vel eros donec. Sit amet facilisis magna etiam. Imperdiet sed euismod nisi porta.
+          &lt;/p&gt;
+          &lt;a href="#" class="btn btn--green"&gt;Book now&lt;/a&gt;
+      &lt;/div&gt;</span>
+        
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</span></pre>
             </div>
         </div>
 
@@ -412,7 +185,7 @@
             <div class="col">
                 <h4>Example</h4>
                 <ul>
-                    <li><a href="nav-01-ex06.html" target="_blank">Example</a></li>
+                    <li><a href="popup-01-ex03.html" target="_blank">Example</a></li>
                 </ul>
 
             </div>
@@ -426,180 +199,158 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <h2>Step #7 - Remove/hide navigation</h2>
+        <h2>Step #4 - Style images and align both sides</h2>
         <div class="row">
 
             <div class="col-4">
-                <p>Remove the navigation links using opacity and width.</p>
-                <p>Remove original width: 100% since it's no longer needed.</p>
-                <p>When checkbox is checked:</p>
-                <ul>
-                    <li>Add a transform on the checkbxo to make the background fill screen</li>
-                    <li>Add opacity to navigation__nav so it shows.</li>
-                </ul>
+                <p>Style images first since they are so large.</p>
+                <p>Use display: table-cell so both sides have the same height. This isn't possible with float.</p>
+                <p>Remove height: 50rem; from .popup__content since there's now content to display.</p>
+                <p>Add display: table to .popup__content.</p>
+                <p>Add overflow: hidden so images do not overflow their container.</p>
             </div>
 
             <div class="col-8">
-                <pre class="example"><span class="code-css">.navigation__nav {
-  height: 100vh;
-  top: 0;
-  left: 0;
-  position: fixed;
-  z-index: 1500;
-  <span class="code-comment">/* hide menu items */</span>
-  <span class="code-highlight">opacity: 0;</span>
-  <span class="code-comment">/* removes them from page so they can't be clicked even though they are invisible */</span>
-  <span class="code-highlight">width: 0;</span>
-}
-
-.navigation__checkbox:checked~.navigation__background {
-  /* Make it huge so it covers the entire screen */
-  transform: scale(80)
-}
-
-.navigation__checkbox:checked~.navigation__nav {
-  /* show navigation */
-  opacity: 1;
-  width: 100%
-}</span></pre>
-            </div>
-        </div>
-
-
-        <div class="row">
-            <div class="col">
-                <h4>Example</h4>
-                <ul>
-                    <li><a href="nav-01-ex07.html" target="_blank">Example</a></li>
-                </ul>
-
-            </div>
-        </div>
-
-
-
-
-
-
-
-        <h2>Step #8 - Add transition when checkbox is checked</h2>
-        <div class="row">
-
-            <div class="col-4">
-                <p>Add transition on background and nav</p>
-            </div>
-
-            <div class="col-8">
-                <pre class="example"><span class="code-css">.navigation__background {
-  height: 6rem;
-  width: 6rem;
-  border-radius: 50%;
-  position: fixed;
-  top: 6.5rem;
-  right: 6.5rem;
-  background-image: radial-gradient(#7ed56f, #28b485);
-  z-index: 1000;
-  <span class="code-comment">/* animation grows to fill page */</span>
-  <span class="code-highlight">transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);</span>
-}
-
-.navigation__nav {
-  height: 100vh;
-  top: 0;
-  left: 0;
-  position: fixed;
-  z-index: 1500;
-  opacity: 0;
-  width: 0;
-  <span class="code-highlight">transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);</span>
-}</span></pre>
-            </div>
-        </div>
-
-
-        <div class="row">
-            <div class="col">
-                <h4>Example</h4>
-                <ul>
-                    <li><a href="nav-01-ex08.html" target="_blank">Example</a></li>
-                </ul>
-
-            </div>
-        </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <h2>Step #9 - Add hamburger icon lines</h2>
-        <div class="row">
-
-            <div class="col-4">
-                <p>Create 3 hamburger icon lines</p>
-                <p>Position them horizontally on top of each other</p>
-            </div>
-
-            <div class="col-8">
-                <pre class="example"><span class="code-css">.navigation__icon {
-  position: relative;
-  margin-top: 3.5rem
-}
-
-<span class="code-comment">/* Create a horizontal line */</span>
-.navigation__icon,
-.navigation__icon::before,
-.navigation__icon::after {
-  width: 3rem;
-  height: 2px;
-  background-color: #333;
-  display: inline-block
-}
-
-.navigation__icon::before,
-.navigation__icon::after {
-  <span class="code-comment">/* to allow pseudo elements to appear on page you must set a content and display property */</span>
-  content: "";
-  <span class="code-comment">/* so you can set their position */</span>
+                <pre class="example"><span class="code-css">.popup__content {
   position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 75%;              
+  background-color: #fff;
+  box-shadow: 0 2rem 4rem rgab(#000, 0.2);
+  border-radius: 3px;
+  <span class="code-comment">/* used to make left and right sides have same height */</span>
+  <span class="code-highlight">display: table;
+  overflow: hidden;</span>               
+}
+                
+.popup__img {
+  display: block;
+  <span class="code-comment">/* 100% of parent container's width */</span>
+  width: 100%
+}
+
+.popup__left {
+  width: 33.33333%;
+  <span class="code-comment">/* used to make left and right sides have same height */</span>
+  display: table-cell
+}
+
+.popup__right {
+  width: 66.66666%;
+  <span class="code-comment">/* used to make left and right sides have same height */</span>
+  display: table-cell;
+  <span class="code-comment">/* align vertically */</span>
+  vertical-align: middle;
+  padding: 3rem 5rem
+}</span></pre>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col">
+                <h4>Example</h4>
+                <ul>
+                    <li><a href="popup-01-ex04.html" target="_blank">Example</a></li>
+                </ul>
+
+            </div>
+        </div>
+
+
+
+
+
+
+        <h2>Step #5 - Add colums and hyphenation in text</h2>
+        <div class="row">
+
+            <div class="col-4">
+                <p>Add columns</p>
+                <p>Add border between columns</p>
+                <p>Add auto hyphens</p>
+            </div>
+
+            <div class="col-8">
+                <pre class="example"><span class="code-css"> .popup__text {
+  font-size: 1.4rem;
+  margin-bottom: 4rem;
+  <span class="code-comment">/* colomn layout */</span>
+  -moz-column-count: 2;
+  <span class="code-comment">/* space between colums */</span>
+  -moz-column-gap: 4rem;
+  -moz-column-rule: 1px solid #eee;
+  <span class="code-comment">/* auto hypenation */</span>
+  then only works if HTML has language att set <html lang="en"> */
+  column-count: 2;
+  column-gap: 4rem;
+  <span class="code-comment">/* border between the columns */</span>
+  column-rule: 1px solid #eee;
+  <span class="code-comment">/* hyphens */</span>
+  -ms-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto
+}</span></pre>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col">
+                <h4>Example</h4>
+                <ul>
+                    <li><a href="popup-01-ex05.html" target="_blank">Example</a></li>
+                </ul>
+
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+        <h2>Step #6 - Hide popup and add anchor link</h2>
+        <div class="row">
+
+            <div class="col-4">
+                <p>Set opacity and visibility to hide popup container.</p>
+                <p>Add popup:target CSS which is what is called when the button link is clicked.</p>
+                <p>Add button on homepage to click.</p>
+                <p>Add transition to container so it fades in</p>
+            </div>
+
+            <div class="col-8">
+                <pre class="example"><span class="code-css">.popup {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
   left: 0;
-  transition: all .2s
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 9999;
+  <span class="code-highlight">opacity: 0;
+  visibility: hidden;
+  transition: all 1s;</span>
 }
 
-<span class="code-comment">/* spacing of icon line one at top and one at bottom */</span>
+<span class="code-comment">/* targert when a button is clicked to anchor tag and URL changes to #popup */
+.popup:target {
+opacity: 1;
+visibility: visible
+}</span>
 
-.navigation__icon::before {
-  top: -.8rem
-}
-
-.navigation__icon::after {
-  top: .8rem
-}</span></pre>
+<span class="code-html">
+  &lt;a href="#popup" class="btn btn--white"&gt;Book now!</a>
+</span></pre>
             </div>
         </div>
 
@@ -608,7 +359,7 @@
             <div class="col">
                 <h4>Example</h4>
                 <ul>
-                    <li><a href="nav-01-ex09.html" target="_blank">Example</a></li>
+                    <li><a href="popup-01-ex06.html" target="_blank">Example</a></li>
                 </ul>
 
             </div>
@@ -620,20 +371,46 @@
 
 
 
-        <h2>Step #10 - space hamburger lines when hovered</h2>
+
+
+
+
+
+
+
+
+
+
+
+        <h2>Step #7 - Style X link to close popup. </h2>
         <div class="row">
 
             <div class="col-4">
-                <p>Use the before and after pseudo classes to move the lines when hovered</p>
+                <p>Style and position X closing link to top right.</p>
             </div>
 
             <div class="col-8">
-                <pre class="example"><span class="code-css">.navigation__button:hover .navigation__icon::before {
-  top: -1rem
+                <pre class="example"><span class="code-css">.popup:target .popup__content {
+  opacity: 1;
 }
 
-.navigation__button:hover .navigation__icon::after {
-  top: 1rem
+.popup__close:link,
+.popup__close:visited {
+  color: #777;
+  <span class="code-comment">/* positioned to 1st positioned parent which is popup__content */</span>
+  position: absolute;
+  top: 2.5rem;
+  right: 2.5rem;
+  font-size: 3rem;
+  text-decoration: none;
+  display: inline-block;
+  transition: all .2s;
+  <span class="code-comment">/* to fix inherited line height that adds extra space around X icon */</span>
+  line-height: 1
+}
+
+.popup__close:hover {
+  color: #55c57a
 }</span></pre>
             </div>
         </div>
@@ -643,7 +420,7 @@
             <div class="col">
                 <h4>Example</h4>
                 <ul>
-                    <li><a href="nav-01-ex010.html" target="_blank">Example</a></li>
+                    <li><a href="popup-01-ex07.html" target="_blank">Example</a></li>
                 </ul>
 
             </div>
@@ -653,35 +430,53 @@
 
 
 
-        <h2>Step #11 - Rotate hamburger lines when clicked</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <h2>Step #8 - Add zoom effect </h2>
         <div class="row">
 
             <div class="col-4">
-                <p>When button is clicked, hide center line</p>
-                <p>Rotate top and bottom lines to become an X</p>
+                <p>Add a second transform on popup__content with scale to make it smaller.</p>
+                <p>Then scale back to 1 on the target popup.</p>
+                <p>Add small delay by .2s</p>
+                <p>
             </div>
 
             <div class="col-8">
-                <pre class="example"><span class="code-css"><span class="code-comment">/* when checkbox is checked select sibling's icon
-this is the center horizontal line in the icon */</span>
-.navigation__checkbox:checked+.navigation__button .navigation__icon {
-  <span class="code-comment">/* hide */</span>
-  background-color: transparent
-}
+                <pre class="example"><span class="code-css">.popup__content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 75%;
+      background-color: #fff;
+      box-shadow: 0 2rem 4rem rgab(#000, 0.2);
+      border-radius: 3px;
+      display: table;
+      overflow: hidden;
+      opacity: 0;
+      <span class="code-comment">/* there is already a transform in the @include, so you cannot add a 2nd in the same declaration. To fix add the original from the @include, add the new one in the same declaration */</span>
+      <span class="code-highlight">transform: translate(-50%, -50%) scale(0.5);
+      transition: all .4s .2s;</span>
+  }
 
-<span class="code-comment">/* rotate the top and botom icons */</span>
-.navigation__checkbox:checked+.navigation__button .navigation__icon::before {
-  <span class="code-comment">/* rotate 180deg - 45deg so it flips around */</span>
-  transform: rotate(135deg);
-  <span class="code-comment">/* set to zero so the top and bottom icons form an X */</span>
-  top: 0
-}
-
-.navigation__checkbox:checked+.navigation__button .navigation__icon::after {
-  <span class="code-comment">/* rotate */</span>
-  transform: rotate(-135deg);
-  <span class="code-comment">/* set to zero so the top and bottom icons form an X */</span>
-  top: 0
+<span class="code-comment">/* scale originally downscaled to .5 on popup__content
+This sets it back to full size 1 */</span>
+.popup:target .popup__content {
+  opacity: 1;
+  <span class="code-highlight">transform: translate(-50%, -50%) scale(1);</span>
 }</span></pre>
             </div>
         </div>
@@ -691,11 +486,12 @@ this is the center horizontal line in the icon */</span>
             <div class="col">
                 <h4>Example</h4>
                 <ul>
-                    <li><a href="nav-01-ex11.html" target="_blank">Example</a></li>
+                    <li><a href="popup-01-ex08.html" target="_blank">Example</a></li>
                 </ul>
 
             </div>
         </div>
+
 
 
     </section>
