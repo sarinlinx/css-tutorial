@@ -123,9 +123,13 @@
 
 
                         <!-- Resolution switching -->
-                        <!-- Set width descriptor of each image to inform browser-->
-                        <!-- sizes att informs browser of size of image at different viewport width and display resolution -->
-                        <!-- Divide small image width by brreakpoint width 701/900 = .19 which is almost 20% to get the viewport width-->
+                        <!-- Set width descriptor (by # of pixels) of each image -->
+                        <!-- This informs the browser about the images without having to download them -->
+                        <!-- sizes attribute informs browser of width of image at different viewport widths -->
+                        <!-- the browser then decides which is the best image to use based off of viewport width and display resolution -->
+                        <!-- Divide small image width by breakpoint width. -->
+                        <!-- If image is 700px and breakpoint is 900px,  701/900 = .19 which is almost 20%. -->
+                        <!-- You then use this to get the viewport width and add that to the right as 20vw -->
                         <!-- 171/600 breakpoint = 30% -->
                         <!-- add default size if no conditions apply set width to what's default in CSS for this element-->
                         <!-- finally include src in case user is using older browser that doesn't support srcset -->
