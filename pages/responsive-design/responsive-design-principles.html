@@ -10,7 +10,7 @@
     <link rel="stylesheet" type="text/css" href="../../_css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="../../_css/style.css">
 
-    <title>Flexbox</title>
+    <title>Responsive Design</title>
 </head>
 
 <body>
@@ -24,7 +24,41 @@
 
 
     <section class="container">
-        <h2 class="heading-emphasis">3 basic principles of responsive design</h2>
+        <h1>HTML meta tag</h1>
+        <p>You must have the following meta tag in the HTML head or responsive queries will not function.</p>
+
+        <pre class="example"><span class="code-html">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"></span></pre>
+
+
+
+
+
+        <h1>CSS to check if user can hover over HTML elements</h1>
+
+        <p>This allows you to identify touch devices.</p>
+        <div class="row">
+            <div class="col-5">
+                <p>Add hover:none to the media query to select touch devices.</p>
+                <p>The opposite for devices with a mouse would use hover: hover;</p>
+            </div>
+            <div class="col-7">
+                <pre class="example"><span class="code-css">@media only screen and (max-width: 56.25em),
+only screen <span class="code-highlight">and (hover: none)</span> {
+  .card {
+      height: auto;
+      border-radius: 3px;
+      box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+      background-color: #fff
+  }
+}</span></pre>
+            </div>
+        </div>
+
+
+
+
+
+        <h1 class="heading-emphasis">3 basic principles of responsive design</h1>
 
         <div class="row">
             <div class="col">
@@ -74,14 +108,16 @@
                 <p>Look at the most popular products and create breakpoints.</p>
                 <p>You can find the most popular screen sizes here:</p>
                 <ul>
-                    <li><a href="https://gs.statcounter.com/screen-resolution-stats" target="_blank">statcounter screen sizes</a></li>
+                    <li><a href="https://gs.statcounter.com/screen-resolution-stats" target="_blank">statcounter screen sizes</a>
+                    </li>
                 </ul>
 
 
 
                 <h2>Perfect</h2>
                 <p>Ignore screen sizes and focus only on your design.</p>
-                <p>Manually shrink your screen and choose to create a breakpoint whenever you find something should be adjusted.</p>
+                <p>Manually shrink your screen and choose to create a breakpoint whenever you find something should be adjusted.
+                </p>
                 <p>This is very time consuming however.</p>
 
 
